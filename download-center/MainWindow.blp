@@ -1,0 +1,12 @@
+using Gtk 4.0;
+using Adw 1;
+
+template MainWindow : Adw.ApplicationWindow {
+    title: _("Download center");
+    width-request: 400;
+    height-request: 600;
+    Adw.ToolbarView view {
+       [top] Adw.HeaderBar{}
+       content: Label {label: _("Error");};
+    }
+}
