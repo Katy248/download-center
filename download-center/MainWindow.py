@@ -4,6 +4,8 @@ from .DownloadsView import DownloadsView
 from .LoginView import LoginView
 from .auth import AUTH_STATE
 
+MAIN_WINDOW: Adw.ApplicationWindow = None
+
 
 @Gtk.Template.from_file("./download-center/MainWindow.ui")
 class MainWindow(Adw.ApplicationWindow):
@@ -12,8 +14,15 @@ class MainWindow(Adw.ApplicationWindow):
 
     def __init__(self, app: Adw.Application, **kwargs):
         super().__init__(application=app, **kwargs)
-        login_view = LoginView(self.on_authenticate)
-        self.view.set_content(login_view)
+
+        view = None
+        if AUTH_STATE.is_authenticated():
+            view = DownloadsView()
+        else:
+            view = LoginView(self.on_authenticate)
+
+        self.view.set_content(view)
+        MAIN_WINDOW = self
         # AUTH_STATE.connect("notify", self.on_authenticate)
         # self.set_content(DownloadsView())
 

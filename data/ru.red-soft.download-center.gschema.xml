@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schemalist>
+	<schema path="/ru/red-soft/download-center/" id="ru.red-soft.download-center">
+		<key name="stay-logged-in" type="b">
+			<default>true</default>
+			<!-- <summary>License key for download center</summary> -->
+		</key>
+		<key name="license-key" type="s">
+			<default>''</default>
+			<!-- <value></value> -->
+			<summary>License key for download center</summary>
+		</key>
+	</schema>
+</schemalist>

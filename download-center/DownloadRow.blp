@@ -1,0 +1,19 @@
+using Gtk 4.0;
+using Adw 1;
+
+template DownloadRow : Adw.ActionRow {
+	[suffix] Gtk.Box{
+	Button hash_button {
+		tooltip-text: _("Download MD5 hash");
+		styles ["flat", "circular"] 
+		icon-name: "security-medium-rtl-symbolic";
+		valign: center;
+	}
+	Button download_button {
+		tooltip-text: _("Download RPM");
+		styles ["flat", "circular"] 
+		icon-name: "folder-download-symbolic";
+		valign: center;
+	}
+	}
+}

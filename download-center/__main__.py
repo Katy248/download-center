@@ -5,11 +5,8 @@ gi.require_version("Adw", "1")
 
 from gi.repository import Gtk, Adw
 
+from .config import APP_ID
 from .MainWindow import MainWindow
-
-APP_NAME = "download-center"
-
-APP_ID = f"ru.red-soft.{APP_NAME}"
 
 
 def on_activate(app: Adw.Application):

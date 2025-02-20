@@ -3,37 +3,32 @@ using Adw 1;
 
 template DownloadsView:Gtk.Box {
     // hexpand: true;
-    // vexpand: true;
+    vexpand: true;
     orientation: vertical;
+    Adw.ToastOverlay toast_overlay{
+
     Gtk.ScrolledWindow{
+        vexpand: true;
         Adw.Clamp{
+            vexpand: true;
+            margin-top: 10;
+            margin-bottom: 10;
             margin-start: 10;
             margin-end: 10;
             Gtk.Box{
                 orientation: vertical;
-                Gtk.ListBox {
-                    styles ["boxed-list"]
-                    selection-mode: none;
-                    Adw.ActionRow{
-                        title: "redlog-0.5-2.x86_64.rpm";
-                        subtitle: "0.2 Mb";
-                        [suffix] Gtk.Box{
-                            Button {
-                                tooltip-text: "Copy MD5 hash";
-                                styles ["flat", "circular"] 
-                                icon-name: "security-medium-rtl-symbolic";
-                                valign: center;
-                            }
-                            Button {
-                                tooltip-text: "Download RPM";
-                                styles ["flat", "circular"] 
-                                icon-name: "folder-download-symbolic";
-                                valign: center;
-                            }
-                        }
-                    }
+                spacing: 20;
+                Adw.PreferencesGroup current_builds_group {
+                    title: _("Current build");
+                }
+                Adw.PreferencesGroup redos7_builds_group {
+                    title: _("RED OS 7.3");
+                }
+                Adw.PreferencesGroup redos8_builds_group {
+                    title: _("RED OS 8");
                 }
             }
         }
+    }
     }
 }
