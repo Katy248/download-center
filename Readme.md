@@ -10,6 +10,12 @@
 - [X] Persistence authentication
 - [ ] Localization
 
+## Dependencies
+
+- [Python 3.13]()
+- [PyGObject](https://pygobject.gnome.org/)
+- Libadwaita >= 1.5
+
 ## Screenshots
 
 ![Main page screenshot](other/screenshots/main-page.png)
