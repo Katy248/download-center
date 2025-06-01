@@ -15,56 +15,37 @@ template $LoginPage: Adw.NavigationPage {
                     // margin-bottom: 20;
                     margin-start: 20;
                     margin-end: 20;
+                    valign: center;
 
-                    Gtk.Box {
-                        orientation: vertical;
-                        spacing: 25;
+                    Gtk.ListBox {
+                        styles [
+                            "boxed-list-separate",
+                        ]
 
-                        Gtk.Box {
-                            orientation: vertical;
-                            spacing: 10;
+                        selection-mode: none;
 
-                            Gtk.ListBox {
-                                styles [
-                                    "boxed-list",
-                                ]
-
-                                selection-mode: none;
-
-                                Adw.EntryRow license_entry {
-                                    title: _("License key");
-                                    input-purpose: pin;
-                                }
-                            }
-
-                            Gtk.Box {
-                                halign: end;
-                                spacing: 10;
-
-                                Gtk.Label {
-                                    label: _("Stay logged in");
-                                }
-
-                                CheckButton persistence_check {
-                                    active: true;
-
-                                    styles [
-                                        "selection-mode",
-                                    ]
-                                }
-                            }
+                        Adw.PasswordEntryRow license_entry {
+                            title: _("License key");
+                            input-purpose: pin;
+                            max-length: 29;
                         }
 
-                        Button login_button {
+                        Adw.SwitchRow persistence_check {
+                            title: _("Stay logged in");
+                            active: true;
+
+                            styles [
+                                "selection-mode",
+                            ]
+                        }
+
+                        Adw.ButtonRow login_button {
                             styles [
                                 "suggested-action",
-                                "pill",
                             ]
 
-                            Adw.ButtonContent {
-                                label: _("Log in");
-                                icon-name: "dialog-password-symbolic";
-                            }
+                            title: _("Log in");
+                            start-icon-name: "dialog-password-symbolic";
                         }
                     }
                 }
