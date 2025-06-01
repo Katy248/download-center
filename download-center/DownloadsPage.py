@@ -1,13 +1,13 @@
 from gi.repository import Gtk, Adw
 from .api import get_files
 from .DownloadRow import DownloadRow
-from .state import NOTIFY_FUNC
 from .auth import logout
+from .SettingsPage import SettingsPage
 
 
-@Gtk.Template.from_file("./download-center/DownloadsView.ui")
-class DownloadsView(Adw.NavigationPage):
-    __gtype_name__ = "DownloadsView"
+@Gtk.Template.from_file("./download-center/DownloadsPage.ui")
+class DownloadsPage(Adw.NavigationPage):
+    __gtype_name__ = "DownloadsPage"
     current_builds_group = Gtk.Template.Child()
     redos7_builds_group = Gtk.Template.Child()
     redos8_builds_group = Gtk.Template.Child()
@@ -34,8 +34,6 @@ class DownloadsView(Adw.NavigationPage):
             row.connect("download-started", self.on_download_started)
             row.connect("download-finished", self.on_download_finished)
 
-        NOTIFY_FUNC = self.add_toast
-
     def on_download_started(self, _: DownloadRow, file_url: str, output_file: str):
         self.add_toast(f"Started downloading to {output_file}")
 
@@ -50,3 +48,7 @@ class DownloadsView(Adw.NavigationPage):
     @Gtk.Template.Callback()
     def on_logout_button_clicked(self, args):
         logout()
+
+    @Gtk.Template.Callback()
+    def on_settings_button_clicked(self, _):
+        self.get_parent().push(SettingsPage())

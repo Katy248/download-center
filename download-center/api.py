@@ -1,17 +1,13 @@
-from http.client import HTTPSConnection, OK
+from http.client import OK
 import json
 import requests
-from gi.repository import Gtk, Gio, GLib
 import datetime
-from threading import Thread
-from .state import DOWNLOADING, notify
 
 BASE_ADDR = "https://update-center.red-soft.ru"
 
 __jwt: str
 __license_key: str
 __last_auth: datetime.datetime = datetime.datetime.fromtimestamp(0)
-# __client = HTTPSConnection(BASE_ADDR)
 
 
 def __auth(license_key: str) -> bool:

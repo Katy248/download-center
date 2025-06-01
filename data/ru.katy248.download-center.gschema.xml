@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <schemalist>
-	<schema path="/ru/red-soft/download-center/" id="ru.red-soft.download-center">
+	<schema path="/ru/katy248/download-center/" id="ru.katy248.download-center">
 		<key name="stay-logged-in" type="b">
 			<default>true</default>
 			<!-- <summary>License key for download center</summary> -->

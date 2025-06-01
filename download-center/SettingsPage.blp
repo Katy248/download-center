@@ -1,0 +1,31 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $SettingsPage: Adw.NavigationPage {
+    title: _("Settings");
+
+    Adw.ToolbarView {
+        [top]
+        Adw.HeaderBar {}
+
+        content: Gtk.ScrolledWindow {
+            Adw.Clamp {
+                margin-start: 20;
+                margin-end: 20;
+
+                Adw.PreferencesGroup {
+                    title: _("General");
+
+                    Adw.SwitchRow persistence_row {
+                        title: _("Stay logged in");
+                    }
+
+                    Adw.PasswordEntryRow license_key_row {
+                        title: _("License key");
+                        editable: false;
+                    }
+                }
+            }
+        };
+    }
+}

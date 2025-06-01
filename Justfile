@@ -1,11 +1,12 @@
-APP_ID := "ru.red-soft.download-center"
+APP_ID := "ru.katy248.download-center"
 SCHEMAS_DIR := "/usr/share/glib-2.0/schemas"
 
 compile-blueprints:
     blueprint-compiler compile ./download-center/MainWindow.blp --output ./download-center/MainWindow.ui
-    blueprint-compiler compile ./download-center/DownloadsView.blp --output ./download-center/DownloadsView.ui
-    blueprint-compiler compile ./download-center/LoginView.blp --output ./download-center/LoginView.ui
+    blueprint-compiler compile ./download-center/DownloadsPage.blp --output ./download-center/DownloadsPage.ui
+    blueprint-compiler compile ./download-center/LoginPage.blp --output ./download-center/LoginPage.ui
     blueprint-compiler compile ./download-center/DownloadRow.blp --output ./download-center/DownloadRow.ui
+    blueprint-compiler compile ./download-center/SettingsPage.blp --output ./download-center/SettingsPage.ui
 
 # [dir('data')]
 compile-gschema:

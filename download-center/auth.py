@@ -22,9 +22,13 @@ class AuthState(GObject.Object):
 
     def authenticate(self, license_key: str) -> bool:
         self.authenticated = login(license_key)
-        if self.authenticated:
-            self.emit(AUTHENTICATED_CHANGED_SIGNAL, True)
+        if not self.authenticated:
+            return False
+
+        if SETTINGS.get_boolean("stay-logged-in"):
             SETTINGS.set_string("license-key", license_key)
+
+        self.emit(AUTHENTICATED_CHANGED_SIGNAL, True)
         return self.authenticated
 
     def is_authenticated(self):

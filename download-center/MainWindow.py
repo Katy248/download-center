@@ -1,7 +1,7 @@
 from gi.repository import Gtk, Adw
 
-from .DownloadsView import DownloadsView
-from .LoginView import LoginView
+from .DownloadsPage import DownloadsPage
+from .LoginPage import LoginPage
 from .auth import AuthState, AUTH_STATE, AUTHENTICATED_CHANGED_SIGNAL
 
 MAIN_WINDOW: Adw.ApplicationWindow = None
@@ -13,18 +13,20 @@ class MainWindow(Adw.ApplicationWindow):
     view: Adw.ToolbarView = Gtk.Template.Child()
 
     def __init__(self, app: Adw.Application, **kwargs):
+        global MAIN_WINDOW
+        MAIN_WINDOW = self
+
         super().__init__(application=app, **kwargs)
 
         self.change_view(AUTH_STATE.is_authenticated())
 
         AUTH_STATE.connect(AUTHENTICATED_CHANGED_SIGNAL, self.on_authenticated)
-        MAIN_WINDOW = self
 
     def to_logout_view(self):
-        self.view.replace([LoginView()])
+        self.view.replace([LoginPage()])
 
     def to_downloads_view(self):
-        self.view.replace([DownloadsView()])
+        self.view.replace([DownloadsPage()])
 
     def change_view(self, authenticated: bool):
         if authenticated:

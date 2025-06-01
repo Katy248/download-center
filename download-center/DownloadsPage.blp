@@ -1,7 +1,7 @@
 using Gtk 4.0;
 using Adw 1;
 
-template $DownloadsView: Adw.NavigationPage {
+template $DownloadsPage: Adw.NavigationPage {
     title: _("Downloads");
 
     Adw.ToolbarView {
@@ -13,12 +13,17 @@ template $DownloadsView: Adw.NavigationPage {
                 clicked => $on_logout_button_clicked();
                 tooltip-text: _("Log out");
             }
+
+            [end]
+            Button {
+                icon-name: "org.gnome.Settings-symbolic";
+                tooltip-text: _("Settings");
+                clicked => $on_settings_button_clicked();
+            }
         }
 
         content: Adw.ToastOverlay toast_overlay {
             Gtk.ScrolledWindow {
-                vexpand: true;
-
                 Adw.Clamp {
                     vexpand: true;
                     margin-top: 10;
