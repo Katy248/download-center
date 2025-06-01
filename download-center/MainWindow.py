@@ -1,4 +1,4 @@
-from gi.repository import Gtk, Adw
+from gi.repository import Gtk, Adw, Gio
 
 from .DownloadsPage import DownloadsPage
 from .LoginPage import LoginPage

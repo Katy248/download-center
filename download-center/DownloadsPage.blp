@@ -16,6 +16,13 @@ template $DownloadsPage: Adw.NavigationPage {
 
             [end]
             Button {
+                icon-name: "help-about-symbolic";
+                tooltip-text: _("About app");
+                action-name: "win.about";
+            }
+
+            [end]
+            Button {
                 icon-name: "org.gnome.Settings-symbolic";
                 tooltip-text: _("Settings");
                 clicked => $on_settings_button_clicked();
