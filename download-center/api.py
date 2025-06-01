@@ -44,8 +44,14 @@ def __check_auth() -> bool:
     return True
 
 
-def login(key: str):
-    return __auth(key)
+def login(license_key: str):
+    return __auth(license_key)
+
+
+def logout():
+    global __jwt, __license_key, __last_auth
+    __jwt = None
+    __license_key = None
 
 
 def get_files(current=True):
@@ -61,42 +67,3 @@ def get_files(current=True):
         return False
 
     return response.json()
-
-
-def __download_file(file: str):
-    from .MainWindow import MAIN_WINDOW
-
-    print("Start downloading")
-    DOWNLOADING = True
-
-    file_name = file.split("/")[-1]
-    gio_file = Gio.File.new_for_path(file_name)
-
-    file_dialog = Gtk.FileDialog()
-    file_dialog.set_initial_file(gio_file)
-
-    def callback(source, res):
-        nonlocal gio_file
-        gio_file = source.save_finish(res)
-
-    file_dialog.save(MAIN_WINDOW, callback=callback)
-    with open(gio_file.get_path(), "wb") as fs_file:
-        response = requests.post(BASE_ADDR + "/download/files", data={"file": file})
-        fs_file.write(response.content)
-
-    DOWNLOADING = False
-    notify('File "%s" downloaded' % file_name)
-    print("End downloading")
-
-
-def __download_in_thread(file: str):
-    thread = Thread(target=__download_file, args=(file,))
-    thread.start()
-
-
-def download_hash(file: str):
-    __download_in_thread(file)
-
-
-def download_rpm(file: str):
-    __download_in_thread(file)

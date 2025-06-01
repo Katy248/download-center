@@ -2,7 +2,7 @@ from gi.repository import Gtk, Adw
 
 from .DownloadsView import DownloadsView
 from .LoginView import LoginView
-from .auth import AUTH_STATE
+from .auth import AuthState, AUTH_STATE, AUTHENTICATED_CHANGED_SIGNAL
 
 MAIN_WINDOW: Adw.ApplicationWindow = None
 
@@ -15,18 +15,22 @@ class MainWindow(Adw.ApplicationWindow):
     def __init__(self, app: Adw.Application, **kwargs):
         super().__init__(application=app, **kwargs)
 
-        view = None
-        if AUTH_STATE.is_authenticated():
-            view = DownloadsView()
-        else:
-            view = LoginView(self.on_authenticate)
+        self.change_view(AUTH_STATE.is_authenticated())
 
-        self.view.set_content(view)
+        AUTH_STATE.connect(AUTHENTICATED_CHANGED_SIGNAL, self.on_authenticated)
         MAIN_WINDOW = self
-        # AUTH_STATE.connect("notify", self.on_authenticate)
-        # self.set_content(DownloadsView())
 
-    def on_authenticate(self):
-        # print("Change views")
-        downloads_view = DownloadsView()
-        self.view.set_content(downloads_view)
+    def to_logout_view(self):
+        self.view.replace([LoginView()])
+
+    def to_downloads_view(self):
+        self.view.replace([DownloadsView()])
+
+    def change_view(self, authenticated: bool):
+        if authenticated:
+            self.to_downloads_view()
+        else:
+            self.to_logout_view()
+
+    def on_authenticated(self, _: AuthState, authenticated: bool):
+        self.change_view(authenticated)

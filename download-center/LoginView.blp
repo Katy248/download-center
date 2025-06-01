@@ -1,49 +1,74 @@
 using Gtk 4.0;
 using Adw 1;
 
-template LoginView:Gtk.Box {
-    hexpand: true;
-    vexpand: true;
-    orientation: vertical;
-    Gtk.ScrolledWindow{
-    hexpand: true;
-    vexpand: true;
-    // valign: center;
-        Adw.Clamp{
-            margin-top: 10;
-            margin-bottom: 10;
-            margin-start: 10;
-            margin-end: 10;
-            Gtk.Box{
-                orientation: vertical;
-                spacing: 25;
-                Gtk.ListBox {
-                    styles ["boxed-list"]
-                    selection-mode: none;
-                    Adw.EntryRow license_entry {
-                        title: _("License key");
-                        input-purpose: pin;
-                    } 
-                }
-                Gtk.Box{
-                    halign: end;
-                    spacing: 10;
-                    Gtk.Label {
-                        label: _("Stay logged in");
-                    }
-                    CheckButton persistence_check {
-                        active: true;
-                        styles ["selection-mode"]
-                    }
-                } 
-                Button login_button {
-                styles ["suggested-action", "pill"]
-                    Adw.ButtonContent {
-                        label: _("Log in");
-                        icon-name: "dialog-password-symbolic";
+template $LoginView: Adw.NavigationPage {
+    title: _("Login");
+
+    Adw.ToolbarView {
+        [top]
+        Adw.HeaderBar {}
+
+        content: Adw.ToastOverlay toast_overlay {
+            Gtk.ScrolledWindow {
+                Adw.Clamp {
+                    // margin-top: 20;
+                    // margin-bottom: 20;
+                    margin-start: 20;
+                    margin-end: 20;
+
+                    Gtk.Box {
+                        orientation: vertical;
+                        spacing: 25;
+
+                        Gtk.Box {
+                            orientation: vertical;
+                            spacing: 10;
+
+                            Gtk.ListBox {
+                                styles [
+                                    "boxed-list",
+                                ]
+
+                                selection-mode: none;
+
+                                Adw.EntryRow license_entry {
+                                    title: _("License key");
+                                    input-purpose: pin;
+                                }
+                            }
+
+                            Gtk.Box {
+                                halign: end;
+                                spacing: 10;
+
+                                Gtk.Label {
+                                    label: _("Stay logged in");
+                                }
+
+                                CheckButton persistence_check {
+                                    active: true;
+
+                                    styles [
+                                        "selection-mode",
+                                    ]
+                                }
+                            }
+                        }
+
+                        Button login_button {
+                            styles [
+                                "suggested-action",
+                                "pill",
+                            ]
+
+                            Adw.ButtonContent {
+                                label: _("Log in");
+                                icon-name: "dialog-password-symbolic";
+                            }
+                        }
                     }
                 }
             }
-        }
+        };
     }
 }
