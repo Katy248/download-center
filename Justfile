@@ -1,5 +1,6 @@
 APP_ID := "ru.katy248.download-center"
 SCHEMAS_DIR := "/usr/share/glib-2.0/schemas"
+INSTALL_DIR := "~/.local/share/" + APP_ID 
 
 compile-blueprints:
     blueprint-compiler compile ./download-center/MainWindow.blp --output ./download-center/MainWindow.ui
@@ -17,3 +18,7 @@ build: compile-blueprints
 
 run: build
     python -m download-center
+
+install: 
+    mkdir -p {{ INSTALL_DIR }}
+    cp ./data/128x128.png {{ INSTALL_DIR }}

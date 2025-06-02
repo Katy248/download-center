@@ -1,4 +1,7 @@
-from gi.repository import Gtk, Adw, Gio
+from gi.repository import Gtk, Adw, Gio, GdkPixbuf
+from pathlib import Path
+
+from .config import APP_ID
 
 from .DownloadsPage import DownloadsPage
 from .LoginPage import LoginPage
@@ -21,6 +24,11 @@ class MainWindow(Adw.ApplicationWindow):
         self.change_view(AUTH_STATE.is_authenticated())
 
         AUTH_STATE.connect(AUTHENTICATED_CHANGED_SIGNAL, self.on_authenticated)
+
+        pixbuf = GdkPixbuf.Pixbuf.new_from_file(
+            f"{Path.home()}/.local/share/{APP_ID}/128x128.png"
+        )
+        self.set_icon(pixbuf)
 
     def to_logout_view(self):
         self.view.replace([LoginPage()])
