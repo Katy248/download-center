@@ -19,7 +19,7 @@ template $LoginPage: Adw.NavigationPage {
 
                     Gtk.ListBox {
                         styles [
-                            "boxed-list-separate",
+                            "boxed-list",
                         ]
 
                         selection-mode: none;
@@ -27,7 +27,7 @@ template $LoginPage: Adw.NavigationPage {
                         Adw.PasswordEntryRow license_entry {
                             title: _("License key");
                             input-purpose: pin;
-                            max-length: 29;
+                            // max-length: 29;
                         }
 
                         Adw.SwitchRow persistence_check {
@@ -39,13 +39,23 @@ template $LoginPage: Adw.NavigationPage {
                             ]
                         }
 
-                        Adw.ButtonRow login_button {
+                        Adw.ActionRow login_button {
+                            activatable: true;
+
                             styles [
                                 "suggested-action",
                             ]
 
                             title: _("Log in");
-                            start-icon-name: "dialog-password-symbolic";
+
+                            [start]
+                            Gtk.Image {
+                                styles [
+                                    "circular"
+                                ]
+
+                                icon-name: "dialog-password-symbolic";
+                            }
                         }
                     }
                 }

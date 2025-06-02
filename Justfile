@@ -15,10 +15,15 @@ compile-gschema:
     sudo glib-compile-schemas {{ SCHEMAS_DIR }}
 
 build: compile-blueprints
+    glib-compile-resources ./data/{{ APP_ID }}.gresource.xml
 
 run: build
     python -m download-center
 
-install: 
+install: build compile-gschema
     mkdir -p {{ INSTALL_DIR }}
-    cp ./data/128x128.png {{ INSTALL_DIR }}
+    desktop-file-validate data/{{ APP_ID }}.desktop
+    sudo cp data/{{ APP_ID }}.desktop /usr/share/applications
+    sudo cp data/icons/128x128.png /usr/share/icons/hicolor/128x128/apps/{{ APP_ID }}.png
+    gtk4-update-icon-cache
+    cp ./data/ru.katy248.download-center.gresource {{ INSTALL_DIR }}}

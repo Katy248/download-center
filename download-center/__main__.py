@@ -1,5 +1,7 @@
 from gi.repository import Adw, Gio
 
+from pathlib import Path
+
 from .config import APP_ID
 from .MainWindow import MainWindow, MAIN_WINDOW
 
@@ -17,6 +19,8 @@ def on_activate(app: Adw.Application):
 if __name__ == "__main__":
     app = Adw.Application(application_id=APP_ID)
     app.connect("activate", on_activate)
+    app.set_resource_base_path("/ru/katy248/download-center")
+    # res = Gio.Resource.load(f"{Path.home()}/.local/share/{APP_ID}/{APP_ID}.gresource")
     about_action = Gio.SimpleAction.new("win.about", None)
 
     about_action.connect(

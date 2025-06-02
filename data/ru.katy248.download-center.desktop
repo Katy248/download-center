@@ -1,0 +1,6 @@
+[Desktop Entry]
+Exec=python -m /home/katy/src/download-center/download-center
+Icon=/home/katy/.local/share/icons/ru.katy248.download-center.png
+Terminal=false
+Type=Application
+Name=Download center

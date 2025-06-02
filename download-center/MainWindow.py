@@ -25,10 +25,9 @@ class MainWindow(Adw.ApplicationWindow):
 
         AUTH_STATE.connect(AUTHENTICATED_CHANGED_SIGNAL, self.on_authenticated)
 
-        pixbuf = GdkPixbuf.Pixbuf.new_from_file(
-            f"{Path.home()}/.local/share/{APP_ID}/128x128.png"
-        )
-        self.set_icon(pixbuf)
+        # pixbuf = GdkPixbuf.Pixbuf.new_from_file(
+        #     f"{Path.home()}/.local/share/{APP_ID}/128x128.png"
+        # )
 
     def to_logout_view(self):
         self.view.replace([LoginPage()])
