@@ -26,12 +26,11 @@ class DownloadRow(Adw.ActionRow):
         self.__hash_url = data["hashsum_download_link"]
         self.__download_url = data["download_link"]
 
-        self.hash_button.connect("clicked", self.on_hash_button_click)
-        self.download_button.connect("clicked", self.on_download_button_click)
-
+    @Gtk.Template.Callback()
     def on_hash_button_click(self, btn):
         self.download_hash(self.__hash_url)
 
+    @Gtk.Template.Callback()
     def on_download_button_click(self, btn):
         self.download_rpm(self.__download_url)
 

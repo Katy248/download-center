@@ -14,6 +14,7 @@ template $DownloadRow: Adw.ActionRow {
 
 			icon-name: "security-high-symbolic";
 			valign: center;
+			clicked => $on_hash_button_click();
 		}
 
 		Button download_button {
@@ -26,6 +27,7 @@ template $DownloadRow: Adw.ActionRow {
 
 			icon-name: "folder-download-symbolic";
 			valign: center;
+			clicked => $on_download_button_click();
 		}
 	}
 }

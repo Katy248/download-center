@@ -1,6 +1,10 @@
 [Desktop Entry]
-Exec=python -m /home/katy/src/download-center/download-center
-Icon=/home/katy/.local/share/icons/ru.katy248.download-center.png
+Name=Download center
+Exec=download-center
+Icon=ru.katy248.download-center
 Terminal=false
 Type=Application
-Name=Download center
+
+Keywords=RED ADM;РЕД АДМ;
+Categories=GTK;GNOME;Utility;FileTools;
+X-Purism-FormFactor=Workstation;Mobile;
