@@ -1,0 +1,5 @@
+{
+    "FSharp.suggestGitignore": false,
+    "C_Cpp.default.compileCommands": "/home/katy/src/download-center/builddir/compile_commands.json",
+    "C_Cpp.default.configurationProvider": "mesonbuild.mesonbuild"
+}

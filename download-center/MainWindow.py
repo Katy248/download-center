@@ -1,5 +1,4 @@
-from gi.repository import Gtk, Adw, Gio, GdkPixbuf
-from pathlib import Path
+from gi.repository import Gtk, Adw
 
 from .config import APP_ID
 
@@ -10,7 +9,7 @@ from .auth import AuthState, AUTH_STATE, AUTHENTICATED_CHANGED_SIGNAL
 MAIN_WINDOW: Adw.ApplicationWindow = None
 
 
-@Gtk.Template.from_file("./download-center/MainWindow.ui")
+@Gtk.Template.from_resource("/ru/katy248/download-center/MainWindow.ui")
 class MainWindow(Adw.ApplicationWindow):
     __gtype_name__ = "MainWindow"
     view: Adw.ToolbarView = Gtk.Template.Child()

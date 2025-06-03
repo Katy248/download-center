@@ -4,7 +4,7 @@ from .config import SETTINGS
 from .auth import AUTH_STATE, AUTHENTICATED_CHANGED_SIGNAL
 
 
-@Gtk.Template.from_file("./download-center/LoginPage.ui")
+@Gtk.Template.from_resource("/ru/katy248/download-center/LoginPage.ui")
 class LoginPage(Adw.NavigationPage):
     __gtype_name__ = "LoginPage"
 
@@ -15,7 +15,7 @@ class LoginPage(Adw.NavigationPage):
 
     def __init__(self):
         super().__init__()
-        self.login_button.connect("activated", self.on_login_button_click)
+        self.login_button.connect("clicked", self.on_login_button_click)
         SETTINGS.bind(
             "stay-logged-in",
             self.persistence_check,

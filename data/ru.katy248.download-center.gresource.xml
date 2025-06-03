@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<gresources>
-<gresource prefix="/ru/katy248/download-center">
-	<!-- <file preprocess="xml-stripblanks">data/ru.katy248.download-center.svg</file> -->
-	<!-- <file >data/ru.katy248.download-center.png</file> -->
-</gresource>
-</gresources>

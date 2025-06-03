@@ -5,7 +5,7 @@ from .auth import logout
 from .SettingsPage import SettingsPage
 
 
-@Gtk.Template.from_file("./download-center/DownloadsPage.ui")
+@Gtk.Template.from_resource("/ru/katy248/download-center/DownloadsPage.ui")
 class DownloadsPage(Adw.NavigationPage):
     __gtype_name__ = "DownloadsPage"
     current_builds_group = Gtk.Template.Child()

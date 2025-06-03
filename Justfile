@@ -3,11 +3,11 @@ SCHEMAS_DIR := "/usr/share/glib-2.0/schemas"
 INSTALL_DIR := "~/.local/share/" + APP_ID 
 
 compile-blueprints:
-    blueprint-compiler compile ./download-center/MainWindow.blp --output ./download-center/MainWindow.ui
-    blueprint-compiler compile ./download-center/DownloadsPage.blp --output ./download-center/DownloadsPage.ui
-    blueprint-compiler compile ./download-center/LoginPage.blp --output ./download-center/LoginPage.ui
-    blueprint-compiler compile ./download-center/DownloadRow.blp --output ./download-center/DownloadRow.ui
-    blueprint-compiler compile ./download-center/SettingsPage.blp --output ./download-center/SettingsPage.ui
+    blueprint-compiler compile ./download-center/MainWindow.blp --output ./data/MainWindow.ui
+    blueprint-compiler compile ./download-center/DownloadsPage.blp --output ./data/DownloadsPage.ui
+    blueprint-compiler compile ./download-center/LoginPage.blp --output ./data/LoginPage.ui
+    blueprint-compiler compile ./download-center/DownloadRow.blp --output ./data/DownloadRow.ui
+    blueprint-compiler compile ./download-center/SettingsPage.blp --output ./data/SettingsPage.ui
 
 # [dir('data')]
 compile-gschema:

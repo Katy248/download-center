@@ -17,44 +17,42 @@ template $LoginPage: Adw.NavigationPage {
                     margin-end: 20;
                     valign: center;
 
-                    Gtk.ListBox {
-                        styles [
-                            "boxed-list",
-                        ]
+                    Gtk.Box {
+                        orientation: vertical;
+                        spacing: 10;
 
-                        selection-mode: none;
-
-                        Adw.PasswordEntryRow license_entry {
-                            title: _("License key");
-                            input-purpose: pin;
-                            // max-length: 29;
-                        }
-
-                        Adw.SwitchRow persistence_check {
-                            title: _("Stay logged in");
-                            active: true;
-
+                        Gtk.ListBox {
                             styles [
-                                "selection-mode",
+                                "boxed-list",
                             ]
+
+                            selection-mode: none;
+
+                            Adw.PasswordEntryRow license_entry {
+                                title: _("License key");
+                                input-purpose: pin;
+                                // max-length: 29;
+                            }
+
+                            Adw.SwitchRow persistence_check {
+                                title: _("Stay logged in");
+                                active: true;
+
+                                styles [
+                                    "selection-mode",
+                                ]
+                            }
                         }
 
-                        Adw.ActionRow login_button {
-                            activatable: true;
-
+                        Gtk.Button login_button {
                             styles [
                                 "suggested-action",
+                                "pill"
                             ]
 
-                            title: _("Log in");
-
-                            [start]
-                            Gtk.Image {
-                                styles [
-                                    "circular"
-                                ]
-
+                            Adw.ButtonContent {
                                 icon-name: "dialog-password-symbolic";
+                                label: _("Log in");
                             }
                         }
                     }

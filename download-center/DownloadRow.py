@@ -4,7 +4,7 @@ import requests
 from .api import BASE_ADDR
 
 
-@Gtk.Template.from_file("./download-center/DownloadRow.ui")
+@Gtk.Template.from_resource("/ru/katy248/download-center/DownloadRow.ui")
 class DownloadRow(Adw.ActionRow):
     __gtype_name__ = "DownloadRow"
     __gsignals__ = {

@@ -2,7 +2,7 @@ from gi.repository import Adw, Gtk, Gio
 from .config import SETTINGS
 
 
-@Gtk.Template.from_file("./download-center/SettingsPage.ui")
+@Gtk.Template.from_resource("/ru/katy248/download-center/SettingsPage.ui")
 class SettingsPage(Adw.NavigationPage):
     __gtype_name__ = "SettingsPage"
 
