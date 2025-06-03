@@ -1,0 +1,10 @@
+# Blueprints
+download-center/DownloadRow.blp
+download-center/DownloadsPage.blp
+download-center/LoginPage.blp
+download-center/MainWindow.blp
+download-center/SettingsPage.blp
+
+# Python
+download-center/LoginPage.py
+download-center/DownloadsPage.py

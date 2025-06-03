@@ -6,3 +6,4 @@ gnome = import('gnome')
 
 subdir('download-center')
 subdir('data')
+subdir('po')

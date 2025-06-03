@@ -1,0 +1,96 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the download-center package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: download-center\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-03 13:38+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: download-center/DownloadRow.blp:8
+msgid "Download MD5 hash"
+msgstr ""
+
+#: download-center/DownloadRow.blp:21
+msgid "Download RPM"
+msgstr ""
+
+#: download-center/DownloadsPage.blp:5
+msgid "Downloads"
+msgstr ""
+
+#: download-center/DownloadsPage.blp:14
+msgid "Log out"
+msgstr ""
+
+#: download-center/DownloadsPage.blp:20
+msgid "About app"
+msgstr ""
+
+#: download-center/DownloadsPage.blp:27 download-center/SettingsPage.blp:5
+msgid "Settings"
+msgstr ""
+
+#: download-center/DownloadsPage.blp:46
+msgid "Current build"
+msgstr ""
+
+#: download-center/DownloadsPage.blp:50
+msgid "RED OS 7.3"
+msgstr ""
+
+#: download-center/DownloadsPage.blp:54
+msgid "RED OS 8"
+msgstr ""
+
+#: download-center/LoginPage.blp:5
+msgid "Login"
+msgstr ""
+
+#: download-center/LoginPage.blp:32 download-center/SettingsPage.blp:24
+msgid "License key"
+msgstr ""
+
+#: download-center/LoginPage.blp:38 download-center/SettingsPage.blp:20
+msgid "Stay logged in"
+msgstr ""
+
+#: download-center/LoginPage.blp:55
+msgid "Log in"
+msgstr ""
+
+#: download-center/MainWindow.blp:5
+msgid "Download center"
+msgstr ""
+
+#: download-center/SettingsPage.blp:17
+msgid "General"
+msgstr ""
+
+#: download-center/LoginPage.py:37
+msgid "Invalid license key"
+msgstr ""
+
+#: download-center/LoginPage.py:42
+msgid "Failed to authenticate"
+msgstr ""
+
+#: download-center/DownloadsPage.py:39
+#, python-format
+msgid "Started downloading to %s"
+msgstr ""
+
+#: download-center/DownloadsPage.py:42
+#, python-format
+msgid "Finished downloading to %s"
+msgstr ""

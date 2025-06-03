@@ -1,0 +1,86 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: download-center\n"
+"POT-Creation-Date: 2025-06-03 13:38+0300\n"
+"Last-Translator: Katy248 <petrovanton247@gmail.com>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+#: download-center/DownloadRow.blp:8
+msgid "Download MD5 hash"
+msgstr "Загрузить MD5 хеш"
+
+#: download-center/DownloadRow.blp:21
+msgid "Download RPM"
+msgstr "Загрузить RPM"
+
+#: download-center/DownloadsPage.blp:5
+msgid "Downloads"
+msgstr "Загрузки"
+
+#: download-center/DownloadsPage.blp:14
+msgid "Log out"
+msgstr "Выйти"
+
+#: download-center/DownloadsPage.blp:20
+msgid "About app"
+msgstr "О приложении"
+
+#: download-center/DownloadsPage.blp:27 download-center/SettingsPage.blp:5
+msgid "Settings"
+msgstr "Настройки"
+
+#: download-center/DownloadsPage.blp:46
+msgid "Current build"
+msgstr "Текущая сборка"
+
+#: download-center/DownloadsPage.blp:50
+msgid "RED OS 7.3"
+msgstr "РЕД ОС 7.3"
+
+#: download-center/DownloadsPage.blp:54
+msgid "RED OS 8"
+msgstr "РЕД ОС 8"
+
+#: download-center/LoginPage.blp:5
+msgid "Login"
+msgstr "Вход"
+
+#: download-center/LoginPage.blp:32 download-center/SettingsPage.blp:24
+msgid "License key"
+msgstr "Лицензионный ключ"
+
+#: download-center/LoginPage.blp:38 download-center/SettingsPage.blp:20
+msgid "Stay logged in"
+msgstr "Оставаться в системе"
+
+#: download-center/LoginPage.blp:55
+msgid "Log in"
+msgstr "Войти"
+
+#: download-center/MainWindow.blp:5
+msgid "Download center"
+msgstr "Цент загрузок"
+
+#: download-center/SettingsPage.blp:17
+msgid "General"
+msgstr "Основное"
+
+#: download-center/LoginPage.py:37
+msgid "Invalid license key"
+msgstr "Неверный лицензионный ключ"
+
+#: download-center/LoginPage.py:42
+msgid "Failed to authenticate"
+msgstr "Не получилось авторизоваться"
+
+#: download-center/DownloadsPage.py:39
+#, python-format
+msgid "Started downloading to %s"
+msgstr "Началась загрузка в %s"
+
+#: download-center/DownloadsPage.py:42
+#, python-format
+msgid "Finished downloading to %s"
+msgstr "Завершена загрузка в %s"

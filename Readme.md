@@ -8,7 +8,7 @@
 - [X] Clean libadwaita look
 - [X] Downloading files
 - [X] Persistence authentication
-- [ ] Localization
+- [X] Localization
 
 ## Dependencies
 

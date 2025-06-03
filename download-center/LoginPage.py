@@ -1,5 +1,6 @@
 from gi.repository import Gtk, Adw, Gio
 from .config import SETTINGS
+from gettext import gettext as _
 
 from .auth import AUTH_STATE, AUTHENTICATED_CHANGED_SIGNAL
 
@@ -33,12 +34,12 @@ class LoginPage(Adw.NavigationPage):
     def on_login_button_click(self, btn: Gtk.Button):
         key = self.license_entry.get_text()
         if key is None or len(key) <= 0:
-            self.add_toast("Invalid license key")
+            self.add_toast(_("Invalid license key"))
             self.license_entry.add_css_class("error")
             return
 
         if not AUTH_STATE.authenticate(key):
-            self.add_toast("Failed to authenticate")
+            self.add_toast(_("Failed to authenticate"))
             self.license_entry.add_css_class("error")
 
     def add_toast(self, msg):

@@ -3,6 +3,7 @@ from .api import get_files
 from .DownloadRow import DownloadRow
 from .auth import logout
 from .SettingsPage import SettingsPage
+from gettext import gettext as _
 
 
 @Gtk.Template.from_resource("/ru/katy248/download-center/DownloadsPage.ui")
@@ -35,10 +36,10 @@ class DownloadsPage(Adw.NavigationPage):
             row.connect("download-finished", self.on_download_finished)
 
     def on_download_started(self, _: DownloadRow, file_url: str, output_file: str):
-        self.add_toast(f"Started downloading to {output_file}")
+        self.add_toast(_("Started downloading to %s") % output_file)
 
     def on_download_finished(self, _: DownloadRow, file_url: str, output_file: str):
-        self.add_toast(f"Finished downloading to {output_file}")
+        self.add_toast(_("Finished downloading to %s") % output_file)
 
     def add_toast(self, msg):
         toast = Adw.Toast.new(msg)
