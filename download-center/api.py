@@ -63,3 +63,12 @@ def get_files(current=True):
         return False
 
     return response.json()
+
+
+def get_changelogs(changelogs_file_url: str) -> bytes:
+    response = requests.post(
+        BASE_ADDR + "/download/files",
+        data={"file": changelogs_file_url},
+        headers={"Authorization": f"Bearer {__jwt}"},
+    )
+    return response.content

@@ -1,13 +1,14 @@
 from gi.repository import Gtk, Adw, Gio
 
-from .config import APP_NAME, VERSION
+from .config import APP_NAME, RELEASE_NOTES_FILE, VERSION
 
 from .DownloadsPage import DownloadsPage
 from .LoginPage import LoginPage
 from .auth import AuthState, AUTH_STATE, AUTHENTICATED_CHANGED_SIGNAL
 
-MAIN_WINDOW: Adw.ApplicationWindow = None
 from gettext import gettext as _
+
+MAIN_WINDOW: Adw.ApplicationWindow = None
 
 
 @Gtk.Template.from_resource("/ru/katy248/download-center/MainWindow.ui")
@@ -41,6 +42,9 @@ class MainWindow(Adw.ApplicationWindow):
         dialog.set_website("https://gitlab.com/Katy248/download-center")
         dialog.set_issue_url("https://gitlab.com/Katy248/download-center/-/issues")
         dialog.set_follows_content_size(False)
+        dialog.set_release_notes_version(VERSION)
+        with open(RELEASE_NOTES_FILE, "rb") as notes_file:
+            dialog.set_release_notes(notes_file.read().decode("utf-8"))
         dialog.present(self.view)
 
     def to_logout_view(self):

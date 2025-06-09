@@ -12,26 +12,25 @@ class DownloadsPage(Adw.NavigationPage):
     current_builds_group = Gtk.Template.Child()
     redos7_builds_group = Gtk.Template.Child()
     redos8_builds_group = Gtk.Template.Child()
+    astra_builds_group = Gtk.Template.Child()
     logout_button: Gtk.Button = Gtk.Template.Child()
+    content_box: Gtk.Box = Gtk.Template.Child()
 
     toast_overlay: Adw.ToastOverlay = Gtk.Template.Child()
 
     def __init__(self):
         super().__init__()
-        data = get_files()
-        self.current_builds_group.set_description(data["version"])
+        self.data = get_files()
+        self.current_builds_group.set_description(self.data["version"])
+        self.fill_build_group(self.redos7_builds_group, "redos7")
+        self.fill_build_group(self.redos8_builds_group, "redos8")
+        self.fill_build_group(self.astra_builds_group, "astra")
 
-        redos7_builds = [b for b in data["rpm"] if b["build"] == "redos7"]
-        for build in redos7_builds:
+    def fill_build_group(self, group: Adw.PreferencesGroup, build_name: str):
+        builds = [b for b in self.data["rpm"] if b["build"] == build_name]
+        for build in builds:
             row = DownloadRow(build)
-            self.redos7_builds_group.add(row)
-            row.connect("download-started", self.on_download_started)
-            row.connect("download-finished", self.on_download_finished)
-
-        redos8_builds = [b for b in data["rpm"] if b["build"] == "redos8"]
-        for build in redos8_builds:
-            row = DownloadRow(build)
-            self.redos8_builds_group.add(row)
+            group.add(row)
             row.connect("download-started", self.on_download_started)
             row.connect("download-finished", self.on_download_finished)
 
