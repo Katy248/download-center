@@ -1,4 +1,3 @@
-pkgdatadir = get_option('prefix') / get_option('datadir') / meson.project_name()
 gnome.compile_resources(
     project_id,
     'gresource.xml',
@@ -6,6 +5,7 @@ gnome.compile_resources(
     gresource_bundle: true,
     install: true,
     install_dir: pkgdatadir,
+    dependencies: [blueprints],
 )
 install_data(
     'ru.katy248.download-center.gschema.xml',
