@@ -9,6 +9,7 @@ class Application(Adw.Application):
         self.set_resource_base_path("/ru/katy248/download-center")
 
         self.set_accels_for_action("win.about", ["<Control>h"])
+        self.set_accels_for_action("win.settings", ["<Ctrl>S"])
 
     def do_activate(app: Adw.Application):
         window = MainWindow(app)

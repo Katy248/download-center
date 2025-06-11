@@ -1,9 +1,10 @@
-from gi.repository import Gtk, Adw
+from gi.repository import Gtk, Adw, Gio
+from gettext import gettext as _
 from .api import get_files
 from .DownloadRow import DownloadRow
 from .auth import logout
 from .SettingsPage import SettingsPage
-from gettext import gettext as _
+from .actions import settings_action
 
 
 @Gtk.Template.from_resource("/ru/katy248/download-center/DownloadsPage.ui")
@@ -25,6 +26,8 @@ class DownloadsPage(Adw.NavigationPage):
         self.fill_build_group(self.redos7_builds_group, "redos7")
         self.fill_build_group(self.redos8_builds_group, "redos8")
         self.fill_build_group(self.astra_builds_group, "astra")
+
+        settings_action.connect("activate", self.to_settings_page)
 
     def fill_build_group(self, group: Adw.PreferencesGroup, build_name: str):
         builds = [b for b in self.data["rpm"] if b["build"] == build_name]
@@ -49,6 +52,6 @@ class DownloadsPage(Adw.NavigationPage):
     def on_logout_button_clicked(self, args):
         logout()
 
-    @Gtk.Template.Callback()
-    def on_settings_button_clicked(self, _):
+    # @Gtk.Template.Callback()
+    def to_settings_page(self, _, __):
         self.get_parent().push(SettingsPage())

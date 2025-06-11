@@ -5,6 +5,7 @@ from .config import APP_NAME, RELEASE_NOTES_FILE, VERSION
 from .DownloadsPage import DownloadsPage
 from .LoginPage import LoginPage
 from .auth import AuthState, AUTH_STATE, AUTHENTICATED_CHANGED_SIGNAL
+from .actions import settings_action
 
 from gettext import gettext as _
 
@@ -29,6 +30,7 @@ class MainWindow(Adw.ApplicationWindow):
         about_action = Gio.SimpleAction.new("about", None)
         about_action.connect("activate", self.on_about_activated)
         self.add_action(about_action)
+        self.add_action(settings_action)
 
     def on_about_activated(self, action, _):
         dialog = Adw.AboutDialog()

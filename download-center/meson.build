@@ -9,6 +9,7 @@ config_source_file = configure_file(
 )
 
 sources = [
+    'actions.py',
     'DownloadRow.py',
     'DownloadsPage.py',
     'LoginPage.py',

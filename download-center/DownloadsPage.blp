@@ -1,6 +1,21 @@
 using Gtk 4.0;
 using Adw 1;
 
+menu main_menu {
+    item {
+        label: _("Settings");
+        icon-name: "org.gnome.Settings-symbolic";
+        // => $on_settings_button_clicked();
+        action: "win.settings";
+    }
+
+    item {
+        label: _("About app");
+        action: "win.about";
+        icon-name: "help-about-symbolic";
+    }
+}
+
 template $DownloadsPage: Adw.NavigationPage {
     title: _("Downloads");
 
@@ -15,17 +30,10 @@ template $DownloadsPage: Adw.NavigationPage {
             }
 
             [end]
-            Button {
-                icon-name: "help-about-symbolic";
-                tooltip-text: _("About app");
-                action-name: "win.about";
-            }
-
-            [end]
-            Button {
-                icon-name: "org.gnome.Settings-symbolic";
-                tooltip-text: _("Settings");
-                clicked => $on_settings_button_clicked();
+            Gtk.MenuButton {
+                menu-model: main_menu;
+                icon-name: "open-menu-symbolic";
+                tooltip-text: "Open menu";
             }
         }
 
@@ -46,16 +54,16 @@ template $DownloadsPage: Adw.NavigationPage {
                             title: _("Current build");
                         }
 
+                        Adw.PreferencesGroup astra_builds_group {
+                            title: _("Astra Linux");
+                        }
+
                         Adw.PreferencesGroup redos7_builds_group {
                             title: _("RED OS 7.3");
                         }
 
                         Adw.PreferencesGroup redos8_builds_group {
                             title: _("RED OS 8");
-                        }
-
-                        Adw.PreferencesGroup astra_builds_group {
-                            title: _("Astra Linux");
                         }
                     }
                 }
