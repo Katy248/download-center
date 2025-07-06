@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: download-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-03 13:38+0300\n"
+"POT-Creation-Date: 2025-07-06 16:42+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,31 +25,35 @@ msgstr ""
 msgid "Download RPM"
 msgstr ""
 
-#: download-center/DownloadsPage.blp:5
-msgid "Downloads"
-msgstr ""
-
-#: download-center/DownloadsPage.blp:14
-msgid "Log out"
-msgstr ""
-
-#: download-center/DownloadsPage.blp:20
-msgid "About app"
-msgstr ""
-
-#: download-center/DownloadsPage.blp:27 download-center/SettingsPage.blp:5
+#: download-center/DownloadsPage.blp:6 download-center/SettingsPage.blp:5
 msgid "Settings"
 msgstr ""
 
-#: download-center/DownloadsPage.blp:46
-msgid "Current build"
+#: download-center/DownloadsPage.blp:13
+msgid "About app"
 msgstr ""
 
-#: download-center/DownloadsPage.blp:50
-msgid "RED OS 7.3"
+#: download-center/DownloadsPage.blp:20
+msgid "Downloads"
+msgstr ""
+
+#: download-center/DownloadsPage.blp:29
+msgid "Log Out"
 msgstr ""
 
 #: download-center/DownloadsPage.blp:54
+msgid "Current build"
+msgstr ""
+
+#: download-center/DownloadsPage.blp:58
+msgid "Astra Linux"
+msgstr ""
+
+#: download-center/DownloadsPage.blp:62
+msgid "RED OS 7.3"
+msgstr ""
+
+#: download-center/DownloadsPage.blp:66
 msgid "RED OS 8"
 msgstr ""
 
@@ -85,12 +89,12 @@ msgstr ""
 msgid "Failed to authenticate"
 msgstr ""
 
-#: download-center/DownloadsPage.py:39
+#: download-center/DownloadsPage.py:41
 #, python-format
 msgid "Started downloading to %s"
 msgstr ""
 
-#: download-center/DownloadsPage.py:42
+#: download-center/DownloadsPage.py:44
 #, python-format
 msgid "Finished downloading to %s"
 msgstr ""
