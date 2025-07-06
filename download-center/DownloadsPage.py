@@ -37,10 +37,10 @@ class DownloadsPage(Adw.NavigationPage):
             row.connect("download-started", self.on_download_started)
             row.connect("download-finished", self.on_download_finished)
 
-    def on_download_started(self, _: DownloadRow, file_url: str, output_file: str):
+    def on_download_started(self, row: DownloadRow, file_url: str, output_file: str):
         self.add_toast(_("Started downloading to %s") % output_file)
 
-    def on_download_finished(self, _: DownloadRow, file_url: str, output_file: str):
+    def on_download_finished(self, row: DownloadRow, file_url: str, output_file: str):
         self.add_toast(_("Finished downloading to %s") % output_file)
 
     def add_toast(self, msg):
