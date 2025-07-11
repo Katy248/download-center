@@ -6,6 +6,7 @@ from .DownloadsPage import DownloadsPage
 from .LoginPage import LoginPage
 from .auth import AuthState, AUTH_STATE, AUTHENTICATED_CHANGED_SIGNAL
 from .actions import settings_action
+from .SettingsDialog import SettingsDialog
 
 from gettext import gettext as _
 
@@ -29,8 +30,13 @@ class MainWindow(Adw.ApplicationWindow):
 
         about_action = Gio.SimpleAction.new("about", None)
         about_action.connect("activate", self.on_about_activated)
+        settings_action.connect("activate", self.on_settings_activated)
         self.add_action(about_action)
         self.add_action(settings_action)
+
+    def on_settings_activated(self, action, _):
+        dialog = SettingsDialog()
+        dialog.present(self)
 
     def on_about_activated(self, action, _):
         dialog = Adw.AboutDialog()
@@ -45,9 +51,12 @@ class MainWindow(Adw.ApplicationWindow):
         dialog.set_issue_url("https://gitlab.com/Katy248/download-center/-/issues")
         dialog.set_follows_content_size(False)
         dialog.set_release_notes_version(VERSION)
+
+        print(f"[DEBUG {APP_NAME}] RELEASE_NOTES_FILE: {RELEASE_NOTES_FILE}")
+
         with open(RELEASE_NOTES_FILE, "rb") as notes_file:
             dialog.set_release_notes(notes_file.read().decode("utf-8"))
-        dialog.present(self.view)
+        dialog.present(self)
 
     def to_logout_view(self):
         self.view.replace([LoginPage()])

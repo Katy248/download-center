@@ -12,8 +12,12 @@ install_data(
     install_dir: get_option('prefix') / get_option('datadir') / 'glib-2.0/schemas',
 )
 install_data(
-    'ru.katy248.download-center.svg',
+    'icons/ru.katy248.download-center.svg',
     install_dir: get_option('datadir') / 'icons/hicolor/scalable/apps',
+)
+install_data(
+    'icons/ru.katy248.download-center-symbolic.svg',
+    install_dir: get_option('datadir') / 'icons/hicolor/symbolic/apps',
 )
 install_data(
     'ru.katy248.download-center.desktop',

@@ -14,7 +14,7 @@ sources = [
     'DownloadsPage.py',
     'LoginPage.py',
     'MainWindow.py',
-    'SettingsPage.py',
+    'SettingsDialog.py',
     '__init__.py',
     '__main__.py',
     'api.py',
@@ -34,7 +34,7 @@ blueprints = custom_target(
         'DownloadsPage.blp',
         'LoginPage.blp',
         'MainWindow.blp',
-        'SettingsPage.blp',
+        'SettingsDialog.blp',
     ),
     output: 'data',
     command: [

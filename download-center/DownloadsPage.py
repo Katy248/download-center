@@ -3,7 +3,6 @@ from gettext import gettext as _
 from .api import get_files
 from .DownloadRow import DownloadRow
 from .auth import logout
-from .SettingsPage import SettingsPage
 from .actions import settings_action
 
 
@@ -27,7 +26,7 @@ class DownloadsPage(Adw.NavigationPage):
         self.fill_build_group(self.redos8_builds_group, "redos8")
         self.fill_build_group(self.astra_builds_group, "astra")
 
-        settings_action.connect("activate", self.to_settings_page)
+        # settings_action.connect("activate", self.to_settings_page)
 
     def fill_build_group(self, group: Adw.PreferencesGroup, build_name: str):
         builds = [b for b in self.data["rpm"] if b["build"] == build_name]
@@ -53,5 +52,5 @@ class DownloadsPage(Adw.NavigationPage):
         logout()
 
     # @Gtk.Template.Callback()
-    def to_settings_page(self, _, __):
-        self.get_parent().push(SettingsPage())
+    # def to_settings_page(self, _, __):
+    #     self.get_parent().push(SettingsPage())

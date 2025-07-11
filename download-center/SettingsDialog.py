@@ -2,8 +2,8 @@ from gi.repository import Adw, Gtk, Gio
 from .config import SETTINGS
 
 
-@Gtk.Template.from_resource("/ru/katy248/download-center/SettingsPage.ui")
-class SettingsPage(Adw.NavigationPage):
+@Gtk.Template.from_resource("/ru/katy248/download-center/SettingsDialog.ui")
+class SettingsDialog(Adw.PreferencesDialog):
     __gtype_name__ = "SettingsPage"
 
     persistence_row = Gtk.Template.Child()
