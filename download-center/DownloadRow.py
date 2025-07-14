@@ -2,6 +2,7 @@ from threading import Thread
 from gi.repository import Adw, Gtk, GObject, Gio
 import requests
 from .api import BASE_ADDR
+from typing import Callable
 
 
 @Gtk.Template.from_resource("/ru/katy248/download-center/DownloadRow.ui")
@@ -27,25 +28,28 @@ class DownloadRow(Adw.ActionRow):
         self.__download_url = data["download_link"]
 
     @Gtk.Template.Callback()
-    def on_hash_button_click(self, btn):
+    def on_hash_button_click(self, btn: Gtk.Button):
         self.download_hash(self.__hash_url)
 
     @Gtk.Template.Callback()
-    def on_download_button_click(self, btn):
+    def on_download_button_click(self, btn: Gtk.Button):
         self.download_rpm(self.__download_url)
 
-    def select_output_and_download(self, file_url: str, callback_fn) -> str:
+    def select_output_and_download(
+        self, file_url: str, callback_fn: Callable[[str, str], None]
+    ) -> None:
         file_name = file_url.split("/")[-1]
-        gio_file = Gio.File.new_for_path(file_name)
+        gio_file: Gio.File = Gio.File.new_for_path(file_name)
 
         file_dialog = Gtk.FileDialog()
         file_dialog.set_initial_file(gio_file)
 
-        def callback(source, res):
+        def callback(source: Gtk.FileDialog, res: Gio.AsyncResult):
             nonlocal gio_file
             gio_file = source.save_finish(res)
-            filepath = gio_file.get_path()
-            if not filepath == "" or filepath is None:
+            filepath: str | None = gio_file.get_path()
+
+            if not filepath == "" and filepath is not None:
                 callback_fn(file_url, filepath)
 
         from .MainWindow import MAIN_WINDOW

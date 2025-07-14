@@ -19,9 +19,20 @@ install_data(
     'icons/ru.katy248.download-center-symbolic.svg',
     install_dir: pkgdatadir / 'icons/hicolor/symbolic/apps',
 )
+desktop_file = 'ru.katy248.download-center.desktop'
+
+dfv = find_program('desktop-file-validate', required: false)
+if dfv.found()
+    custom_target(
+        'desktop-file-validation',
+        input: desktop_file,
+        command: [dfv, '@INPUT@'],
+        output: '.',
+    )
+endif
 
 install_data(
-    'ru.katy248.download-center.desktop',
+    desktop_file,
     install_dir: get_option('prefix') / get_option('datadir') / 'applications',
 )
 install_data(

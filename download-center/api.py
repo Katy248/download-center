@@ -5,8 +5,8 @@ import datetime
 
 BASE_ADDR = "https://update-center.red-soft.ru"
 
-__jwt: str
-__license_key: str
+__jwt: str | None
+__license_key: str | None
 __last_auth: datetime.datetime = datetime.datetime.fromtimestamp(0)
 
 
@@ -50,7 +50,7 @@ def logout():
     __license_key = None
 
 
-def get_files(current=True):
+def get_files():
     if not __check_auth():
         return False
 

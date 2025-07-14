@@ -1,9 +1,8 @@
-from gi.repository import Gtk, Adw, Gio
+from gi.repository import Gtk, Adw
 from gettext import gettext as _
 from .api import get_files
 from .DownloadRow import DownloadRow
 from .auth import logout
-from .actions import settings_action
 
 
 @Gtk.Template.from_resource("/ru/katy248/download-center/DownloadsPage.ui")
@@ -20,15 +19,22 @@ class DownloadsPage(Adw.NavigationPage):
 
     def __init__(self):
         super().__init__()
+        self.setup_builds()
+
+    def setup_builds(self):
         self.data = get_files()
+        if self.data is False:
+            return
         self.current_builds_group.set_description(self.data["version"])
         self.fill_build_group(self.redos7_builds_group, "redos7")
         self.fill_build_group(self.redos8_builds_group, "redos8")
         self.fill_build_group(self.astra_builds_group, "astra")
 
-        # settings_action.connect("activate", self.to_settings_page)
-
     def fill_build_group(self, group: Adw.PreferencesGroup, build_name: str):
+        if self.data is False:
+            return
+        if self.data["rpm"] is None:
+            return
         builds = [b for b in self.data["rpm"] if b["build"] == build_name]
         for build in builds:
             row = DownloadRow(build)
@@ -42,7 +48,7 @@ class DownloadsPage(Adw.NavigationPage):
     def on_download_finished(self, row: DownloadRow, file_url: str, output_file: str):
         self.add_toast(_("Finished downloading to %s") % output_file)
 
-    def add_toast(self, msg):
+    def add_toast(self, msg: str):
         toast = Adw.Toast.new(msg)
         toast.set_timeout(2)
         self.toast_overlay.add_toast(toast)
