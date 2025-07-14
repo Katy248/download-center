@@ -4,6 +4,7 @@ Exec=download-center
 Icon=ru.katy248.download-center
 Terminal=false
 Type=Application
+MimeType=
 
 Keywords=RED ADM;РЕД АДМ;
 Categories=GTK;GNOME;Utility;FileTools;

@@ -13,12 +13,13 @@ install_data(
 )
 install_data(
     'icons/ru.katy248.download-center.svg',
-    install_dir: get_option('datadir') / 'icons/hicolor/scalable/apps',
+    install_dir: pkgdatadir / 'icons/hicolor/scalable/apps',
 )
 install_data(
     'icons/ru.katy248.download-center-symbolic.svg',
-    install_dir: get_option('datadir') / 'icons/hicolor/symbolic/apps',
+    install_dir: pkgdatadir / 'icons/hicolor/symbolic/apps',
 )
+
 install_data(
     'ru.katy248.download-center.desktop',
     install_dir: get_option('prefix') / get_option('datadir') / 'applications',
