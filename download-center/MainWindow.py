@@ -10,13 +10,13 @@ from .SettingsDialog import SettingsDialog
 
 from gettext import gettext as _
 
-MAIN_WINDOW: Adw.ApplicationWindow = None
+MAIN_WINDOW: Adw.ApplicationWindow | None = None
 
 
 @Gtk.Template.from_resource("/ru/katy248/download-center/MainWindow.ui")
 class MainWindow(Adw.ApplicationWindow):
     __gtype_name__ = "MainWindow"
-    view: Adw.ToolbarView = Gtk.Template.Child()
+    view: Adw.NavigationView = Gtk.Template.Child()
 
     def __init__(self, app: Adw.Application, **kwargs):
         global MAIN_WINDOW

@@ -1,0 +1,8 @@
+{
+  "include": [
+    "src"
+  ],
+  "ignore": [
+    "download-center/config.py"
+  ]
+}

@@ -1,7 +1,6 @@
 from http.client import OK
 import json
 import requests
-from .config import DEVELOPMENT
 import datetime
 
 BASE_ADDR = "https://update-center.red-soft.ru"
