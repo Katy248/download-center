@@ -12,7 +12,8 @@
 
 ## Dependencies
 
-- [Python 3.13]()
+- Python 3.11
+- python3-requests
 - [PyGObject](https://pygobject.gnome.org/)
 - Libadwaita >= 1.5
 
