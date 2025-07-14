@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>ru.katy248.download-center</id>
+
+  <name>Download Center</name>
+  <!-- <summary>Proves that we can use Vala and Gtk</summary> -->
+
+  <metadata_license>CC-BY-4.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+
+  <description>
+    <p>
+      Cool app for downloading RED ADM stuff
+    </p>
+  </description>
+
+  <launchable type="desktop-id">ru.katy248.download-center.desktop</launchable>
+</component>

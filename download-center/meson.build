@@ -11,6 +11,7 @@ config_source_file = configure_file(
 )
 
 sources = files(
+    'DonationDialog.py',
     'DownloadRow.py',
     'DownloadsPage.py',
     'LoginPage.py',
@@ -32,6 +33,7 @@ python.install_sources(sources, subdir: meson.project_name())
 blueprints = custom_target(
     'blueprints',
     input: files(
+        'DonationDialog.blp',
         'DownloadRow.blp',
         'DownloadsPage.blp',
         'LoginPage.blp',

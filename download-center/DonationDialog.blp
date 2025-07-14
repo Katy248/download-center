@@ -1,0 +1,69 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $DonationDialog: Adw.Dialog {
+    title: _("Help this app");
+
+    Gtk.Box {
+        orientation: vertical;
+
+        Adw.HeaderBar {
+            styles [
+                "flat"
+            ]
+        }
+
+        Adw.Clamp {
+            margin-start: 20;
+            margin-end: 20;
+            margin-top: 20;
+            margin-bottom: 20;
+
+            Gtk.Box {
+                orientation: vertical;
+                spacing: 20;
+
+                Label {
+                    styles [
+                        "title-1"
+                    ]
+
+                    label: _("Cool app isn't it?");
+                    wrap: true;
+                }
+
+                Label {
+                    label: _("So maybe you can help it to improve");
+                    wrap: true;
+                }
+
+                Label {
+                    label: _("There is several options that helps to fix existing bugs, develop new features or just maintain application in current state");
+                    wrap: true;
+                }
+
+                Gtk.Box {
+                    styles [
+                        "linked"
+                    ]
+
+                    hexpand: true;
+
+                    Gtk.Button {
+                        Adw.ButtonContent {
+                            label: _("Donate");
+                            icon-name: "emote-love-symbolic";
+                        }
+                    }
+
+                    Gtk.Button {
+                        Adw.ButtonContent {
+                            label: _("Contribute");
+                            icon-name: "emblem-documents-symbolic";
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

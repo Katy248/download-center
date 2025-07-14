@@ -11,6 +11,8 @@ install_data(
     'ru.katy248.download-center.gschema.xml',
     install_dir: get_option('prefix') / get_option('datadir') / 'glib-2.0/schemas',
 )
+gnome.compile_schemas(depend_files: 'ru.katy248.download-center.gschema.xml')
+
 install_data(
     'icons/ru.katy248.download-center.svg',
     install_dir: pkgdatadir / 'icons/hicolor/scalable/apps',
@@ -35,13 +37,20 @@ i18n.merge_file(
     output: desktop_file,
     input: desktop_file,
     type: 'desktop',
-    po_dir: '../po',
+    po_dir: meson.project_source_root() / 'po',
+    install: true,
     install_dir: get_option('prefix') / get_option('datadir') / 'applications',
 )
 
 install_data(
     'download-center',
     install_dir: get_option('prefix') / get_option('bindir'),
+)
+
+install_data(
+    'metainfo.xml',
+    install_dir: get_option('prefix') / get_option('datadir') / 'metainfo',
+    rename: 'ru.katy248.download-center.metainfo.xml',
 )
 
 gnome.post_install(
