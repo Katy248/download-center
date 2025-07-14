@@ -1,6 +1,7 @@
 from http.client import OK
 import json
 import requests
+from .config import DEVELOPMENT
 import datetime
 
 BASE_ADDR = "https://update-center.red-soft.ru"
@@ -62,6 +63,9 @@ def get_files():
     if not response.status_code == OK:
         return False
 
+    if DEVELOPMENT:
+        print(response.content.decode("utf-8"))
+
     return response.json()
 
 
@@ -69,6 +73,11 @@ def get_changelogs(changelogs_file_url: str) -> bytes:
     response = requests.post(
         BASE_ADDR + "/download/files",
         data={"file": changelogs_file_url},
-        headers={"Authorization": f"Bearer {__jwt}"},
+        headers={
+            "Authorization": f"Bearer {__jwt}",
+            "Content-Type": "application/json",
+        },
     )
+    if DEVELOPMENT:
+        print(response.content)
     return response.content
