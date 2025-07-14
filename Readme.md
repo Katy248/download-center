@@ -16,6 +16,10 @@
 - [PyGObject](https://pygobject.gnome.org/)
 - Libadwaita >= 1.5
 
+## Development
+
+On RED OS prefix should be `/usr`
+
 ## Screenshots
 
 ![Main page screenshot](other/screenshots/main-page.png)
