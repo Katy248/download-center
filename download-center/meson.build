@@ -10,8 +10,7 @@ config_source_file = configure_file(
     configuration: config,
 )
 
-sources = [
-    'actions.py',
+sources = files(
     'DownloadRow.py',
     'DownloadsPage.py',
     'LoginPage.py',
@@ -19,11 +18,12 @@ sources = [
     'SettingsDialog.py',
     '__init__.py',
     '__main__.py',
+    'actions.py',
     'api.py',
     'app.py',
     'auth.py',
-    config_source_file,
-]
+)
+sources += config_source_file
 
 python = import('python').find_installation('python3')
 
