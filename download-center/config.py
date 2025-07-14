@@ -9,9 +9,14 @@ SETTINGS = Gio.Settings.new(APP_ID)
 
 
 GRESOURCE_FILE = f"@PKGDIR@/{APP_ID}.gresource"
-LOCALE_DIR = "@PKGDIR@/locale"
+LOCALE_DIR = "@LOCALEDIR@"
 VERSION = "@VERSION@"
 
 RELEASE_NOTES_FILE = "@PKGDIR@/RELEASE_NOTES"
 
 DEVELOPMENT : bool = @DEVELOPMENT@
+
+if DEVELOPMENT:
+    print(f"GResource file {GRESOURCE_FILE}")
+    print(f"Locale dir {LOCALE_DIR}")
+    print(f"Release notes file {RELEASE_NOTES_FILE}")

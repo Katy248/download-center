@@ -8,3 +8,6 @@ download-center/SettingsDialog.blp
 # Python
 download-center/LoginPage.py
 download-center/DownloadsPage.py
+
+# Data
+data/ru.katy248.download-center.desktop

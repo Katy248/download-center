@@ -8,13 +8,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: download-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-14 10:41+0300\n"
+"POT-Creation-Date: 2025-07-14 13:05+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: download-center/DownloadRow.blp:8
@@ -45,19 +45,19 @@ msgstr ""
 msgid "App Menu"
 msgstr ""
 
-#: download-center/DownloadsPage.blp:54
+#: download-center/DownloadsPage.blp:53
 msgid "Current build"
 msgstr ""
 
-#: download-center/DownloadsPage.blp:58
+#: download-center/DownloadsPage.blp:57
 msgid "Astra Linux"
 msgstr ""
 
-#: download-center/DownloadsPage.blp:62
+#: download-center/DownloadsPage.blp:61
 msgid "RED OS 7.3"
 msgstr ""
 
-#: download-center/DownloadsPage.blp:66
+#: download-center/DownloadsPage.blp:65
 msgid "RED OS 8"
 msgstr ""
 
@@ -77,7 +77,7 @@ msgstr ""
 msgid "Log in"
 msgstr ""
 
-#: download-center/MainWindow.blp:5
+#: download-center/MainWindow.blp:5 data/ru.katy248.download-center.desktop:3
 msgid "Download center"
 msgstr ""
 
@@ -93,12 +93,16 @@ msgstr ""
 msgid "Failed to authenticate"
 msgstr ""
 
-#: download-center/DownloadsPage.py:40
+#: download-center/DownloadsPage.py:46
 #, python-format
 msgid "Started downloading to %s"
 msgstr ""
 
-#: download-center/DownloadsPage.py:43
+#: download-center/DownloadsPage.py:49
 #, python-format
 msgid "Finished downloading to %s"
+msgstr ""
+
+#: data/ru.katy248.download-center.desktop:10
+msgid "RED ADM;РЕД АДМ;"
 msgstr ""

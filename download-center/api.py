@@ -63,9 +63,6 @@ def get_files():
     if not response.status_code == OK:
         return False
 
-    if DEVELOPMENT:
-        print(response.content.decode("utf-8"))
-
     return response.json()
 
 
@@ -78,6 +75,4 @@ def get_changelogs(changelogs_file_url: str) -> bytes:
             "Content-Type": "application/json",
         },
     )
-    if DEVELOPMENT:
-        print(response.content)
     return response.content

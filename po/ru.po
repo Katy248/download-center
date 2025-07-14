@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: download-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-14 10:41+0300\n"
+"POT-Creation-Date: 2025-07-14 13:05+0300\n"
 "Last-Translator: Katy248 <petrovanton247@gmail.com>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -37,19 +37,19 @@ msgstr "Выход"
 msgid "App Menu"
 msgstr "Меню Приложения"
 
-#: download-center/DownloadsPage.blp:54
+#: download-center/DownloadsPage.blp:53
 msgid "Current build"
 msgstr "Текущая сборка"
 
-#: download-center/DownloadsPage.blp:58
+#: download-center/DownloadsPage.blp:57
 msgid "Astra Linux"
 msgstr "Astra Linux"
 
-#: download-center/DownloadsPage.blp:62
+#: download-center/DownloadsPage.blp:61
 msgid "RED OS 7.3"
 msgstr "РЕД ОС 7.3"
 
-#: download-center/DownloadsPage.blp:66
+#: download-center/DownloadsPage.blp:65
 msgid "RED OS 8"
 msgstr "РЕД ОС 8"
 
@@ -69,7 +69,7 @@ msgstr "Оставаться в системе"
 msgid "Log in"
 msgstr "Войти"
 
-#: download-center/MainWindow.blp:5
+#: download-center/MainWindow.blp:5 data/ru.katy248.download-center.desktop:3
 msgid "Download center"
 msgstr "Цент загрузок"
 
@@ -85,12 +85,16 @@ msgstr "Неверный лицензионный ключ"
 msgid "Failed to authenticate"
 msgstr "Не получилось авторизоваться"
 
-#: download-center/DownloadsPage.py:40
+#: download-center/DownloadsPage.py:46
 #, python-format
 msgid "Started downloading to %s"
 msgstr "Началась загрузка в %s"
 
-#: download-center/DownloadsPage.py:43
+#: download-center/DownloadsPage.py:49
 #, python-format
 msgid "Finished downloading to %s"
 msgstr "Завершена загрузка в %s"
+
+#: data/ru.katy248.download-center.desktop:10
+msgid "RED ADM;РЕД АДМ;"
+msgstr "RED ADM;РЕД АДМ;"

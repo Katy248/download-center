@@ -4,8 +4,8 @@ import locale
 
 if __name__ == "__main__":
     print(APP_NAME, VERSION)
-    locale.bindtextdomain(APP_NAME, LOCALE_DIR)
     locale.textdomain(APP_NAME)
+    locale.bindtextdomain(APP_NAME, LOCALE_DIR)
 
     resource = Gio.Resource.load(GRESOURCE_FILE)
     Gio.resources_register(resource)

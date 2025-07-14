@@ -1,6 +1,7 @@
 config = configuration_data()
 config.set('PKGDIR', pkgdatadir)
 config.set('VERSION', meson.project_version())
+config.set('LOCALEDIR', localedir)
 config.set('DEVELOPMENT', get_option('development'))
 
 config_source_file = configure_file(

@@ -31,10 +31,14 @@ if dfv.found()
     )
 endif
 
-install_data(
-    desktop_file,
+i18n.merge_file(
+    output: desktop_file,
+    input: desktop_file,
+    type: 'desktop',
+    po_dir: '../po',
     install_dir: get_option('prefix') / get_option('datadir') / 'applications',
 )
+
 install_data(
     'download-center',
     install_dir: get_option('prefix') / get_option('bindir'),
