@@ -8,12 +8,12 @@ from .auth import logout
 @Gtk.Template.from_resource("/ru/katy248/download-center/DownloadsPage.ui")
 class DownloadsPage(Adw.NavigationPage):
     __gtype_name__ = "DownloadsPage"
-    current_builds_group = Gtk.Template.Child()
     redos7_builds_group = Gtk.Template.Child()
     redos8_builds_group = Gtk.Template.Child()
     astra_builds_group = Gtk.Template.Child()
     logout_button: Gtk.Button = Gtk.Template.Child()
     content_box: Gtk.Box = Gtk.Template.Child()
+    window_title: Adw.WindowTitle = Gtk.Template.Child()
 
     toast_overlay: Adw.ToastOverlay = Gtk.Template.Child()
 
@@ -25,7 +25,10 @@ class DownloadsPage(Adw.NavigationPage):
         self.data = get_files()
         if self.data is False:
             return
-        self.current_builds_group.set_description(self.data["version"])
+
+        self.window_title.set_subtitle(_("Current build: %s") % self.data["version"])
+        self.window_title.set_title(self.get_title())
+
         self.fill_build_group(self.redos7_builds_group, "redos7")
         self.fill_build_group(self.redos8_builds_group, "redos8")
         self.fill_build_group(self.astra_builds_group, "astra")

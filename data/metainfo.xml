@@ -30,6 +30,14 @@
     <internet>always</internet>
   </requires>
   <releases>
+    <release version="0.2.3">
+      <description>
+        <ul>
+          <li>Added annoying donation dialog <em>(enterprise style development)</em></li>
+          <li>Move current build to window title bar</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.2.2">
       <description>
         <ul>

@@ -17,11 +17,13 @@ menu main_menu {
 }
 
 template $DownloadsPage: Adw.NavigationPage {
-    title: _("Downloads");
+    title: _("Download center");
 
     Adw.ToolbarView {
         [top]
         Adw.HeaderBar {
+            title-widget: Adw.WindowTitle window_title {};
+
             [start]
             Button logout_button {
                 icon-name: "system-log-out-symbolic";
@@ -48,10 +50,6 @@ template $DownloadsPage: Adw.NavigationPage {
                     Gtk.Box content_box {
                         orientation: vertical;
                         spacing: 20;
-
-                        Adw.PreferencesGroup current_builds_group {
-                            title: _("Current build");
-                        }
 
                         Adw.PreferencesGroup astra_builds_group {
                             title: _("Astra Linux");
