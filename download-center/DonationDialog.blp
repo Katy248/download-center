@@ -38,13 +38,11 @@ template $DonationDialog: Adw.Dialog {
                 }
 
                 Gtk.Box {
-                    styles [
-                        "linked",
-                    ]
-
+                    orientation: vertical;
+                    spacing: 6;
                     halign: center;
 
-                    Gtk.Button {
+                    Gtk.Button donate_button {
                         styles [
                             "suggested-action",
                             "pill",
@@ -56,11 +54,14 @@ template $DonationDialog: Adw.Dialog {
                         }
                     }
 
-                    Gtk.Button {
+                    Gtk.LinkButton contribute_button {
                         styles [
                             "pill",
                             "success",
+                            "opaque",
                         ]
+
+                        uri: "https://github.com/katy248/download-center";
 
                         Adw.ButtonContent {
                             label: _("Contribute");
