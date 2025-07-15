@@ -48,4 +48,5 @@ blueprints = custom_target(
         '@CURRENT_SOURCE_DIR@',
         '@INPUT@',
     ],
+    build_by_default: true,
 )

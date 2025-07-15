@@ -1,6 +1,7 @@
 from gi.repository import Gio
 from .config import APP_NAME, GRESOURCE_FILE, LOCALE_DIR, VERSION
 import locale
+import sys
 
 if __name__ == "__main__":
     print(APP_NAME, VERSION)
@@ -13,4 +14,4 @@ if __name__ == "__main__":
     from .app import Application
 
     app = Application()
-    app.run([])
+    sys.exit(app.run(sys.argv))

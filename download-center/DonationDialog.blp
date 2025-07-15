@@ -9,7 +9,7 @@ template $DonationDialog: Adw.Dialog {
 
         Adw.HeaderBar {
             styles [
-                "flat"
+                "flat",
             ]
         }
 
@@ -25,7 +25,7 @@ template $DonationDialog: Adw.Dialog {
 
                 Label {
                     styles [
-                        "title-1"
+                        "title-1",
                     ]
 
                     label: _("Cool app isn't it?");
@@ -33,23 +33,23 @@ template $DonationDialog: Adw.Dialog {
                 }
 
                 Label {
-                    label: _("So maybe you can help it to improve");
-                    wrap: true;
-                }
-
-                Label {
-                    label: _("There is several options that helps to fix existing bugs, develop new features or just maintain application in current state");
+                    label: _("So maybe you can help it to improve? There is several options that helps to fix existing bugs, develop new features or just maintain application in current state");
                     wrap: true;
                 }
 
                 Gtk.Box {
                     styles [
-                        "linked"
+                        "linked",
                     ]
 
-                    hexpand: true;
+                    halign: center;
 
                     Gtk.Button {
+                        styles [
+                            "suggested-action",
+                            "pill",
+                        ]
+
                         Adw.ButtonContent {
                             label: _("Donate");
                             icon-name: "emote-love-symbolic";
@@ -57,10 +57,40 @@ template $DonationDialog: Adw.Dialog {
                     }
 
                     Gtk.Button {
+                        styles [
+                            "pill",
+                            "success",
+                        ]
+
                         Adw.ButtonContent {
                             label: _("Contribute");
                             icon-name: "emblem-documents-symbolic";
                         }
+                    }
+                }
+
+                Gtk.Separator {
+                    styles [
+                        "spacer",
+                    ]
+                }
+
+                Gtk.Box {
+                    halign: center;
+                    spacing: 6;
+
+                    styles [
+                        "dimmed",
+                    ]
+
+                    Gtk.CheckButton show_dialog_check_button {
+                        styles [
+                            "selection-mode",
+                        ]
+                    }
+
+                    Gtk.Label {
+                        label: _("Don't show this dialog again");
                     }
                 }
             }

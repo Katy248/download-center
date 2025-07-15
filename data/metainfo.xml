@@ -1,18 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
   <id>ru.katy248.download-center</id>
-
   <name>Download Center</name>
-  <!-- <summary>Proves that we can use Vala and Gtk</summary> -->
-
+  <summary>Downloading RED ADM but cooler</summary>
   <metadata_license>CC-BY-4.0</metadata_license>
-  <project_license>GPL-3.0-or-later</project_license>
-
+  <!-- <project_license>GPL-3.0-or-later</project_license> -->
+  <developer id="ru.katy248">
+    <name>Katy248</name>
+    <email>katy248@example.com</email>
+  </developer>
   <description>
     <p>
       Cool app for downloading RED ADM stuff
     </p>
   </description>
-
   <launchable type="desktop-id">ru.katy248.download-center.desktop</launchable>
+  <categories>
+    <category>Utility</category>
+    <category>Administration</category>
+  </categories>
+  <url type="homepage">https://github.com/katy248/download-center</url>
+  <url type="vcs-browser">https://github.com/katy248/download-center</url>
+  <url type="bugtracker">https://gitlab.com/Katy248/download-center/-/issues</url>
+  <provides>
+    <binary>download-center</binary>
+    <python3>download-center</python3>
+  </provides>
+  <requires>
+    <internet>always</internet>
+  </requires>
+  <releases>
+    <release version="0.2.2">
+      <description>
+        <ul>
+          <li>Added localization</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.2.1">
+      <description>
+        <ul>
+          <li>Reworked settings</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.0.2">
+      <description>
+        <ul>
+          <li>Added <em>Astra Linux</em> builds</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.0.1">
+      <description>
+        <p>First release</p>
+      </description>
+    </release>
+  </releases>
 </component>

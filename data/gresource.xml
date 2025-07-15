@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
-<gresource prefix="/ru/katy248/download-center">
-	  <file preprocess="xml-stripblanks">DownloadRow.ui</file>
-	  <file preprocess="xml-stripblanks">DownloadsPage.ui</file>
-	  <file preprocess="xml-stripblanks">LoginPage.ui</file>
-	  <file preprocess="xml-stripblanks">MainWindow.ui</file>
-	  <file preprocess="xml-stripblanks">SettingsDialog.ui</file>
-	  <file preprocess="xml-stripblanks">DonationDialog.ui</file>
-	  <!-- <file preprocess="xml-stripblanks">ru.katy248.download-center.svg</file> -->
-</gresource>
+	<gresource prefix="/ru/katy248/download-center">
+		<file preprocess="xml-stripblanks">DownloadRow.ui</file>
+		<file preprocess="xml-stripblanks">DownloadsPage.ui</file>
+		<file preprocess="xml-stripblanks">LoginPage.ui</file>
+		<file preprocess="xml-stripblanks">MainWindow.ui</file>
+		<file preprocess="xml-stripblanks">SettingsDialog.ui</file>
+		<file preprocess="xml-stripblanks">DonationDialog.ui</file>
+		<file preprocess="xml-stripblanks">metainfo.xml</file>
+	</gresource>
 </gresources>

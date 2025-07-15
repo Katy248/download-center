@@ -6,7 +6,7 @@ template $SettingsPage: Adw.PreferencesDialog {
     search-enabled: true;
 
     styles [
-        "model"
+        "modal",
     ]
 
     Adw.PreferencesPage {
@@ -20,6 +20,14 @@ template $SettingsPage: Adw.PreferencesDialog {
             Adw.PasswordEntryRow license_key_row {
                 title: _("License key");
                 editable: false;
+            }
+        }
+
+        Adw.PreferencesGroup {
+            title: _("Other");
+
+            Adw.SwitchRow show_donation_dialog_row {
+                title: _("Show donation dialog");
             }
         }
     }

@@ -1,7 +1,7 @@
 gnome.compile_resources(
     project_id,
     'gresource.xml',
-    source_dir: ['.'],
+    source_dir: [meson.current_source_dir(), meson.current_build_dir()],
     gresource_bundle: true,
     install: true,
     install_dir: pkgdatadir,

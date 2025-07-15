@@ -9,3 +9,4 @@ MimeType=
 Keywords=RED ADM;РЕД АДМ;
 Categories=GTK;GNOME;Utility;FileTools;
 X-Purism-FormFactor=Workstation;Mobile;
+X-GNOME-UsesNotifications=true
