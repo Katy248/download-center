@@ -21,7 +21,15 @@ install_data(
     'icons/ru.katy248.download-center-symbolic.svg',
     install_dir: pkgdatadir / 'icons/hicolor/symbolic/apps',
 )
-desktop_file = 'ru.katy248.download-center.desktop'
+icon_sizes = ['16', '24', '32', '48', '64', '128']
+
+foreach i : icon_sizes
+    install_data(
+        'icons/ru.katy248.download-center-symbolic.svg',
+        install_dir: pkgdatadir / 'icons/hicolor/' + i + 'x' + i + '/apps',
+    )
+    desktop_file = 'ru.katy248.download-center.desktop'
+endforeach
 
 dfv = find_program('desktop-file-validate', required: false)
 if dfv.found()

@@ -26,7 +26,7 @@ class DownloadsPage(Adw.NavigationPage):
         if self.data is False:
             return
 
-        self.window_title.set_subtitle(_("Current build: %s") % self.data["version"])
+        self.window_title.set_subtitle(_("Current build: %s" % self.data["version"]))
         self.window_title.set_title(self.get_title())
 
         self.fill_build_group(self.redos7_builds_group, "redos7")

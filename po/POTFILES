@@ -1,13 +1,14 @@
 # Blueprints
 download-center/DownloadRow.blp
 download-center/DownloadsPage.blp
+download-center/DonationDialog.blp
 download-center/LoginPage.blp
 download-center/MainWindow.blp
 download-center/SettingsDialog.blp
-
-# Python
 download-center/LoginPage.py
 download-center/DownloadsPage.py
-
-# Data
+download-center/DownloadRow.py
+download-center/MainWindow.py
+download-center/DonationDialog.py
 data/ru.katy248.download-center.desktop
+data/metainfo.xml

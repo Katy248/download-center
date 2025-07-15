@@ -3,8 +3,13 @@ BUILD_DIR := "builddir"
 
 setup:
     meson setup {{ BUILD_DIR }} --reconfigure
+    just --fmt --unstable
 
-build: setup
+update-translations: setup
+    meson compile -C {{ BUILD_DIR }} {{ PROJECT_NAME }}-pot
+    meson compile -C {{ BUILD_DIR }} {{ PROJECT_NAME }}-update-po
+
+build: update-translations
     meson compile -C {{ BUILD_DIR }}
 
 install: build

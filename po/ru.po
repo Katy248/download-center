@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: download-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-14 13:05+0300\n"
+"POT-Creation-Date: 2025-07-16 00:25+0300\n"
 "Last-Translator: Katy248 <petrovanton247@gmail.com>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -25,33 +25,60 @@ msgstr "Настройки"
 msgid "About app"
 msgstr "О приложении"
 
-#: download-center/DownloadsPage.blp:20
-msgid "Downloads"
-msgstr "Загрузки"
+#: download-center/DownloadsPage.blp:20 download-center/MainWindow.blp:5
+#: data/ru.katy248.download-center.desktop:2
+msgid "Download center"
+msgstr "Цент загрузок"
 
-#: download-center/DownloadsPage.blp:29
+#: download-center/DownloadsPage.blp:31
 msgid "Log Out"
 msgstr "Выход"
 
-#: download-center/DownloadsPage.blp:36
+#: download-center/DownloadsPage.blp:38
 msgid "App Menu"
 msgstr "Меню Приложения"
 
-#: download-center/DownloadsPage.blp:53
-msgid "Current build"
-msgstr "Текущая сборка"
-
-#: download-center/DownloadsPage.blp:57
+#: download-center/DownloadsPage.blp:55
 msgid "Astra Linux"
 msgstr "Astra Linux"
 
-#: download-center/DownloadsPage.blp:61
+#: download-center/DownloadsPage.blp:59
 msgid "RED OS 7.3"
 msgstr "РЕД ОС 7.3"
 
-#: download-center/DownloadsPage.blp:65
+#: download-center/DownloadsPage.blp:63
 msgid "RED OS 8"
 msgstr "РЕД ОС 8"
+
+#: download-center/DonationDialog.blp:5
+msgid "Help this app"
+msgstr "Помогите приложению"
+
+#: download-center/DonationDialog.blp:32
+msgid "Cool app isn't it?"
+msgstr "Классное приложение, не так ли?"
+
+#: download-center/DonationDialog.blp:37
+msgid ""
+"So maybe you can help it to improve? There is several options that helps to "
+"fix existing bugs, develop new features or just maintain application in "
+"current state"
+msgstr ""
+"Так может, вы поможете его улучшить? Есть несколько вариантов, которые "
+"помогают исправлять существующие ошибки, разрабатывать новые функции или "
+"просто поддерживать приложение в приличном состоянии"
+
+#: download-center/DonationDialog.blp:53
+msgid "Donate"
+msgstr "Пожертвовать"
+
+#: download-center/DonationDialog.blp:68
+msgid "Contribute"
+msgstr "Внести вклад"
+
+#: download-center/DonationDialog.blp:95
+msgid "Don't show this dialog again"
+msgstr "Не показывать этот диалог снова"
 
 #: download-center/LoginPage.blp:5
 msgid "Login"
@@ -69,13 +96,17 @@ msgstr "Оставаться в системе"
 msgid "Log in"
 msgstr "Войти"
 
-#: download-center/MainWindow.blp:5 data/ru.katy248.download-center.desktop:3
-msgid "Download center"
-msgstr "Цент загрузок"
-
 #: download-center/SettingsDialog.blp:14
 msgid "General"
 msgstr "Основное"
+
+#: download-center/SettingsDialog.blp:27
+msgid "Other"
+msgstr "Другое"
+
+#: download-center/SettingsDialog.blp:30
+msgid "Show donation dialog"
+msgstr "Показывать диалог для сбора пожертвований"
 
 #: download-center/LoginPage.py:37
 msgid "Invalid license key"
@@ -85,16 +116,73 @@ msgstr "Неверный лицензионный ключ"
 msgid "Failed to authenticate"
 msgstr "Не получилось авторизоваться"
 
-#: download-center/DownloadsPage.py:46
+#: download-center/DownloadsPage.py:29
+#, python-format
+msgid "Current build: %s"
+msgstr "Текущая сборка: %s"
+
+#: download-center/DownloadsPage.py:49
 #, python-format
 msgid "Started downloading to %s"
 msgstr "Началась загрузка в %s"
 
-#: download-center/DownloadsPage.py:49
+#: download-center/DownloadsPage.py:52
 #, python-format
 msgid "Finished downloading to %s"
 msgstr "Завершена загрузка в %s"
 
-#: data/ru.katy248.download-center.desktop:10
+#: download-center/MainWindow.py:68
+msgid "What are you trying to debug?"
+msgstr "Что ты пытаешься отладить?"
+
+#: download-center/MainWindow.py:70
+msgid "The Ultimate Question of Life, the Universe, and Everything"
+msgstr "Ответ на главный вопрос жизни, вселенной и всего такого"
+
+#: download-center/MainWindow.py:72
+msgid "Nice!"
+msgstr "Nice!"
+
+#: download-center/MainWindow.py:74
+msgid "228"
+msgstr "228"
+
+#: download-center/MainWindow.py:76
+msgid "420"
+msgstr "420"
+
+#: download-center/MainWindow.py:78
+msgid "Bang! Bang! Bang! Pull my devil trigger"
+msgstr "Bang! Bang! Bang! Pull my devil trigger"
+
+#: download-center/MainWindow.py:80
+msgid "You nazi, aren't you? If you are, go fuck yourself"
+msgstr "Вы наци, да? Если вы наци, то идите вы нахуй короче"
+
+#: download-center/MainWindow.py:84
+#, python-format
+msgid "Congratulations! This is your %s visit. Hope you like this app"
+msgstr "Поздравляем! Это ваш %s визит. Надеемся вам нравится приложение"
+
+#: download-center/DonationDialog.py:26
+msgid "No money"
+msgstr "Без денег"
+
+#: download-center/DonationDialog.py:27
+msgid "Currently there is no way to donate((( But thank you for try!"
+msgstr "Сейчас нет способа пожертвовать((( Но спасибо за попытку!"
+
+#: download-center/DonationDialog.py:29
+msgid "Ok"
+msgstr "ОК"
+
+#: data/ru.katy248.download-center.desktop:9
 msgid "RED ADM;РЕД АДМ;"
 msgstr "RED ADM;РЕД АДМ;"
+
+#, python-format
+#~ msgid "Congratulations! This is your %d visit. Hope you like this app"
+#~ msgstr "Поздравляем! Это ваш %d визит. Надеемся вам нравится приложение"
+
+#~ msgid "Downloads"
+#~ msgstr "Загрузки"

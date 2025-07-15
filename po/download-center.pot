@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: download-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-14 13:05+0300\n"
+"POT-Creation-Date: 2025-07-16 00:25+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,32 +33,56 @@ msgstr ""
 msgid "About app"
 msgstr ""
 
-#: download-center/DownloadsPage.blp:20
-msgid "Downloads"
+#: download-center/DownloadsPage.blp:20 download-center/MainWindow.blp:5
+#: data/ru.katy248.download-center.desktop:2
+msgid "Download center"
 msgstr ""
 
-#: download-center/DownloadsPage.blp:29
+#: download-center/DownloadsPage.blp:31
 msgid "Log Out"
 msgstr ""
 
-#: download-center/DownloadsPage.blp:36
+#: download-center/DownloadsPage.blp:38
 msgid "App Menu"
 msgstr ""
 
-#: download-center/DownloadsPage.blp:53
-msgid "Current build"
-msgstr ""
-
-#: download-center/DownloadsPage.blp:57
+#: download-center/DownloadsPage.blp:55
 msgid "Astra Linux"
 msgstr ""
 
-#: download-center/DownloadsPage.blp:61
+#: download-center/DownloadsPage.blp:59
 msgid "RED OS 7.3"
 msgstr ""
 
-#: download-center/DownloadsPage.blp:65
+#: download-center/DownloadsPage.blp:63
 msgid "RED OS 8"
+msgstr ""
+
+#: download-center/DonationDialog.blp:5
+msgid "Help this app"
+msgstr ""
+
+#: download-center/DonationDialog.blp:32
+msgid "Cool app isn't it?"
+msgstr ""
+
+#: download-center/DonationDialog.blp:37
+msgid ""
+"So maybe you can help it to improve? There is several options that helps to "
+"fix existing bugs, develop new features or just maintain application in "
+"current state"
+msgstr ""
+
+#: download-center/DonationDialog.blp:53
+msgid "Donate"
+msgstr ""
+
+#: download-center/DonationDialog.blp:68
+msgid "Contribute"
+msgstr ""
+
+#: download-center/DonationDialog.blp:95
+msgid "Don't show this dialog again"
 msgstr ""
 
 #: download-center/LoginPage.blp:5
@@ -77,12 +101,16 @@ msgstr ""
 msgid "Log in"
 msgstr ""
 
-#: download-center/MainWindow.blp:5 data/ru.katy248.download-center.desktop:3
-msgid "Download center"
-msgstr ""
-
 #: download-center/SettingsDialog.blp:14
 msgid "General"
+msgstr ""
+
+#: download-center/SettingsDialog.blp:27
+msgid "Other"
+msgstr ""
+
+#: download-center/SettingsDialog.blp:30
+msgid "Show donation dialog"
 msgstr ""
 
 #: download-center/LoginPage.py:37
@@ -93,16 +121,66 @@ msgstr ""
 msgid "Failed to authenticate"
 msgstr ""
 
-#: download-center/DownloadsPage.py:46
+#: download-center/DownloadsPage.py:29
 #, python-format
-msgid "Started downloading to %s"
+msgid "Current build: %s"
 msgstr ""
 
 #: download-center/DownloadsPage.py:49
 #, python-format
+msgid "Started downloading to %s"
+msgstr ""
+
+#: download-center/DownloadsPage.py:52
+#, python-format
 msgid "Finished downloading to %s"
 msgstr ""
 
-#: data/ru.katy248.download-center.desktop:10
+#: download-center/MainWindow.py:68
+msgid "What are you trying to debug?"
+msgstr ""
+
+#: download-center/MainWindow.py:70
+msgid "The Ultimate Question of Life, the Universe, and Everything"
+msgstr ""
+
+#: download-center/MainWindow.py:72
+msgid "Nice!"
+msgstr ""
+
+#: download-center/MainWindow.py:74
+msgid "228"
+msgstr ""
+
+#: download-center/MainWindow.py:76
+msgid "420"
+msgstr ""
+
+#: download-center/MainWindow.py:78
+msgid "Bang! Bang! Bang! Pull my devil trigger"
+msgstr ""
+
+#: download-center/MainWindow.py:80
+msgid "You nazi, aren't you? If you are, go fuck yourself"
+msgstr ""
+
+#: download-center/MainWindow.py:84
+#, python-format
+msgid "Congratulations! This is your %s visit. Hope you like this app"
+msgstr ""
+
+#: download-center/DonationDialog.py:26
+msgid "No money"
+msgstr ""
+
+#: download-center/DonationDialog.py:27
+msgid "Currently there is no way to donate((( But thank you for try!"
+msgstr ""
+
+#: download-center/DonationDialog.py:29
+msgid "Ok"
+msgstr ""
+
+#: data/ru.katy248.download-center.desktop:9
 msgid "RED ADM;РЕД АДМ;"
 msgstr ""

@@ -9,7 +9,9 @@ class Application(Adw.Application):
         self.set_resource_base_path("/ru/katy248/download-center")
 
         self.set_accels_for_action("win.about", ["<Control>question"])
-        self.set_accels_for_action("win.settings", ["<Ctrl>slash", "<Ctrl>S"])
+        self.set_accels_for_action(
+            "win.settings", ["<Ctrl>comma", "<Ctrl>slash", "<Ctrl>S"]
+        )
 
     def do_activate(self):
         window = MainWindow(self)

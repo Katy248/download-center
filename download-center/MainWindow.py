@@ -48,6 +48,8 @@ class MainWindow(Adw.ApplicationWindow):
         SETTINGS.set_int("entrance-count", SETTINGS.get_int("entrance-count") + 1)
         SETTINGS.apply()
 
+        self.check_entrances_and_notify()
+
         show_dialog = SETTINGS.get_boolean("show-donation-dialog")
         if not show_dialog:
             return
@@ -58,6 +60,33 @@ class MainWindow(Adw.ApplicationWindow):
 
             dialog = DonationDialog()
             dialog.present(self)
+
+    def check_entrances_and_notify(self):
+        entrances = SETTINGS.get_int("entrance-count")
+        title: str | None = None
+        if entrances == 0:
+            title = _("What are you trying to debug?")
+        if entrances == 42:
+            title = _("The Ultimate Question of Life, the Universe, and Everything")
+        if entrances == 69:
+            title = _("Nice!")
+        if entrances == 228:
+            title = _("228")
+        if entrances == 420:
+            title = _("420")
+        if entrances == 666:
+            title = _("Bang! Bang! Bang! Pull my devil trigger")
+        if entrances == 1488:
+            title = _("You nazi, aren't you? If you are, go fuck yourself")
+
+        if title is not None:
+            body = _(
+                "Congratulations! This is your %s visit. Hope you like this app"
+            ) % str(entrances)
+
+            notification = Gio.Notification.new(title)
+            notification.set_body(body)
+            Gio.Application.get_default().send_notification("cool-number", notification)
 
     def on_settings_activated(self, action, _):
         dialog = SettingsDialog()
