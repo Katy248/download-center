@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: download-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-16 00:25+0300\n"
+"POT-Creation-Date: 2025-07-16 10:07+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,7 +34,7 @@ msgid "About app"
 msgstr ""
 
 #: download-center/DownloadsPage.blp:20 download-center/MainWindow.blp:5
-#: data/ru.katy248.download-center.desktop:2
+#: data/ru.katy248.download-center.desktop:3
 msgid "Download center"
 msgstr ""
 
@@ -181,6 +181,6 @@ msgstr ""
 msgid "Ok"
 msgstr ""
 
-#: data/ru.katy248.download-center.desktop:9
+#: data/ru.katy248.download-center.desktop:10
 msgid "RED ADM;РЕД АДМ;"
 msgstr ""

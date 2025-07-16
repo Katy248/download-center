@@ -28,7 +28,7 @@ msgstr "О приложении"
 #: download-center/DownloadsPage.blp:20 download-center/MainWindow.blp:5
 #: data/ru.katy248.download-center.desktop:3
 msgid "Download center"
-msgstr "Цент загрузок"
+msgstr "Центр загрузок"
 
 #: download-center/DownloadsPage.blp:31
 msgid "Log Out"

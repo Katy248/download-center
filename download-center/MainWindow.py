@@ -55,7 +55,7 @@ class MainWindow(Adw.ApplicationWindow):
             return
 
         entrances = SETTINGS.get_int("entrance-count")
-        if entrances > 0:
+        if entrances % 3 == 0:
             from .DonationDialog import DonationDialog
 
             dialog = DonationDialog()

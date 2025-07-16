@@ -8,9 +8,13 @@ class DonationDialog(Adw.Dialog):
     __gtype_name__ = "DonationDialog"
     show_dialog_check_button: Gtk.CheckButton = Gtk.Template.Child()
     donate_button: Gtk.Button = Gtk.Template.Child()
+    dont_show_box: Gtk.Box = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+
+        if SETTINGS.get_int("entrance-count") < 10:
+            self.dont_show_box.hide()
 
         SETTINGS.bind(
             "show-donation-dialog",
@@ -27,10 +31,10 @@ class DonationDialog(Adw.Dialog):
             _("Currently there is no way to donate((( But thank you for try!"),
         )
         dialog.add_response("ok", _("Ok"))
-        dialog.connect(
-            "response",
-            lambda dialog, response: SETTINGS.set_boolean(
-                "show-donation-dialog", False
-            ),
-        )
+
+        def on_response(dialog, response):
+            SETTINGS.set_boolean("show-donation-dialog", False)
+            self.dont_show_box.set_visible(True)
+
+        dialog.connect("response", on_response)
         dialog.present(self)

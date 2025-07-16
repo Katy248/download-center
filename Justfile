@@ -9,7 +9,7 @@ update-translations: setup
     meson compile -C {{ BUILD_DIR }} {{ PROJECT_NAME }}-pot
     meson compile -C {{ BUILD_DIR }} {{ PROJECT_NAME }}-update-po
 
-build: update-translations
+build: setup
     meson compile -C {{ BUILD_DIR }}
 
 install: build
