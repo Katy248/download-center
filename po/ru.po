@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: download-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-16 00:25+0300\n"
+"POT-Creation-Date: 2025-07-16 10:07+0300\n"
 "Last-Translator: Katy248 <petrovanton247@gmail.com>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgid "About app"
 msgstr "О приложении"
 
 #: download-center/DownloadsPage.blp:20 download-center/MainWindow.blp:5
-#: data/ru.katy248.download-center.desktop:2
+#: data/ru.katy248.download-center.desktop:3
 msgid "Download center"
 msgstr "Цент загрузок"
 
@@ -64,9 +64,9 @@ msgid ""
 "fix existing bugs, develop new features or just maintain application in "
 "current state"
 msgstr ""
-"Так может, вы поможете его улучшить? Есть несколько вариантов, которые "
-"помогают исправлять существующие ошибки, разрабатывать новые функции или "
-"просто поддерживать приложение в приличном состоянии"
+"Тогда может, вы поспособствуете его улучшению? Есть несколько вариантов, "
+"которые помогают исправлять существующие ошибки, разрабатывать новые функции "
+"или просто поддерживать приложение в приличном состоянии"
 
 #: download-center/DonationDialog.blp:53
 msgid "Donate"
@@ -176,7 +176,7 @@ msgstr "Сейчас нет способа пожертвовать((( Но сп
 msgid "Ok"
 msgstr "ОК"
 
-#: data/ru.katy248.download-center.desktop:9
+#: data/ru.katy248.download-center.desktop:10
 msgid "RED ADM;РЕД АДМ;"
 msgstr "RED ADM;РЕД АДМ;"
 
