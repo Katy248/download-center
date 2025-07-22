@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: download-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-16 10:07+0300\n"
+"POT-Creation-Date: 2025-07-22 15:29+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,7 +34,7 @@ msgid "About app"
 msgstr ""
 
 #: download-center/DownloadsPage.blp:20 download-center/MainWindow.blp:5
-#: data/ru.katy248.download-center.desktop:3
+#: data/ru.katy248.download-center.desktop:2
 msgid "Download center"
 msgstr ""
 
@@ -169,18 +169,18 @@ msgstr ""
 msgid "Congratulations! This is your %s visit. Hope you like this app"
 msgstr ""
 
-#: download-center/DonationDialog.py:26
+#: download-center/DonationDialog.py:30
 msgid "No money"
 msgstr ""
 
-#: download-center/DonationDialog.py:27
+#: download-center/DonationDialog.py:31
 msgid "Currently there is no way to donate((( But thank you for try!"
 msgstr ""
 
-#: download-center/DonationDialog.py:29
+#: download-center/DonationDialog.py:33
 msgid "Ok"
 msgstr ""
 
-#: data/ru.katy248.download-center.desktop:10
+#: data/ru.katy248.download-center.desktop:9
 msgid "RED ADM;РЕД АДМ;"
 msgstr ""

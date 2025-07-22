@@ -1,6 +1,6 @@
 from gi.repository import Gtk, Adw, Gio
 from .config import SETTINGS
-from gettext import gettext as _
+from locale import gettext as _
 
 from .auth import AUTH_STATE, AUTHENTICATED_CHANGED_SIGNAL
 

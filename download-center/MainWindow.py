@@ -8,7 +8,7 @@ from .auth import AuthState, AUTH_STATE, AUTHENTICATED_CHANGED_SIGNAL
 from .actions import settings_action
 from .SettingsDialog import SettingsDialog
 
-from gettext import gettext as _
+from locale import gettext as _
 
 MAIN_WINDOW: Adw.ApplicationWindow | None = None
 

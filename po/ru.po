@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: download-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-16 10:07+0300\n"
+"POT-Creation-Date: 2025-07-22 15:29+0300\n"
 "Last-Translator: Katy248 <petrovanton247@gmail.com>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgid "About app"
 msgstr "О приложении"
 
 #: download-center/DownloadsPage.blp:20 download-center/MainWindow.blp:5
-#: data/ru.katy248.download-center.desktop:3
+#: data/ru.katy248.download-center.desktop:2
 msgid "Download center"
 msgstr "Центр загрузок"
 
@@ -164,19 +164,19 @@ msgstr "Вы наци, да? Если вы наци, то идите вы нах
 msgid "Congratulations! This is your %s visit. Hope you like this app"
 msgstr "Поздравляем! Это ваш %s визит. Надеемся вам нравится приложение"
 
-#: download-center/DonationDialog.py:26
+#: download-center/DonationDialog.py:30
 msgid "No money"
 msgstr "Без денег"
 
-#: download-center/DonationDialog.py:27
+#: download-center/DonationDialog.py:31
 msgid "Currently there is no way to donate((( But thank you for try!"
 msgstr "Сейчас нет способа пожертвовать((( Но спасибо за попытку!"
 
-#: download-center/DonationDialog.py:29
+#: download-center/DonationDialog.py:33
 msgid "Ok"
 msgstr "ОК"
 
-#: data/ru.katy248.download-center.desktop:10
+#: data/ru.katy248.download-center.desktop:9
 msgid "RED ADM;РЕД АДМ;"
 msgstr "RED ADM;РЕД АДМ;"
 

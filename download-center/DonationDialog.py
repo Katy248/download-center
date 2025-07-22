@@ -1,6 +1,6 @@
 from gi.repository import Gtk, Adw, Gio
 from .config import SETTINGS
-from gettext import gettext as _
+from locale import gettext as _
 
 
 @Gtk.Template.from_resource("/ru/katy248/download-center/DonationDialog.ui")

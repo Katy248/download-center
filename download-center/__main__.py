@@ -2,9 +2,14 @@ from gi.repository import Gio
 from .config import APP_NAME, GRESOURCE_FILE, LOCALE_DIR, VERSION
 import locale
 import sys
+import gettext
 
 if __name__ == "__main__":
     print(APP_NAME, VERSION)
+
+    gettext.bindtextdomain(APP_NAME, LOCALE_DIR)
+    gettext.textdomain(APP_NAME)
+
     locale.textdomain(APP_NAME)
     locale.bindtextdomain(APP_NAME, LOCALE_DIR)
 
