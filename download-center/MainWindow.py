@@ -86,7 +86,9 @@ class MainWindow(Adw.ApplicationWindow):
 
             notification = Gio.Notification.new(title)
             notification.set_body(body)
-            Gio.Application.get_default().send_notification("cool-number", notification)
+            Gio.Application.get_default().send_notification(
+                "cool-number-%d" % entrances, notification
+            )
 
     def on_settings_activated(self, action, _):
         dialog = SettingsDialog()
