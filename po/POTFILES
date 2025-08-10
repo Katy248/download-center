@@ -11,4 +11,4 @@ download-center/DownloadRow.py
 download-center/MainWindow.py
 download-center/DonationDialog.py
 data/ru.katy248.download-center.desktop
-data/metainfo.xml
+data/ru.katy248.download-center.metainfo.xml.in

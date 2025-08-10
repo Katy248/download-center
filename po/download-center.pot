@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: download-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-22 15:29+0300\n"
+"POT-Creation-Date: 2025-08-10 16:26+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,7 +34,7 @@ msgid "About app"
 msgstr ""
 
 #: download-center/DownloadsPage.blp:20 download-center/MainWindow.blp:5
-#: data/ru.katy248.download-center.desktop:2
+#: data/ru.katy248.download-center.desktop:3
 msgid "Download center"
 msgstr ""
 
@@ -181,6 +181,46 @@ msgstr ""
 msgid "Ok"
 msgstr ""
 
-#: data/ru.katy248.download-center.desktop:9
+#: data/ru.katy248.download-center.desktop:10
 msgid "RED ADM;РЕД АДМ;"
+msgstr ""
+
+#: data/ru.katy248.download-center.metainfo.xml.in:4
+msgid "Download Center"
+msgstr ""
+
+#: data/ru.katy248.download-center.metainfo.xml.in:5
+msgid "Downloading RED ADM but cooler"
+msgstr ""
+
+#: data/ru.katy248.download-center.metainfo.xml.in:12
+msgid "Cool app for downloading RED ADM stuff"
+msgstr ""
+
+#: data/ru.katy248.download-center.metainfo.xml.in:36
+msgid "Added annoying donation dialog <em>(enterprise style development)</em>"
+msgstr ""
+
+#: data/ru.katy248.download-center.metainfo.xml.in:37
+msgid "Move current build to window title bar"
+msgstr ""
+
+#: data/ru.katy248.download-center.metainfo.xml.in:38
+msgid "Fix localization"
+msgstr ""
+
+#: data/ru.katy248.download-center.metainfo.xml.in:45
+msgid "Added localization"
+msgstr ""
+
+#: data/ru.katy248.download-center.metainfo.xml.in:52
+msgid "Reworked settings"
+msgstr ""
+
+#: data/ru.katy248.download-center.metainfo.xml.in:59
+msgid "Added <em>Astra Linux</em> builds"
+msgstr ""
+
+#: data/ru.katy248.download-center.metainfo.xml.in:65
+msgid "First release"
 msgstr ""

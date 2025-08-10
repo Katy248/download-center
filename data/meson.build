@@ -28,37 +28,44 @@ foreach i : icon_sizes
         'icons/ru.katy248.download-center-symbolic.svg',
         install_dir: pkgdatadir / 'icons/hicolor/' + i + 'x' + i + '/apps',
     )
-    desktop_file = 'ru.katy248.download-center.desktop'
 endforeach
 
-dfv = find_program('desktop-file-validate', required: false)
-if dfv.found()
-    custom_target(
-        'desktop-file-validation',
-        input: desktop_file,
-        command: [dfv, '@INPUT@'],
-        output: '.',
-    )
-endif
+po_dir = meson.project_source_root() / 'po'
 
-i18n.merge_file(
-    output: desktop_file,
-    input: desktop_file,
+desktop_file = i18n.merge_file(
+    output: 'ru.katy248.download-center.desktop',
+    input: 'ru.katy248.download-center.desktop',
     type: 'desktop',
-    po_dir: meson.project_source_root() / 'po',
+    po_dir: po_dir,
     install: true,
     install_dir: get_option('prefix') / get_option('datadir') / 'applications',
+)
+
+dfv = find_program('desktop-file-validate', required: false, disabler: true)
+test(
+    'Desktop file validation',
+    dfv,
+    args: [desktop_file],
+)
+
+appstream_file = i18n.merge_file(
+    input: 'ru.katy248.download-center.metainfo.xml.in',
+    output: 'ru.katy248.download-center.metainfo.xml',
+    po_dir: po_dir,
+    install: true,
+    install_dir: get_option('prefix') / get_option('datadir') / 'metainfo',
+)
+
+appstreamcli = find_program('appstreamcli', required: false, disabler: true)
+test(
+    'Validate appstream file',
+    appstreamcli,
+    args: ['validate', '--no-net', '--explain', appstream_file],
 )
 
 install_data(
     'download-center',
     install_dir: get_option('prefix') / get_option('bindir'),
-)
-
-install_data(
-    'metainfo.xml',
-    install_dir: get_option('prefix') / get_option('datadir') / 'metainfo',
-    rename: 'ru.katy248.download-center.metainfo.xml',
 )
 
 gnome.post_install(

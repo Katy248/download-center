@@ -1,6 +1,6 @@
 from gi.repository import Gtk, Adw, Gio
 
-from .config import VERSION, SETTINGS
+from .config import VERSION, SETTINGS, DEVELOPMENT
 
 from .DownloadsPage import DownloadsPage
 from .LoginPage import LoginPage
@@ -23,6 +23,9 @@ class MainWindow(Adw.ApplicationWindow):
         MAIN_WINDOW = self
 
         super().__init__(application=app, **kwargs)
+
+        if DEVELOPMENT:
+            self.add_css_class("devel")
 
         self.change_view(AUTH_STATE.is_authenticated())
 
@@ -97,7 +100,8 @@ class MainWindow(Adw.ApplicationWindow):
     def on_about_activated(self, action, _):
         dialog = Adw.AboutDialog()
         dialog = Adw.AboutDialog.new_from_appdata(
-            "/ru/katy248/download-center/metainfo.xml", VERSION
+            "/ru/katy248/download-center/ru.katy248.download-center.metainfo.xml",
+            VERSION,
         )
         dialog.set_artists(["Katy248 <petrovanton247@gmail.com>"])
         dialog.set_developers(["Katy248 <petrovanton247@gmail.com>"])
