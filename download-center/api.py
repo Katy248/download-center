@@ -5,20 +5,39 @@ import datetime
 
 BASE_ADDR = "https://update-center.red-soft.ru"
 
-__jwt: str | None
-__license_key: str | None
+__jwt: str | None = None
+__license_key: str | None = None
 __last_auth: datetime.datetime = datetime.datetime.fromtimestamp(0)
+
+
+def get_headers(
+    with_json_content: bool = False, with_auth: bool = False
+) -> dict[str, str]:
+    global __jwt
+    headers = {}
+    if with_json_content:
+        headers["Content-Type"] = "application/json"
+    if with_auth:
+        if __jwt is not None:
+            headers["Authorization"] = f"Bearer {__jwt}"
+        else:
+            print("[ERROR] Failed add authorization header, JWT token is empty")
+
+    return headers
 
 
 def __auth(license_key: str) -> bool:
     global __jwt, __license_key, __last_auth
     response = requests.post(
         BASE_ADDR + "/auth/login",
-        headers={"Content-Type": "application/json"},
+        headers=get_headers(with_json_content=True),
         data=json.dumps({"key": license_key}),
     )
 
     if not response.status_code == OK:
+        print(
+            f"[ERROR] Auth failed with status code {response.status_code}. Body dump: {response.content}"
+        )
         return False
     js = response.json()
 
@@ -56,7 +75,7 @@ def get_files():
 
     response = requests.get(
         BASE_ADDR + "/download/files?type=current",
-        headers={"Authorization": f"Bearer {__jwt}"},
+        headers=get_headers(with_auth=True),
     )
 
     if not response.status_code == OK:
@@ -68,10 +87,7 @@ def get_files():
 def get_changelogs(changelogs_file_url: str) -> bytes:
     response = requests.post(
         BASE_ADDR + "/download/files",
-        data={"file": changelogs_file_url},
-        headers={
-            "Authorization": f"Bearer {__jwt}",
-            "Content-Type": "application/json",
-        },
+        data=json.dumps({"file": changelogs_file_url}),
+        headers=get_headers(with_auth=True, with_json_content=True),
     )
     return response.content

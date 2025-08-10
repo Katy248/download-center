@@ -1,8 +1,10 @@
 from threading import Thread
 from gi.repository import Adw, Gtk, GObject, Gio
 import requests
-from .api import BASE_ADDR
+import json
+from .api import BASE_ADDR, get_headers
 from typing import Callable
+from locale import gettext as _
 
 
 @Gtk.Template.from_resource("/ru/katy248/download-center/DownloadRow.ui")
@@ -61,9 +63,27 @@ class DownloadRow(Adw.ActionRow):
 
         with open(output_file, "wb") as fs_file:
             response = requests.post(
-                BASE_ADDR + "/download/files", data={"file": file_url}
+                BASE_ADDR + "/download/files",
+                data=json.dumps({"file": file_url}),
+                headers=get_headers(with_auth=True, with_json_content=True),
             )
-            fs_file.write(response.content)
+            if response.ok:
+                fs_file.write(response.content)
+            else:
+                print(
+                    "[ERROR]: Response status code is %d. Body dump: %s"
+                    % (response.status_code, response.content)
+                )
+                error_dialog = Adw.AlertDialog()
+                error_dialog.set_heading(_("Failed download file"))
+                error_dialog.set_body(
+                    _(
+                        "There is error occurred while downloading file '%s'. Response status code is %d"
+                    )
+                    % (self.get_title(), response.status_code)
+                )
+                error_dialog.add_response("ok", _("Terrible"))
+                error_dialog.present(self)
 
         self.emit("download-finished", file_url, output_file)
 
