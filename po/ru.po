@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: download-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-10 16:26+0300\n"
+"POT-Creation-Date: 2025-08-24 15:35+0300\n"
 "Last-Translator: Katy248 <petrovanton247@gmail.com>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgid "About app"
 msgstr "О приложении"
 
 #: download-center/DownloadsPage.blp:20 download-center/MainWindow.blp:5
-#: data/ru.katy248.download-center.desktop:3
+#: data/ru.katy248.download-center.desktop:2
 msgid "Download center"
 msgstr "Центр загрузок"
 
@@ -68,15 +68,15 @@ msgstr ""
 "которые помогают исправлять существующие ошибки, разрабатывать новые функции "
 "или просто поддерживать приложение в приличном состоянии"
 
-#: download-center/DonationDialog.blp:53
+#: download-center/DonationDialog.blp:55
 msgid "Donate"
 msgstr "Пожертвовать"
 
-#: download-center/DonationDialog.blp:68
+#: download-center/DonationDialog.blp:70
 msgid "Contribute"
 msgstr "Внести вклад"
 
-#: download-center/DonationDialog.blp:95
+#: download-center/DonationDialog.blp:97
 msgid "Don't show this dialog again"
 msgstr "Не показывать этот диалог снова"
 
@@ -131,52 +131,68 @@ msgstr "Началась загрузка в %s"
 msgid "Finished downloading to %s"
 msgstr "Завершена загрузка в %s"
 
-#: download-center/MainWindow.py:68
+#: download-center/DownloadRow.py:78
+#, fuzzy
+msgid "Failed download file"
+msgstr "Завершена загрузка в %s"
+
+#: download-center/DownloadRow.py:81
+#, python-format
+msgid ""
+"There is error occurred while downloading file '%s'. Response status code is "
+"%d"
+msgstr ""
+
+#: download-center/DownloadRow.py:85
+msgid "Terrible"
+msgstr ""
+
+#: download-center/MainWindow.py:71
 msgid "What are you trying to debug?"
 msgstr "Что ты пытаешься отладить?"
 
-#: download-center/MainWindow.py:70
+#: download-center/MainWindow.py:73
 msgid "The Ultimate Question of Life, the Universe, and Everything"
 msgstr "Ответ на главный вопрос жизни, вселенной и всего такого"
 
-#: download-center/MainWindow.py:72
+#: download-center/MainWindow.py:75
 msgid "Nice!"
 msgstr "Nice!"
 
-#: download-center/MainWindow.py:74
+#: download-center/MainWindow.py:77
 msgid "228"
 msgstr "228"
 
-#: download-center/MainWindow.py:76
+#: download-center/MainWindow.py:79
 msgid "420"
 msgstr "420"
 
-#: download-center/MainWindow.py:78
+#: download-center/MainWindow.py:81
 msgid "Bang! Bang! Bang! Pull my devil trigger"
 msgstr "Bang! Bang! Bang! Pull my devil trigger"
 
-#: download-center/MainWindow.py:80
+#: download-center/MainWindow.py:83
 msgid "You nazi, aren't you? If you are, go fuck yourself"
 msgstr "Вы наци, да? Если вы наци, то идите вы нахуй короче"
 
-#: download-center/MainWindow.py:84
+#: download-center/MainWindow.py:87
 #, python-format
 msgid "Congratulations! This is your %s visit. Hope you like this app"
 msgstr "Поздравляем! Это ваш %s визит. Надеемся вам нравится приложение"
 
 #: download-center/DonationDialog.py:30
-msgid "No money"
-msgstr "Без денег"
+msgid "Thanks!"
+msgstr "Спасибо!"
 
 #: download-center/DonationDialog.py:31
-msgid "Currently there is no way to donate((( But thank you for try!"
-msgstr "Сейчас нет способа пожертвовать((( Но спасибо за попытку!"
+msgid "Thank you for your donation!"
+msgstr "Спасибо за ваше пожертвование!"
 
 #: download-center/DonationDialog.py:33
 msgid "Ok"
 msgstr "ОК"
 
-#: data/ru.katy248.download-center.desktop:10
+#: data/ru.katy248.download-center.desktop:9
 msgid "RED ADM;РЕД АДМ;"
 msgstr "RED ADM;РЕД АДМ;"
 
@@ -188,13 +204,19 @@ msgstr "Центр загрузок"
 msgid "Downloading RED ADM but cooler"
 msgstr "Скачивание РЕД АДМ, но круче"
 
+#: data/ru.katy248.download-center.metainfo.xml.in:9
+msgid "Katy248"
+msgstr ""
+
 #: data/ru.katy248.download-center.metainfo.xml.in:12
 msgid "Cool app for downloading RED ADM stuff"
 msgstr "Крутое приложение для загрузки РЕД АДМ"
 
 #: data/ru.katy248.download-center.metainfo.xml.in:36
 msgid "Added annoying donation dialog <em>(enterprise style development)</em>"
-msgstr "Добавлен доставучий диалог с просьбой о пожертвовании <em>(enterprise-разработка)</em>"
+msgstr ""
+"Добавлен доставучий диалог с просьбой о пожертвовании <em>(enterprise-"
+"разработка)</em>"
 
 #: data/ru.katy248.download-center.metainfo.xml.in:37
 msgid "Move current build to window title bar"
@@ -219,6 +241,12 @@ msgstr "Добавлены сборки <em>Astra Linux</em>"
 #: data/ru.katy248.download-center.metainfo.xml.in:65
 msgid "First release"
 msgstr "Первый релиз"
+
+#~ msgid "No money"
+#~ msgstr "Без денег"
+
+#~ msgid "Currently there is no way to donate((( But thank you for try!"
+#~ msgstr "Сейчас нет способа пожертвовать((( Но спасибо за попытку!"
 
 #, python-format
 #~ msgid "Congratulations! This is your %d visit. Hope you like this app"

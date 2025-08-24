@@ -7,7 +7,7 @@ from locale import gettext as _
 class DonationDialog(Adw.Dialog):
     __gtype_name__ = "DonationDialog"
     show_dialog_check_button: Gtk.CheckButton = Gtk.Template.Child()
-    donate_button: Gtk.Button = Gtk.Template.Child()
+    donate_button: Gtk.LinkButton = Gtk.Template.Child()
     dont_show_box: Gtk.Box = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
@@ -27,8 +27,8 @@ class DonationDialog(Adw.Dialog):
 
     def on_donate_clicked(self, button):
         dialog = Adw.AlertDialog.new(
-            _("No money"),
-            _("Currently there is no way to donate((( But thank you for try!"),
+            _("Thanks!"),
+            _("Thank you for your donation!"),
         )
         dialog.add_response("ok", _("Ok"))
 
@@ -38,3 +38,4 @@ class DonationDialog(Adw.Dialog):
 
         dialog.connect("response", on_response)
         dialog.present(self)
+        self.close()

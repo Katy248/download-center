@@ -43,11 +43,13 @@ template $DonationDialog: Adw.Dialog {
                     spacing: 6;
                     halign: center;
 
-                    Gtk.Button donate_button {
+                    Gtk.LinkButton donate_button {
                         styles [
                             "suggested-action",
                             "pill",
                         ]
+
+                        uri: "https://boosty.to/katy248/donate";
 
                         Adw.ButtonContent {
                             label: _("Donate");

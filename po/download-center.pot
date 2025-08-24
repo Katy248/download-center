@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: download-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-10 16:26+0300\n"
+"POT-Creation-Date: 2025-08-24 15:35+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,7 +34,7 @@ msgid "About app"
 msgstr ""
 
 #: download-center/DownloadsPage.blp:20 download-center/MainWindow.blp:5
-#: data/ru.katy248.download-center.desktop:3
+#: data/ru.katy248.download-center.desktop:2
 msgid "Download center"
 msgstr ""
 
@@ -73,15 +73,15 @@ msgid ""
 "current state"
 msgstr ""
 
-#: download-center/DonationDialog.blp:53
+#: download-center/DonationDialog.blp:55
 msgid "Donate"
 msgstr ""
 
-#: download-center/DonationDialog.blp:68
+#: download-center/DonationDialog.blp:70
 msgid "Contribute"
 msgstr ""
 
-#: download-center/DonationDialog.blp:95
+#: download-center/DonationDialog.blp:97
 msgid "Don't show this dialog again"
 msgstr ""
 
@@ -136,52 +136,67 @@ msgstr ""
 msgid "Finished downloading to %s"
 msgstr ""
 
-#: download-center/MainWindow.py:68
+#: download-center/DownloadRow.py:78
+msgid "Failed download file"
+msgstr ""
+
+#: download-center/DownloadRow.py:81
+#, python-format
+msgid ""
+"There is error occurred while downloading file '%s'. Response status code is "
+"%d"
+msgstr ""
+
+#: download-center/DownloadRow.py:85
+msgid "Terrible"
+msgstr ""
+
+#: download-center/MainWindow.py:71
 msgid "What are you trying to debug?"
 msgstr ""
 
-#: download-center/MainWindow.py:70
+#: download-center/MainWindow.py:73
 msgid "The Ultimate Question of Life, the Universe, and Everything"
 msgstr ""
 
-#: download-center/MainWindow.py:72
+#: download-center/MainWindow.py:75
 msgid "Nice!"
 msgstr ""
 
-#: download-center/MainWindow.py:74
+#: download-center/MainWindow.py:77
 msgid "228"
 msgstr ""
 
-#: download-center/MainWindow.py:76
+#: download-center/MainWindow.py:79
 msgid "420"
 msgstr ""
 
-#: download-center/MainWindow.py:78
+#: download-center/MainWindow.py:81
 msgid "Bang! Bang! Bang! Pull my devil trigger"
 msgstr ""
 
-#: download-center/MainWindow.py:80
+#: download-center/MainWindow.py:83
 msgid "You nazi, aren't you? If you are, go fuck yourself"
 msgstr ""
 
-#: download-center/MainWindow.py:84
+#: download-center/MainWindow.py:87
 #, python-format
 msgid "Congratulations! This is your %s visit. Hope you like this app"
 msgstr ""
 
 #: download-center/DonationDialog.py:30
-msgid "No money"
+msgid "Thanks!"
 msgstr ""
 
 #: download-center/DonationDialog.py:31
-msgid "Currently there is no way to donate((( But thank you for try!"
+msgid "Thank you for your donation!"
 msgstr ""
 
 #: download-center/DonationDialog.py:33
 msgid "Ok"
 msgstr ""
 
-#: data/ru.katy248.download-center.desktop:10
+#: data/ru.katy248.download-center.desktop:9
 msgid "RED ADM;РЕД АДМ;"
 msgstr ""
 
@@ -191,6 +206,10 @@ msgstr ""
 
 #: data/ru.katy248.download-center.metainfo.xml.in:5
 msgid "Downloading RED ADM but cooler"
+msgstr ""
+
+#: data/ru.katy248.download-center.metainfo.xml.in:9
+msgid "Katy248"
 msgstr ""
 
 #: data/ru.katy248.download-center.metainfo.xml.in:12
