@@ -97,12 +97,13 @@ class MainWindow(Adw.ApplicationWindow):
         dialog = SettingsDialog()
         dialog.present(self)
 
-    def on_about_activated(self, action, _):
+    def on_about_activated(self, action, args):
         dialog = Adw.AboutDialog()
         dialog = Adw.AboutDialog.new_from_appdata(
             "/ru/katy248/download-center/ru.katy248.download-center.metainfo.xml",
             VERSION,
         )
+        dialog.add_link(_("Support development"), "https://boosty.to/katy248/donate")
         dialog.set_artists(["Katy248 <petrovanton247@gmail.com>"])
         dialog.set_developers(["Katy248 <petrovanton247@gmail.com>"])
         dialog.present(self)

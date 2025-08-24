@@ -22,6 +22,7 @@
   <url type="homepage">https://github.com/katy248/download-center</url>
   <url type="vcs-browser">https://github.com/katy248/download-center</url>
   <url type="bugtracker">https://gitlab.com/Katy248/download-center/-/issues</url>
+  <url type="donation">https://boosty.to/katy248/donate</url>
   <provides>
     <binary>download-center</binary>
     <python3>download-center</python3>
@@ -30,6 +31,14 @@
     <internet>always</internet>
   </requires>
   <releases>
+    <release version="0.2.5">
+      <description>
+        <ul>
+          <li>Fix bugs</li>
+          <li>Added donation link</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.2.4">
       <description>
         <ul>

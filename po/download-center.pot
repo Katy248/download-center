@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: download-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-24 15:35+0300\n"
+"POT-Creation-Date: 2025-08-24 19:01+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,7 +34,7 @@ msgid "About app"
 msgstr ""
 
 #: download-center/DownloadsPage.blp:20 download-center/MainWindow.blp:5
-#: data/ru.katy248.download-center.desktop:2
+#: data/ru.katy248.download-center.desktop:3
 msgid "Download center"
 msgstr ""
 
@@ -184,6 +184,10 @@ msgstr ""
 msgid "Congratulations! This is your %s visit. Hope you like this app"
 msgstr ""
 
+#: download-center/MainWindow.py:106
+msgid "Support development"
+msgstr ""
+
 #: download-center/DonationDialog.py:30
 msgid "Thanks!"
 msgstr ""
@@ -196,7 +200,7 @@ msgstr ""
 msgid "Ok"
 msgstr ""
 
-#: data/ru.katy248.download-center.desktop:9
+#: data/ru.katy248.download-center.desktop:10
 msgid "RED ADM;РЕД АДМ;"
 msgstr ""
 
@@ -208,38 +212,42 @@ msgstr ""
 msgid "Downloading RED ADM but cooler"
 msgstr ""
 
-#: data/ru.katy248.download-center.metainfo.xml.in:9
-msgid "Katy248"
-msgstr ""
-
 #: data/ru.katy248.download-center.metainfo.xml.in:12
 msgid "Cool app for downloading RED ADM stuff"
 msgstr ""
 
-#: data/ru.katy248.download-center.metainfo.xml.in:36
-msgid "Added annoying donation dialog <em>(enterprise style development)</em>"
-msgstr ""
-
 #: data/ru.katy248.download-center.metainfo.xml.in:37
-msgid "Move current build to window title bar"
+msgid "Fix bugs"
 msgstr ""
 
 #: data/ru.katy248.download-center.metainfo.xml.in:38
-msgid "Fix localization"
+msgid "Added donation link"
 msgstr ""
 
 #: data/ru.katy248.download-center.metainfo.xml.in:45
+msgid "Added annoying donation dialog <em>(enterprise style development)</em>"
+msgstr ""
+
+#: data/ru.katy248.download-center.metainfo.xml.in:46
+msgid "Move current build to window title bar"
+msgstr ""
+
+#: data/ru.katy248.download-center.metainfo.xml.in:47
+msgid "Fix localization"
+msgstr ""
+
+#: data/ru.katy248.download-center.metainfo.xml.in:54
 msgid "Added localization"
 msgstr ""
 
-#: data/ru.katy248.download-center.metainfo.xml.in:52
+#: data/ru.katy248.download-center.metainfo.xml.in:61
 msgid "Reworked settings"
 msgstr ""
 
-#: data/ru.katy248.download-center.metainfo.xml.in:59
+#: data/ru.katy248.download-center.metainfo.xml.in:68
 msgid "Added <em>Astra Linux</em> builds"
 msgstr ""
 
-#: data/ru.katy248.download-center.metainfo.xml.in:65
+#: data/ru.katy248.download-center.metainfo.xml.in:74
 msgid "First release"
 msgstr ""
