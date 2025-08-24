@@ -1,5 +1,6 @@
 [![Please do not theme this app](https://stopthemingmy.app/badge.svg)](https://stopthemingmy.app)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Donate](https://img.shields.io/badge/Donate-Boosty.to-F15F2C.svg)](https://boosty.to/katy248/donate)
 
 # RED ADM Download center
 
