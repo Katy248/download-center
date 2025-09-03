@@ -9,14 +9,14 @@ from .auth import AUTH_STATE, AUTHENTICATED_CHANGED_SIGNAL
 class LoginPage(Adw.NavigationPage):
     __gtype_name__ = "LoginPage"
 
-    login_button: Gtk.Button = Gtk.Template.Child()
+    login_button: Adw.ButtonRow = Gtk.Template.Child()
     license_entry: Adw.EntryRow = Gtk.Template.Child()
     persistence_check: Adw.SwitchRow = Gtk.Template.Child()
     toast_overlay: Adw.ToastOverlay = Gtk.Template.Child()
 
     def __init__(self):
         super().__init__()
-        self.login_button.connect("clicked", self.on_login_button_click)
+        self.login_button.connect("activated", self.on_login_button_click)
         SETTINGS.bind(
             "stay-logged-in",
             self.persistence_check,

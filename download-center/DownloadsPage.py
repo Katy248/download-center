@@ -33,7 +33,7 @@ class DownloadsPage(Adw.NavigationPage):
         self.fill_build_group(self.redos8_builds_group, "redos8")
         self.fill_build_group(self.astra_builds_group, "astra")
 
-    def fill_build_group(self, group: Adw.PreferencesGroup, build_name: str):
+    def fill_build_group(self, group: Gtk.ListBox, build_name: str):
         if self.data is False:
             return
         if self.data["rpm"] is None:
@@ -41,7 +41,7 @@ class DownloadsPage(Adw.NavigationPage):
         builds = [b for b in self.data["rpm"] if b["build"] == build_name]
         for build in builds:
             row = DownloadRow(build)
-            group.add(row)
+            group.append(row)
             row.connect("download-started", self.on_download_started)
             row.connect("download-finished", self.on_download_finished)
 

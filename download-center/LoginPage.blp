@@ -23,7 +23,7 @@ template $LoginPage: Adw.NavigationPage {
 
                         Gtk.ListBox {
                             styles [
-                                "boxed-list",
+                                "boxed-list-separate",
                             ]
 
                             selection-mode: none;
@@ -42,17 +42,14 @@ template $LoginPage: Adw.NavigationPage {
                                     "selection-mode",
                                 ]
                             }
-                        }
 
-                        Gtk.Button login_button {
-                            styles [
-                                "suggested-action",
-                                "pill"
-                            ]
+                            Adw.ButtonRow login_button {
+                                styles [
+                                    "suggested-action",
+                                ]
 
-                            Adw.ButtonContent {
-                                icon-name: "dialog-password-symbolic";
-                                label: _("Log in");
+                                title: _("Log in");
+                                start-icon-name: "dialog-password-symbolic";
                             }
                         }
                     }

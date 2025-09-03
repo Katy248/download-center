@@ -31,34 +31,17 @@
     <internet>always</internet>
   </requires>
   <releases>
-    <release version="0.2.5">
-      <description>
-        <ul>
-          <li>Fix bugs</li>
-          <li>Added donation link</li>
-        </ul>
-      </description>
-    </release>
-    <release version="0.2.4">
-      <description>
-        <ul>
-          <li>Added annoying donation dialog <em>(enterprise style development)</em></li>
-          <li>Move current build to window title bar</li>
-          <li>Fix localization</li>
-        </ul>
-      </description>
-    </release>
-    <release version="0.2.2">
-      <description>
-        <ul>
-          <li>Added localization</li>
-        </ul>
-      </description>
-    </release>
-    <release version="0.2.1">
+    <release version="0.2.6">
       <description>
         <ul>
           <li>Reworked settings</li>
+          <li>Added localization</li>
+          <li>Added annoying donation dialog <em>(enterprise style development)</em></li>
+          <li>Move current build to window title bar</li>
+          <li>Fix localization</li>
+          <li>Fix bugs</li>
+          <li>Added donation link</li>
+          <li>Update libadwaita to <b>1.6</b>, add new styles and controls</li>
         </ul>
       </description>
     </release>

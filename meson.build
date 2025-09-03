@@ -1,4 +1,4 @@
-project('download-center', version: '0.2.5', meson_version: '>=1.4.1')
+project('download-center', version: '0.2.6', meson_version: '>=1.4.1')
 
 project_id = 'ru.katy248.download-center'
 

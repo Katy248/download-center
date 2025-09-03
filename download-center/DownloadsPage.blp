@@ -51,16 +51,34 @@ template $DownloadsPage: Adw.NavigationPage {
                         orientation: vertical;
                         spacing: 20;
 
-                        Adw.PreferencesGroup astra_builds_group {
+                        Adw.PreferencesGroup {
                             title: _("Astra Linux");
+
+                            Gtk.ListBox astra_builds_group {
+                                styles [
+                                    "boxed-list-separate"
+                                ]
+                            }
                         }
 
-                        Adw.PreferencesGroup redos7_builds_group {
-                            title: _("RED OS 7.3");
-                        }
-
-                        Adw.PreferencesGroup redos8_builds_group {
+                        Adw.PreferencesGroup {
                             title: _("RED OS 8");
+
+                            Gtk.ListBox redos8_builds_group {
+                                styles [
+                                    "boxed-list-separate"
+                                ]
+                            }
+                        }
+
+                        Adw.PreferencesGroup {
+                            title: _("RED OS 7.3");
+
+                            Gtk.ListBox redos7_builds_group {
+                                styles [
+                                    "boxed-list-separate"
+                                ]
+                            }
                         }
                     }
                 }
