@@ -1,5 +1,6 @@
 from gi.repository import Adw, Gtk, Gio
-from .config import SETTINGS
+from .config import SETTINGS, DEVELOPMENT
+from locale import gettext as _
 
 
 @Gtk.Template.from_resource("/ru/katy248/download-center/SettingsDialog.ui")
@@ -9,6 +10,8 @@ class SettingsDialog(Adw.PreferencesDialog):
     persistence_row = Gtk.Template.Child()
     license_key_row = Gtk.Template.Child()
     show_donation_dialog_row = Gtk.Template.Child()
+
+    dev_group: Adw.PreferencesGroup = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -31,3 +34,13 @@ class SettingsDialog(Adw.PreferencesDialog):
             "active",
             Gio.SettingsBindFlags.DEFAULT,
         )
+        if DEVELOPMENT:
+            donation_btn = Adw.ButtonRow(title=_("Present donation dialog"))
+            donation_btn.connect("activated", self.on_donation_btn_clicked)
+            self.dev_group.add(donation_btn)
+
+    def on_donation_btn_clicked(self, btn):
+        from .DonationDialog import DonationDialog
+
+        dialog = DonationDialog()
+        dialog.present(self)

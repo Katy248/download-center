@@ -5,6 +5,7 @@ download-center/DonationDialog.blp
 download-center/LoginPage.blp
 download-center/MainWindow.blp
 download-center/SettingsDialog.blp
+download-center/SettingsDialog.py
 download-center/LoginPage.py
 download-center/DownloadsPage.py
 download-center/DownloadRow.py

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: download-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-24 19:01+0300\n"
+"POT-Creation-Date: 2025-09-09 12:13+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,12 +50,12 @@ msgstr ""
 msgid "Astra Linux"
 msgstr ""
 
-#: download-center/DownloadsPage.blp:59
-msgid "RED OS 7.3"
+#: download-center/DownloadsPage.blp:67
+msgid "RED OS 8"
 msgstr ""
 
-#: download-center/DownloadsPage.blp:63
-msgid "RED OS 8"
+#: download-center/DownloadsPage.blp:79
+msgid "RED OS 7.3"
 msgstr ""
 
 #: download-center/DonationDialog.blp:5
@@ -97,7 +97,7 @@ msgstr ""
 msgid "Stay logged in"
 msgstr ""
 
-#: download-center/LoginPage.blp:55
+#: download-center/LoginPage.blp:51
 msgid "Log in"
 msgstr ""
 
@@ -111,6 +111,14 @@ msgstr ""
 
 #: download-center/SettingsDialog.blp:30
 msgid "Show donation dialog"
+msgstr ""
+
+#: download-center/SettingsDialog.blp:35
+msgid "Development"
+msgstr ""
+
+#: download-center/SettingsDialog.py:38
+msgid "Present donation dialog"
 msgstr ""
 
 #: download-center/LoginPage.py:37
@@ -217,37 +225,41 @@ msgid "Cool app for downloading RED ADM stuff"
 msgstr ""
 
 #: data/ru.katy248.download-center.metainfo.xml.in:37
-msgid "Fix bugs"
-msgstr ""
-
-#: data/ru.katy248.download-center.metainfo.xml.in:38
-msgid "Added donation link"
-msgstr ""
-
-#: data/ru.katy248.download-center.metainfo.xml.in:45
-msgid "Added annoying donation dialog <em>(enterprise style development)</em>"
-msgstr ""
-
-#: data/ru.katy248.download-center.metainfo.xml.in:46
-msgid "Move current build to window title bar"
-msgstr ""
-
-#: data/ru.katy248.download-center.metainfo.xml.in:47
-msgid "Fix localization"
-msgstr ""
-
-#: data/ru.katy248.download-center.metainfo.xml.in:54
-msgid "Added localization"
-msgstr ""
-
-#: data/ru.katy248.download-center.metainfo.xml.in:61
 msgid "Reworked settings"
 msgstr ""
 
-#: data/ru.katy248.download-center.metainfo.xml.in:68
+#: data/ru.katy248.download-center.metainfo.xml.in:38
+msgid "Added localization"
+msgstr ""
+
+#: data/ru.katy248.download-center.metainfo.xml.in:39
+msgid "Added annoying donation dialog <em>(enterprise style development)</em>"
+msgstr ""
+
+#: data/ru.katy248.download-center.metainfo.xml.in:40
+msgid "Move current build to window title bar"
+msgstr ""
+
+#: data/ru.katy248.download-center.metainfo.xml.in:41
+msgid "Fix localization"
+msgstr ""
+
+#: data/ru.katy248.download-center.metainfo.xml.in:42
+msgid "Fix bugs"
+msgstr ""
+
+#: data/ru.katy248.download-center.metainfo.xml.in:43
+msgid "Added donation link"
+msgstr ""
+
+#: data/ru.katy248.download-center.metainfo.xml.in:44
+msgid "1.6"
+msgstr ""
+
+#: data/ru.katy248.download-center.metainfo.xml.in:51
 msgid "Added <em>Astra Linux</em> builds"
 msgstr ""
 
-#: data/ru.katy248.download-center.metainfo.xml.in:74
+#: data/ru.katy248.download-center.metainfo.xml.in:57
 msgid "First release"
 msgstr ""

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: download-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-24 19:01+0300\n"
+"POT-Creation-Date: 2025-09-09 12:13+0300\n"
 "Last-Translator: Katy248 <petrovanton247@gmail.com>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -42,13 +42,13 @@ msgstr "Меню Приложения"
 msgid "Astra Linux"
 msgstr "Astra Linux"
 
-#: download-center/DownloadsPage.blp:59
-msgid "RED OS 7.3"
-msgstr "РЕД ОС 7.3"
-
-#: download-center/DownloadsPage.blp:63
+#: download-center/DownloadsPage.blp:67
 msgid "RED OS 8"
 msgstr "РЕД ОС 8"
+
+#: download-center/DownloadsPage.blp:79
+msgid "RED OS 7.3"
+msgstr "РЕД ОС 7.3"
 
 #: download-center/DonationDialog.blp:5
 msgid "Help this app"
@@ -92,7 +92,7 @@ msgstr "Лицензионный ключ"
 msgid "Stay logged in"
 msgstr "Оставаться в системе"
 
-#: download-center/LoginPage.blp:55
+#: download-center/LoginPage.blp:51
 msgid "Log in"
 msgstr "Войти"
 
@@ -107,6 +107,14 @@ msgstr "Другое"
 #: download-center/SettingsDialog.blp:30
 msgid "Show donation dialog"
 msgstr "Показывать диалог для сбора пожертвований"
+
+#: download-center/SettingsDialog.blp:35
+msgid "Development"
+msgstr "Разработка"
+
+#: download-center/SettingsDialog.py:38
+msgid "Present donation dialog"
+msgstr "Показать диалог для сбора пожертвований"
 
 #: download-center/LoginPage.py:37
 msgid "Invalid license key"
@@ -132,20 +140,19 @@ msgid "Finished downloading to %s"
 msgstr "Завершена загрузка в %s"
 
 #: download-center/DownloadRow.py:78
-#, fuzzy
 msgid "Failed download file"
-msgstr "Завершена загрузка в %s"
+msgstr "Не получилось загрузить файл"
 
 #: download-center/DownloadRow.py:81
 #, python-format
 msgid ""
 "There is error occurred while downloading file '%s'. Response status code is "
 "%d"
-msgstr ""
+msgstr "Во время загрузки файла '%s' произошла ошибка. Код ответа: %d"
 
 #: download-center/DownloadRow.py:85
 msgid "Terrible"
-msgstr ""
+msgstr "Ужасно"
 
 #: download-center/MainWindow.py:71
 msgid "What are you trying to debug?"
@@ -213,40 +220,44 @@ msgid "Cool app for downloading RED ADM stuff"
 msgstr "Крутое приложение для загрузки РЕД АДМ"
 
 #: data/ru.katy248.download-center.metainfo.xml.in:37
-msgid "Fix bugs"
-msgstr ""
+msgid "Reworked settings"
+msgstr "Переработаны настройки"
 
 #: data/ru.katy248.download-center.metainfo.xml.in:38
-msgid "Added donation link"
-msgstr "Добавлена ссылка для пожертвований"
+msgid "Added localization"
+msgstr "Добавлена локализация"
 
-#: data/ru.katy248.download-center.metainfo.xml.in:45
+#: data/ru.katy248.download-center.metainfo.xml.in:39
 msgid "Added annoying donation dialog <em>(enterprise style development)</em>"
 msgstr ""
 "Добавлен доставучий диалог с просьбой о пожертвовании <em>(enterprise-"
 "разработка)</em>"
 
-#: data/ru.katy248.download-center.metainfo.xml.in:46
+#: data/ru.katy248.download-center.metainfo.xml.in:40
 msgid "Move current build to window title bar"
 msgstr "Текущая сборка перемещена в заголовок окна"
 
-#: data/ru.katy248.download-center.metainfo.xml.in:47
+#: data/ru.katy248.download-center.metainfo.xml.in:41
 msgid "Fix localization"
 msgstr "Исправлена локализация"
 
-#: data/ru.katy248.download-center.metainfo.xml.in:54
-msgid "Added localization"
-msgstr "Добавлена локализация"
+#: data/ru.katy248.download-center.metainfo.xml.in:42
+msgid "Fix bugs"
+msgstr "Исправлены баги"
 
-#: data/ru.katy248.download-center.metainfo.xml.in:61
-msgid "Reworked settings"
-msgstr "Переработаны настройки"
+#: data/ru.katy248.download-center.metainfo.xml.in:43
+msgid "Added donation link"
+msgstr "Добавлена ссылка для пожертвований"
 
-#: data/ru.katy248.download-center.metainfo.xml.in:68
+#: data/ru.katy248.download-center.metainfo.xml.in:44
+msgid "1.6"
+msgstr "1.6"
+
+#: data/ru.katy248.download-center.metainfo.xml.in:51
 msgid "Added <em>Astra Linux</em> builds"
 msgstr "Добавлены сборки <em>Astra Linux</em>"
 
-#: data/ru.katy248.download-center.metainfo.xml.in:74
+#: data/ru.katy248.download-center.metainfo.xml.in:57
 msgid "First release"
 msgstr "Первый релиз"
 

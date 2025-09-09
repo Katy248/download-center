@@ -21,7 +21,10 @@ class AuthState(GObject.Object):
             self.authenticate(key)
 
     def authenticate(self, license_key: str) -> bool:
-        self.authenticated = login(license_key)
+        try:
+            self.authenticated = login(license_key)
+        except:
+            print(f"[ERROR] Failed to authenticate")
         if not self.authenticated:
             return False
 
