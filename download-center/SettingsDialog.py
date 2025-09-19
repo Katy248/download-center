@@ -38,6 +38,8 @@ class SettingsDialog(Adw.PreferencesDialog):
             donation_btn = Adw.ButtonRow(title=_("Present donation dialog"))
             donation_btn.connect("activated", self.on_donation_btn_clicked)
             self.dev_group.add(donation_btn)
+        else:
+            self.dev_group.hide()
 
     def on_donation_btn_clicked(self, btn):
         from .DonationDialog import DonationDialog
