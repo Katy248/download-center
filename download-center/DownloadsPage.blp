@@ -40,50 +40,76 @@ template $DownloadsPage: Adw.NavigationPage {
         }
 
         content: Adw.ToastOverlay toast_overlay {
-            Gtk.ScrolledWindow {
-                Adw.Clamp {
-                    margin-top: 20;
-                    margin-bottom: 20;
-                    margin-start: 20;
-                    margin-end: 20;
+            Adw.BreakpointBin {
+                Adw.Breakpoint {
+                    condition ("max-width: 700sp")
 
-                    Gtk.Box content_box {
-                        orientation: vertical;
+                    setters {
+                        base_box.orientation: vertical;
+                    }
+                }
+
+                Gtk.ScrolledWindow {
+                    Gtk.Box base_box {
+                        margin-top: 20;
+                        margin-bottom: 20;
+                        halign: center;
+                        orientation: horizontal;
                         spacing: 20;
 
-                        Adw.PreferencesGroup {
-                            title: _("Astra Linux");
+                        Adw.Clamp {
+                            margin-start: 20;
+                            margin-end: 20;
 
-                            Gtk.ListBox astra_builds_group {
-                                selection-mode: none;
+                            Gtk.Box content_box {
+                                orientation: vertical;
+                                spacing: 20;
 
-                                styles [
-                                    "boxed-list-separate"
-                                ]
+                                Adw.PreferencesGroup {
+                                    title: _("Astra Linux");
+
+                                    Gtk.ListBox astra_builds_group {
+                                        selection-mode: none;
+
+                                        styles [
+                                            "boxed-list-separate"
+                                        ]
+                                    }
+                                }
+
+                                Adw.PreferencesGroup {
+                                    title: _("RED OS 8");
+
+                                    Gtk.ListBox redos8_builds_group {
+                                        selection-mode: none;
+
+                                        styles [
+                                            "boxed-list-separate"
+                                        ]
+                                    }
+                                }
+
+                                Adw.PreferencesGroup {
+                                    title: _("RED OS 7.3");
+
+                                    Gtk.ListBox redos7_builds_group {
+                                        selection-mode: none;
+
+                                        styles [
+                                            "boxed-list-separate"
+                                        ]
+                                    }
+                                }
                             }
                         }
 
-                        Adw.PreferencesGroup {
-                            title: _("RED OS 8");
+                        Adw.Clamp {
+                            margin-start: 20;
+                            margin-end: 20;
 
-                            Gtk.ListBox redos8_builds_group {
-                                selection-mode: none;
-
-                                styles [
-                                    "boxed-list-separate"
-                                ]
-                            }
-                        }
-
-                        Adw.PreferencesGroup {
-                            title: _("RED OS 7.3");
-
-                            Gtk.ListBox redos7_builds_group {
-                                selection-mode: none;
-
-                                styles [
-                                    "boxed-list-separate"
-                                ]
+                            Adw.PreferencesGroup docs_group {
+                                title: _("Documentation");
+                                separate-rows: true;
                             }
                         }
                     }

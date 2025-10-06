@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: download-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-09 12:13+0300\n"
+"POT-Creation-Date: 2025-10-06 14:24+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,16 +46,20 @@ msgstr ""
 msgid "App Menu"
 msgstr ""
 
-#: download-center/DownloadsPage.blp:55
+#: download-center/DownloadsPage.blp:69
 msgid "Astra Linux"
 msgstr ""
 
-#: download-center/DownloadsPage.blp:67
+#: download-center/DownloadsPage.blp:81
 msgid "RED OS 8"
 msgstr ""
 
-#: download-center/DownloadsPage.blp:79
+#: download-center/DownloadsPage.blp:93
 msgid "RED OS 7.3"
+msgstr ""
+
+#: download-center/DownloadsPage.blp:111
+msgid "Documentation"
 msgstr ""
 
 #: download-center/DonationDialog.blp:5
@@ -129,17 +133,21 @@ msgstr ""
 msgid "Failed to authenticate"
 msgstr ""
 
-#: download-center/DownloadsPage.py:29
+#: download-center/DownloadsPage.py:31
 #, python-format
 msgid "Current build: %s"
 msgstr ""
 
-#: download-center/DownloadsPage.py:49
+#: download-center/DownloadsPage.py:53
 #, python-format
 msgid "Started downloading to %s"
 msgstr ""
 
-#: download-center/DownloadsPage.py:52
+#: download-center/DownloadsPage.py:65
+msgid "Open PDF file"
+msgstr ""
+
+#: download-center/DownloadsPage.py:74
 #, python-format
 msgid "Finished downloading to %s"
 msgstr ""
@@ -218,6 +226,10 @@ msgstr ""
 
 #: data/ru.katy248.download-center.metainfo.xml.in:5
 msgid "Downloading RED ADM but cooler"
+msgstr ""
+
+#: data/ru.katy248.download-center.metainfo.xml.in:9
+msgid "Katy248"
 msgstr ""
 
 #: data/ru.katy248.download-center.metainfo.xml.in:12

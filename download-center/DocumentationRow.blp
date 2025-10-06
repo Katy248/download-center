@@ -1,0 +1,17 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $DocumentationRow: Adw.ActionRow {
+    [suffix]
+    Gtk.Button {
+        styles [
+            "circular",
+            "flat",
+            "info"
+        ]
+
+        tooltip-text: _("Open PDF file");
+        valign: center;
+        icon-name: "documentation-symbolic";
+    }
+}

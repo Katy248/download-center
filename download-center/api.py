@@ -1,7 +1,9 @@
 from http.client import OK
 import json
+import typing
 import requests
 import datetime
+from .config import DEVELOPMENT
 
 BASE_ADDR = "https://update-center.red-soft.ru"
 
@@ -69,9 +71,9 @@ def logout():
     __license_key = None
 
 
-def get_files():
+def get_files() -> dict[str, typing.Any] | None:
     if not __check_auth():
-        return False
+        return None
 
     response = requests.get(
         BASE_ADDR + "/download/files?type=current",
@@ -79,7 +81,10 @@ def get_files():
     )
 
     if not response.status_code == OK:
-        return False
+        return None
+
+    if DEVELOPMENT:
+        print(response.json())
 
     return response.json()
 
