@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: download-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-06 14:24+0300\n"
+"POT-Creation-Date: 2025-10-08 11:46+0300\n"
 "Last-Translator: Katy248 <petrovanton247@gmail.com>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -17,40 +17,44 @@ msgstr "Загрузить MD5 хеш"
 msgid "Download RPM"
 msgstr "Загрузить RPM"
 
-#: download-center/DownloadsPage.blp:6 download-center/SettingsDialog.blp:5
+#: download-center/DownloadsPage.blp:6
+msgid "Open in web browser"
+msgstr "Открыть в браузере"
+
+#: download-center/DownloadsPage.blp:12 download-center/SettingsDialog.blp:5
 msgid "Settings"
 msgstr "Настройки"
 
-#: download-center/DownloadsPage.blp:13
+#: download-center/DownloadsPage.blp:18
 msgid "About app"
 msgstr "О приложении"
 
-#: download-center/DownloadsPage.blp:20 download-center/MainWindow.blp:5
+#: download-center/DownloadsPage.blp:25 download-center/MainWindow.blp:5
 #: data/ru.katy248.download-center.desktop:3
 msgid "Download center"
 msgstr "Центр загрузок"
 
-#: download-center/DownloadsPage.blp:31
+#: download-center/DownloadsPage.blp:36
 msgid "Log Out"
 msgstr "Выход"
 
-#: download-center/DownloadsPage.blp:38
+#: download-center/DownloadsPage.blp:43
 msgid "App Menu"
 msgstr "Меню Приложения"
 
-#: download-center/DownloadsPage.blp:69
+#: download-center/DownloadsPage.blp:74
 msgid "Astra Linux"
 msgstr "Astra Linux"
 
-#: download-center/DownloadsPage.blp:81
+#: download-center/DownloadsPage.blp:86
 msgid "RED OS 8"
 msgstr "РЕД ОС 8"
 
-#: download-center/DownloadsPage.blp:93
+#: download-center/DownloadsPage.blp:98
 msgid "RED OS 7.3"
 msgstr "РЕД ОС 7.3"
 
-#: download-center/DownloadsPage.blp:111
+#: download-center/DownloadsPage.blp:116
 msgid "Documentation"
 msgstr "Документация"
 
@@ -128,21 +132,17 @@ msgstr "Неверный лицензионный ключ"
 msgid "Failed to authenticate"
 msgstr "Не получилось авторизоваться"
 
-#: download-center/DownloadsPage.py:31
+#: download-center/DownloadsPage.py:32
 #, python-format
 msgid "Current build: %s"
 msgstr "Текущая сборка: %s"
 
-#: download-center/DownloadsPage.py:53
+#: download-center/DownloadsPage.py:54
 #, python-format
 msgid "Started downloading to %s"
 msgstr "Началась загрузка в %s"
 
-#: download-center/DownloadsPage.py:65
-msgid "Open PDF file"
-msgstr "Открыть PDF файл"
-
-#: download-center/DownloadsPage.py:74
+#: download-center/DownloadsPage.py:66
 #, python-format
 msgid "Finished downloading to %s"
 msgstr "Завершена загрузка в %s"
@@ -272,6 +272,9 @@ msgstr "Добавлены сборки <em>Astra Linux</em>"
 #: data/ru.katy248.download-center.metainfo.xml.in:57
 msgid "First release"
 msgstr "Первый релиз"
+
+#~ msgid "Open PDF file"
+#~ msgstr "Открыть PDF файл"
 
 #~ msgid "No money"
 #~ msgstr "Без денег"

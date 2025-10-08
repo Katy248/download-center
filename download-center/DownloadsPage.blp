@@ -3,9 +3,14 @@ using Adw 1;
 
 menu main_menu {
     item {
+        label: _("Open in web browser");
+        action: "app.open-in-web";
+        icon-name: "web-browser-symbolic";
+    }
+
+    item {
         label: _("Settings");
         icon-name: "org.gnome.Settings-symbolic";
-        // => $on_settings_button_clicked();
         action: "win.settings";
     }
 
