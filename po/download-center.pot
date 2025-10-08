@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: download-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-08 12:41+0300\n"
+"POT-Creation-Date: 2025-10-08 13:00+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -85,11 +85,11 @@ msgstr ""
 msgid "Donate"
 msgstr ""
 
-#: download-center/DonationDialog.blp:70
+#: download-center/DonationDialog.blp:69
 msgid "Contribute"
 msgstr ""
 
-#: download-center/DonationDialog.blp:97
+#: download-center/DonationDialog.blp:96
 msgid "Don't show this dialog again"
 msgstr ""
 
@@ -146,6 +146,10 @@ msgstr ""
 
 #: download-center/SettingsDialog.py:38
 msgid "Present donation dialog"
+msgstr ""
+
+#: download-center/SettingsDialog.py:43
+msgid "Entrances count"
 msgstr ""
 
 #: download-center/LoginPage.py:37

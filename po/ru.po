@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: download-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-08 12:41+0300\n"
+"POT-Creation-Date: 2025-10-08 13:00+0300\n"
 "Last-Translator: Katy248 <petrovanton247@gmail.com>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -80,11 +80,11 @@ msgstr ""
 msgid "Donate"
 msgstr "Пожертвовать"
 
-#: download-center/DonationDialog.blp:70
+#: download-center/DonationDialog.blp:69
 msgid "Contribute"
 msgstr "Внести вклад"
 
-#: download-center/DonationDialog.blp:97
+#: download-center/DonationDialog.blp:96
 msgid "Don't show this dialog again"
 msgstr "Не показывать этот диалог снова"
 
@@ -142,6 +142,10 @@ msgstr "Разработка"
 #: download-center/SettingsDialog.py:38
 msgid "Present donation dialog"
 msgstr "Показать диалог для сбора пожертвований"
+
+#: download-center/SettingsDialog.py:43
+msgid "Entrances count"
+msgstr "Количество входов"
 
 #: download-center/LoginPage.py:37
 msgid "Invalid license key"

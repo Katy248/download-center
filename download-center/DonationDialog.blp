@@ -4,17 +4,19 @@ using Adw 1;
 template $DonationDialog: Adw.Dialog {
     title: _("Help this app");
     content-width: 400;
+    height-request: 200;
+    content-height: 400;
 
-    Gtk.Box {
-        orientation: vertical;
+    styles [
+        "preferences"
+    ]
 
-        Adw.HeaderBar {
-            styles [
-                "flat",
-            ]
-        }
+    child: Adw.ToolbarView {
+        [top]
+        Adw.HeaderBar {}
 
-        Adw.ClampScrollable {
+        content: Adw.ClampScrollable {
+            overflow: hidden;
             margin-start: 20;
             margin-end: 20;
             margin-top: 20;
@@ -34,6 +36,10 @@ template $DonationDialog: Adw.Dialog {
                 }
 
                 Label {
+                    styles [
+                        "document"
+                    ]
+
                     label: _("So maybe you can help it to improve? There is several options that helps to fix existing bugs, develop new features or just maintain application in current state");
                     wrap: true;
                 }
@@ -41,11 +47,10 @@ template $DonationDialog: Adw.Dialog {
                 Gtk.Box {
                     orientation: vertical;
                     spacing: 6;
-                    halign: center;
-
+                    // halign: center;
                     Gtk.LinkButton donate_button {
                         styles [
-                            "suggested-action",
+                            "warning",
                             "pill",
                         ]
 
@@ -61,7 +66,6 @@ template $DonationDialog: Adw.Dialog {
                         styles [
                             "pill",
                             "success",
-                            "opaque",
                         ]
 
                         uri: "https://github.com/katy248/download-center";
@@ -98,6 +102,6 @@ template $DonationDialog: Adw.Dialog {
                     }
                 }
             }
-        }
-    }
+        };
+    };
 }
