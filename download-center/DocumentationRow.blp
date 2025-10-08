@@ -13,5 +13,6 @@ template $DocumentationRow: Adw.ActionRow {
         tooltip-text: _("Open PDF file");
         valign: center;
         icon-name: "documentation-symbolic";
+        clicked => $on_view_button_clicked();
     }
 }

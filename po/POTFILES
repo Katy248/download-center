@@ -2,6 +2,8 @@
 download-center/DownloadRow.blp
 download-center/DownloadsPage.blp
 download-center/DonationDialog.blp
+download-center/DocumentationRow.blp
+download-center/DocumentationRow.py
 download-center/LoginPage.blp
 download-center/MainWindow.blp
 download-center/SettingsDialog.blp

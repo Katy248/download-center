@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: download-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-08 11:46+0300\n"
+"POT-Creation-Date: 2025-10-08 12:41+0300\n"
 "Last-Translator: Katy248 <petrovanton247@gmail.com>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -88,6 +88,25 @@ msgstr "Внести вклад"
 msgid "Don't show this dialog again"
 msgstr "Не показывать этот диалог снова"
 
+#: download-center/DocumentationRow.blp:13
+msgid "Open PDF file"
+msgstr "Открыть PDF файл"
+
+#: download-center/DocumentationRow.py:52 download-center/DownloadRow.py:78
+msgid "Failed download file"
+msgstr "Не получилось загрузить файл"
+
+#: download-center/DocumentationRow.py:55 download-center/DownloadRow.py:81
+#, python-format
+msgid ""
+"There is error occurred while downloading file '%s'. Response status code is "
+"%d"
+msgstr "Во время загрузки файла '%s' произошла ошибка. Код ответа: %d"
+
+#: download-center/DocumentationRow.py:59 download-center/DownloadRow.py:85
+msgid "Terrible"
+msgstr "Ужасно"
+
 #: download-center/LoginPage.blp:5
 msgid "Login"
 msgstr "Вход"
@@ -147,55 +166,40 @@ msgstr "Началась загрузка в %s"
 msgid "Finished downloading to %s"
 msgstr "Завершена загрузка в %s"
 
-#: download-center/DownloadRow.py:78
-msgid "Failed download file"
-msgstr "Не получилось загрузить файл"
-
-#: download-center/DownloadRow.py:81
-#, python-format
-msgid ""
-"There is error occurred while downloading file '%s'. Response status code is "
-"%d"
-msgstr "Во время загрузки файла '%s' произошла ошибка. Код ответа: %d"
-
-#: download-center/DownloadRow.py:85
-msgid "Terrible"
-msgstr "Ужасно"
-
-#: download-center/MainWindow.py:71
+#: download-center/MainWindow.py:72
 msgid "What are you trying to debug?"
 msgstr "Что ты пытаешься отладить?"
 
-#: download-center/MainWindow.py:73
+#: download-center/MainWindow.py:74
 msgid "The Ultimate Question of Life, the Universe, and Everything"
 msgstr "Ответ на главный вопрос жизни, вселенной и всего такого"
 
-#: download-center/MainWindow.py:75
+#: download-center/MainWindow.py:76
 msgid "Nice!"
 msgstr "Nice!"
 
-#: download-center/MainWindow.py:77
+#: download-center/MainWindow.py:78
 msgid "228"
 msgstr "228"
 
-#: download-center/MainWindow.py:79
+#: download-center/MainWindow.py:80
 msgid "420"
 msgstr "420"
 
-#: download-center/MainWindow.py:81
+#: download-center/MainWindow.py:82
 msgid "Bang! Bang! Bang! Pull my devil trigger"
 msgstr "Bang! Bang! Bang! Pull my devil trigger"
 
-#: download-center/MainWindow.py:83
+#: download-center/MainWindow.py:84
 msgid "You nazi, aren't you? If you are, go fuck yourself"
 msgstr "Вы наци, да? Если вы наци, то идите вы нахуй короче"
 
-#: download-center/MainWindow.py:87
+#: download-center/MainWindow.py:88
 #, python-format
 msgid "Congratulations! This is your %s visit. Hope you like this app"
 msgstr "Поздравляем! Это ваш %s визит. Надеемся вам нравится приложение"
 
-#: download-center/MainWindow.py:106
+#: download-center/MainWindow.py:108
 msgid "Support development"
 msgstr "Поддержать разработку"
 
@@ -272,9 +276,6 @@ msgstr "Добавлены сборки <em>Astra Linux</em>"
 #: data/ru.katy248.download-center.metainfo.xml.in:57
 msgid "First release"
 msgstr "Первый релиз"
-
-#~ msgid "Open PDF file"
-#~ msgstr "Открыть PDF файл"
 
 #~ msgid "No money"
 #~ msgstr "Без денег"

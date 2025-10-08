@@ -7,5 +7,7 @@ template $MainWindow: Adw.ApplicationWindow {
     default-width: 420;
     default-height: 600;
 
-    Adw.NavigationView view {}
+    Adw.ToastOverlay log_toast_overlay {
+        child: Adw.NavigationView view {};
+    }
 }

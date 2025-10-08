@@ -38,6 +38,13 @@ class SettingsDialog(Adw.PreferencesDialog):
             donation_btn = Adw.ButtonRow(title=_("Present donation dialog"))
             donation_btn.connect("activated", self.on_donation_btn_clicked)
             self.dev_group.add(donation_btn)
+
+            entrances_count = Adw.ActionRow(
+                title=_("Entrances count"),
+                css_classes=["property", "numeric"],
+                subtitle=str(SETTINGS.get_int("entrance-count")),
+            )
+            self.dev_group.add(entrances_count)
         else:
             self.dev_group.hide()
 

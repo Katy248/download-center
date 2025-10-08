@@ -17,6 +17,7 @@ MAIN_WINDOW: Adw.ApplicationWindow | None = None
 class MainWindow(Adw.ApplicationWindow):
     __gtype_name__ = "MainWindow"
     view: Adw.NavigationView = Gtk.Template.Child()
+    log_toast_overlay: Adw.ToastOverlay = Gtk.Template.Child()
 
     def __init__(self, app: Adw.Application, **kwargs):
         global MAIN_WINDOW
@@ -89,9 +90,10 @@ class MainWindow(Adw.ApplicationWindow):
 
             notification = Gio.Notification.new(title)
             notification.set_body(body)
-            Gio.Application.get_default().send_notification(
-                "cool-number-%d" % entrances, notification
-            )
+            default_app = Gio.Application.get_default()
+            if default_app is None:
+                return
+            default_app.send_notification("cool-number-%d" % entrances, notification)
 
     def on_settings_activated(self, action, _):
         dialog = SettingsDialog()

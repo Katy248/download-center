@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: download-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-08 11:46+0300\n"
+"POT-Creation-Date: 2025-10-08 12:41+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -93,6 +93,25 @@ msgstr ""
 msgid "Don't show this dialog again"
 msgstr ""
 
+#: download-center/DocumentationRow.blp:13
+msgid "Open PDF file"
+msgstr ""
+
+#: download-center/DocumentationRow.py:52 download-center/DownloadRow.py:78
+msgid "Failed download file"
+msgstr ""
+
+#: download-center/DocumentationRow.py:55 download-center/DownloadRow.py:81
+#, python-format
+msgid ""
+"There is error occurred while downloading file '%s'. Response status code is "
+"%d"
+msgstr ""
+
+#: download-center/DocumentationRow.py:59 download-center/DownloadRow.py:85
+msgid "Terrible"
+msgstr ""
+
 #: download-center/LoginPage.blp:5
 msgid "Login"
 msgstr ""
@@ -152,55 +171,40 @@ msgstr ""
 msgid "Finished downloading to %s"
 msgstr ""
 
-#: download-center/DownloadRow.py:78
-msgid "Failed download file"
-msgstr ""
-
-#: download-center/DownloadRow.py:81
-#, python-format
-msgid ""
-"There is error occurred while downloading file '%s'. Response status code is "
-"%d"
-msgstr ""
-
-#: download-center/DownloadRow.py:85
-msgid "Terrible"
-msgstr ""
-
-#: download-center/MainWindow.py:71
+#: download-center/MainWindow.py:72
 msgid "What are you trying to debug?"
 msgstr ""
 
-#: download-center/MainWindow.py:73
+#: download-center/MainWindow.py:74
 msgid "The Ultimate Question of Life, the Universe, and Everything"
 msgstr ""
 
-#: download-center/MainWindow.py:75
+#: download-center/MainWindow.py:76
 msgid "Nice!"
 msgstr ""
 
-#: download-center/MainWindow.py:77
+#: download-center/MainWindow.py:78
 msgid "228"
 msgstr ""
 
-#: download-center/MainWindow.py:79
+#: download-center/MainWindow.py:80
 msgid "420"
 msgstr ""
 
-#: download-center/MainWindow.py:81
+#: download-center/MainWindow.py:82
 msgid "Bang! Bang! Bang! Pull my devil trigger"
 msgstr ""
 
-#: download-center/MainWindow.py:83
+#: download-center/MainWindow.py:84
 msgid "You nazi, aren't you? If you are, go fuck yourself"
 msgstr ""
 
-#: download-center/MainWindow.py:87
+#: download-center/MainWindow.py:88
 #, python-format
 msgid "Congratulations! This is your %s visit. Hope you like this app"
 msgstr ""
 
-#: download-center/MainWindow.py:106
+#: download-center/MainWindow.py:108
 msgid "Support development"
 msgstr ""
 
