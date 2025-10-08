@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: download-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-08 13:00+0300\n"
+"POT-Creation-Date: 2025-10-08 14:59+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,19 +50,19 @@ msgstr ""
 msgid "App Menu"
 msgstr ""
 
-#: download-center/DownloadsPage.blp:74
+#: download-center/DownloadsPage.blp:77
 msgid "Astra Linux"
 msgstr ""
 
-#: download-center/DownloadsPage.blp:86
+#: download-center/DownloadsPage.blp:89
 msgid "RED OS 8"
 msgstr ""
 
-#: download-center/DownloadsPage.blp:98
+#: download-center/DownloadsPage.blp:101
 msgid "RED OS 7.3"
 msgstr ""
 
-#: download-center/DownloadsPage.blp:116
+#: download-center/DownloadsPage.blp:119
 msgid "Documentation"
 msgstr ""
 
@@ -70,45 +70,53 @@ msgstr ""
 msgid "Help this app"
 msgstr ""
 
-#: download-center/DonationDialog.blp:32
+#: download-center/DonationDialog.blp:34
 msgid "Cool app isn't it?"
 msgstr ""
 
-#: download-center/DonationDialog.blp:37
+#: download-center/DonationDialog.blp:43
 msgid ""
 "So maybe you can help it to improve? There is several options that helps to "
 "fix existing bugs, develop new features or just maintain application in "
 "current state"
 msgstr ""
 
-#: download-center/DonationDialog.blp:55
+#: download-center/DonationDialog.blp:60
 msgid "Donate"
 msgstr ""
 
-#: download-center/DonationDialog.blp:69
+#: download-center/DonationDialog.blp:74
 msgid "Contribute"
 msgstr ""
 
-#: download-center/DonationDialog.blp:96
+#: download-center/DonationDialog.blp:101
 msgid "Don't show this dialog again"
 msgstr ""
 
-#: download-center/DocumentationRow.blp:13
+#: download-center/DocumentationRow.blp:12
+msgid "Document cached"
+msgstr ""
+
+#: download-center/DocumentationRow.blp:23
 msgid "Open PDF file"
 msgstr ""
 
-#: download-center/DocumentationRow.py:52 download-center/DownloadRow.py:78
+#: download-center/DocumentationRow.py:52
+msgid "Downloading documentation file..."
+msgstr ""
+
+#: download-center/DocumentationRow.py:71 download-center/DownloadRow.py:78
 msgid "Failed download file"
 msgstr ""
 
-#: download-center/DocumentationRow.py:55 download-center/DownloadRow.py:81
+#: download-center/DocumentationRow.py:74 download-center/DownloadRow.py:81
 #, python-format
 msgid ""
 "There is error occurred while downloading file '%s'. Response status code is "
 "%d"
 msgstr ""
 
-#: download-center/DocumentationRow.py:59 download-center/DownloadRow.py:85
+#: download-center/DocumentationRow.py:78 download-center/DownloadRow.py:85
 msgid "Terrible"
 msgstr ""
 
@@ -141,15 +149,32 @@ msgid "Show donation dialog"
 msgstr ""
 
 #: download-center/SettingsDialog.blp:35
+msgid "Cache"
+msgstr ""
+
+#: download-center/SettingsDialog.blp:39
+msgid "Clear cache"
+msgstr ""
+
+#: download-center/SettingsDialog.blp:44
 msgid "Development"
 msgstr ""
 
-#: download-center/SettingsDialog.py:38
+#: download-center/SettingsDialog.py:39
 msgid "Present donation dialog"
 msgstr ""
 
-#: download-center/SettingsDialog.py:43
+#: download-center/SettingsDialog.py:44
 msgid "Entrances count"
+msgstr ""
+
+#: download-center/SettingsDialog.py:69
+msgid "Cache cleared"
+msgstr ""
+
+#: download-center/SettingsDialog.py:73
+#, python-format
+msgid "Failed to clear cache: %s"
 msgstr ""
 
 #: download-center/LoginPage.py:37

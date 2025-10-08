@@ -31,6 +31,15 @@ template $SettingsPage: Adw.PreferencesDialog {
             }
         }
 
+        Adw.PreferencesGroup {
+            title: _("Cache");
+
+            Adw.ButtonRow {
+                activated => $on_clear_cache_activated();
+                title: _("Clear cache");
+            }
+        }
+
         Adw.PreferencesGroup dev_group {
             title: _("Development");
         }

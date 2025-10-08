@@ -3,6 +3,16 @@ using Adw 1;
 
 template $DocumentationRow: Adw.ActionRow {
     [suffix]
+    Gtk.Image cached_icon {
+        styles [
+            "success"
+        ]
+
+        icon-name: "object-select-symbolic";
+        tooltip-text: _("Document cached");
+    }
+
+    [suffix]
     Gtk.Button {
         styles [
             "circular",

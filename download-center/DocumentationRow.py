@@ -1,12 +1,11 @@
 import json
 from gi.repository import Gtk, Adw, GLib, Gio
-from .config import APP_ID
+from .config import APP_ID, CACHE_DIR
 from .api import BASE_ADDR, get_headers
 import os
 from locale import gettext as _
 import requests
-
-CACHE_DIR = os.path.join(os.path.expanduser("~"), ".cache", APP_ID)
+from threading import Thread
 
 if not os.path.exists(CACHE_DIR):
     os.makedirs(CACHE_DIR)
@@ -16,17 +15,29 @@ if not os.path.exists(CACHE_DIR):
 class DocumentationRow(Adw.ActionRow):
     __gtype_name__ = "DocumentationRow"
 
+    cached_icon: Gtk.Image = Gtk.Template.Child()
+
     def __init__(self, document_data: dict[str, str]):
         super().__init__()
         self.data = document_data
         self.set_title(self.change_doc_file_name(document_data["file_name"]))
 
+        self.g_local_file = Gio.File.new_for_path(self.local_file())
+        self.cached_icon.set_visible(self.g_local_file.query_exists())
+
     def change_doc_file_name(self, file_name: str) -> str:
         return file_name.replace(".pdf", "").replace("_", " ")
 
+    def local_file(self) -> str:
+        return os.path.join(CACHE_DIR, self.data["file_name"])
+
     @Gtk.Template.Callback()
     def on_view_button_clicked(self, button):
-        output_file = os.path.join(CACHE_DIR, self.data["file_name"])
+        thread = Thread(target=self.show_document)
+        thread.start()
+
+    def show_document(self):
+        output_file = self.local_file()
         if not os.path.exists(output_file):
             self.download(output_file)
 
@@ -35,6 +46,12 @@ class DocumentationRow(Adw.ActionRow):
         launcher.launch()
 
     def download(self, output_file: str):
+        from .MainWindow import MAIN_WINDOW
+
+        overlay = MAIN_WINDOW.log_toast_overlay
+        start_toast = Adw.Toast.new(_("Downloading documentation file..."))
+        overlay.add_toast(start_toast)
+
         with open(output_file, "wb") as fs_file:
             response = requests.post(
                 BASE_ADDR + "/download/files",
@@ -43,6 +60,8 @@ class DocumentationRow(Adw.ActionRow):
             )
             if response.ok:
                 fs_file.write(response.content)
+                start_toast.dismiss()
+                self.cached_icon.set_visible(self.g_local_file.query_exists())
             else:
                 print(
                     "[ERROR]: Response status code is %d. Body dump: %s"

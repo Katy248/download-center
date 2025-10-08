@@ -1,6 +1,7 @@
 from gi.repository import Adw, Gtk, Gio
 from .config import SETTINGS, DEVELOPMENT
 from locale import gettext as _
+import os
 
 
 @Gtk.Template.from_resource("/ru/katy248/download-center/SettingsDialog.ui")
@@ -53,3 +54,22 @@ class SettingsDialog(Adw.PreferencesDialog):
 
         dialog = DonationDialog()
         dialog.present(self)
+
+    @Gtk.Template.Callback()
+    def on_clear_cache_activated(self, btn):
+        from .config import CACHE_DIR
+
+        try:
+            for filename in os.listdir(CACHE_DIR):
+                file_path = os.path.join(CACHE_DIR, filename)
+                if os.path.isfile(file_path):
+                    os.remove(file_path)
+            os.rmdir(CACHE_DIR)
+
+            toast = Adw.Toast.new(_("Cache cleared"))
+            toast.set_timeout(2)
+            self.add_toast(toast)
+        except OSError as e:
+            toast = Adw.Toast.new(_("Failed to clear cache: %s") % e.strerror)
+            toast.set_timeout(5)
+            self.add_toast(toast)
