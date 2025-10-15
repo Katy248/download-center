@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: download-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-08 14:59+0300\n"
+"POT-Creation-Date: 2025-10-15 13:18+0300\n"
 "Last-Translator: Katy248 <petrovanton247@gmail.com>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -89,9 +89,8 @@ msgid "Don't show this dialog again"
 msgstr "Не показывать этот диалог снова"
 
 #: download-center/DocumentationRow.blp:12
-#, fuzzy
 msgid "Document cached"
-msgstr "Документация"
+msgstr "Документ кэширован"
 
 #: download-center/DocumentationRow.blp:23
 msgid "Open PDF file"
