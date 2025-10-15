@@ -73,40 +73,19 @@ template $DownloadsPage: Adw.NavigationPage {
                                 orientation: vertical;
                                 spacing: 20;
 
-                                Adw.PreferencesGroup {
+                                Adw.PreferencesGroup astra_builds_group {
                                     title: _("Astra Linux");
-
-                                    Gtk.ListBox astra_builds_group {
-                                        selection-mode: none;
-
-                                        styles [
-                                            "boxed-list-separate"
-                                        ]
-                                    }
+                                    separate-rows: true;
                                 }
 
-                                Adw.PreferencesGroup {
+                                Adw.PreferencesGroup redos8_builds_group {
                                     title: _("RED OS 8");
-
-                                    Gtk.ListBox redos8_builds_group {
-                                        selection-mode: none;
-
-                                        styles [
-                                            "boxed-list-separate"
-                                        ]
-                                    }
+                                    separate-rows: true;
                                 }
 
-                                Adw.PreferencesGroup {
+                                Adw.PreferencesGroup redos7_builds_group {
                                     title: _("RED OS 7.3");
-
-                                    Gtk.ListBox redos7_builds_group {
-                                        selection-mode: none;
-
-                                        styles [
-                                            "boxed-list-separate"
-                                        ]
-                                    }
+                                    separate-rows: true;
                                 }
                             }
                         }

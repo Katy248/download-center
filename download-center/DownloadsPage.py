@@ -10,9 +10,9 @@ from .DocumentationRow import DocumentationRow
 @Gtk.Template.from_resource("/ru/katy248/download-center/DownloadsPage.ui")
 class DownloadsPage(Adw.NavigationPage):
     __gtype_name__ = "DownloadsPage"
-    redos7_builds_group = Gtk.Template.Child()
-    redos8_builds_group = Gtk.Template.Child()
-    astra_builds_group = Gtk.Template.Child()
+    redos7_builds_group: Adw.PreferencesGroup = Gtk.Template.Child()
+    redos8_builds_group: Adw.PreferencesGroup = Gtk.Template.Child()
+    astra_builds_group: Adw.PreferencesGroup = Gtk.Template.Child()
     logout_button: Gtk.Button = Gtk.Template.Child()
     content_box: Gtk.Box = Gtk.Template.Child()
     window_title: Adw.WindowTitle = Gtk.Template.Child()
@@ -38,15 +38,23 @@ class DownloadsPage(Adw.NavigationPage):
 
         self.fill_docs(self.data)
 
-    def fill_build_group(self, group: Gtk.ListBox, build_name: str):
+    def fill_build_group(self, group: Adw.PreferencesGroup, build_name: str):
         if self.data is None:
+            print("[WARNING] Can't fill build group: data is None")
+            group.set_visible(False)
             return
         if self.data["rpm"] is None:
+            print("[WARNING] Can't fill build group: 'rpm' key is None")
+            group.set_visible(False)
             return
         builds = [b for b in self.data["rpm"] if b["build"] == build_name]
+        if len(builds) == 0:
+            print("[WARNING] No builds found for build %s" % build_name)
+            group.set_visible(False)
+            return
         for build in builds:
             row = DownloadRow(build)
-            group.append(row)
+            group.add(row)
             row.connect("download-started", self.on_download_started)
             row.connect("download-finished", self.on_download_finished)
 
