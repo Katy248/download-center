@@ -22,7 +22,12 @@
 
 On RED OS prefix should be `/usr`
 
+```bash
+meson configure builddir -D development=false
+```
+
 ## Screenshots
 
 ![Main page screenshot](other/screenshots/main-page.png)
+![Main page (mobile) screenshot](other/screenshots/main-page-mobile.png)
 ![Setting page](other/screenshots/settings-page.png)
