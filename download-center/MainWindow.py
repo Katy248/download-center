@@ -1,14 +1,20 @@
-from gi.repository import Gtk, Adw, Gio
+import asyncio
+from locale import gettext as _
 
-from .config import VERSION, SETTINGS, DEVELOPMENT
+from gi.repository import Adw, Gio, Gtk
 
+from .actions import settings_action
+from .auth import (
+    AUTH_STATE,
+    AUTHENTICATED_CHANGED_SIGNAL,
+    AUTHENTICATION_FAILED_SIGNAL,
+    AuthState,
+    print_log,
+)
+from .config import DEVELOPMENT, SETTINGS, VERSION
 from .DownloadsPage import DownloadsPage
 from .LoginPage import LoginPage
-from .auth import AuthState, AUTH_STATE, AUTHENTICATED_CHANGED_SIGNAL
-from .actions import settings_action
 from .SettingsDialog import SettingsDialog
-
-from locale import gettext as _
 
 MAIN_WINDOW: Adw.ApplicationWindow | None = None
 
@@ -28,9 +34,12 @@ class MainWindow(Adw.ApplicationWindow):
         if DEVELOPMENT:
             self.add_css_class("devel")
 
-        self.change_view(AUTH_STATE.is_authenticated())
+        # self.change_view(AUTH_STATE.is_authenticated())
+        AUTH_STATE.connect(AUTHENTICATION_FAILED_SIGNAL, self.on_authentication_failed)
 
         AUTH_STATE.connect(AUTHENTICATED_CHANGED_SIGNAL, self.on_authenticated)
+
+        # asyncio.run(AUTH_STATE.authenticate())
 
         about_action = Gio.SimpleAction.new("about", None)
         about_action.connect("activate", self.on_about_activated)
@@ -46,6 +55,9 @@ class MainWindow(Adw.ApplicationWindow):
         )
 
         self.handle_entrances()
+
+    def on_authentication_failed(self, _: AuthState, error: str):
+        self.to_failed_auth_view(error)
 
     def handle_entrances(self):
 
@@ -95,11 +107,11 @@ class MainWindow(Adw.ApplicationWindow):
                 return
             default_app.send_notification("cool-number-%d" % entrances, notification)
 
-    def on_settings_activated(self, action, _):
+    def on_settings_activated(self, action: Gio.Action, _):
         dialog = SettingsDialog()
         dialog.present(self)
 
-    def on_about_activated(self, action, args):
+    def on_about_activated(self, action: Gio.Action, args):
         dialog = Adw.AboutDialog()
         dialog = Adw.AboutDialog.new_from_appdata(
             "/ru/katy248/download-center/ru.katy248.download-center.metainfo.xml",
@@ -109,6 +121,11 @@ class MainWindow(Adw.ApplicationWindow):
         dialog.set_artists(["Katy248 <petrovanton247@gmail.com>"])
         dialog.set_developers(["Katy248 <petrovanton247@gmail.com>"])
         dialog.present(self)
+
+    def to_failed_auth_view(self, error: str):
+        from .FailedAuthPage import FailedAuthPage
+
+        self.view.replace([FailedAuthPage(error)])
 
     def to_logout_view(self):
         self.view.replace([LoginPage()])

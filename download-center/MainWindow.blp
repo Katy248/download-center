@@ -2,12 +2,28 @@ using Gtk 4.0;
 using Adw 1;
 
 template $MainWindow: Adw.ApplicationWindow {
-    title: _("Download center");
-    width-request: 360;
-    default-width: 420;
-    default-height: 600;
+  title: _("Download center");
+  width-request: 360;
+  default-width: 420;
+  default-height: 600;
 
-    Adw.ToastOverlay log_toast_overlay {
-        child: Adw.NavigationView view {};
-    }
+  Adw.ToastOverlay log_toast_overlay {
+    child: Adw.NavigationView view {
+      Adw.NavigationPage {
+        title: _("Loading...");
+
+        Adw.ToolbarView {
+          [top]
+          Adw.HeaderBar {}
+
+          content: Adw.Spinner {
+            height-request: 48;
+            width-request: 48;
+            valign: center;
+            halign: center;
+          };
+        }
+      }
+    };
+  }
 }

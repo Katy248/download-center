@@ -5,25 +5,27 @@ config.set('LOCALEDIR', localedir)
 config.set('DEVELOPMENT', get_option('development'))
 
 config_source_file = configure_file(
-    output: 'config.py',
-    input: 'config.py',
-    configuration: config,
+  output: 'config.py',
+  input: 'config.py',
+  configuration: config,
 )
 
 sources = files(
-    'DocumentationRow.py',
-    'DonationDialog.py',
-    'DownloadRow.py',
-    'DownloadsPage.py',
-    'LoginPage.py',
-    'MainWindow.py',
-    'SettingsDialog.py',
-    '__init__.py',
-    '__main__.py',
-    'actions.py',
-    'api.py',
-    'app.py',
-    'auth.py',
+  'DocumentationRow.py',
+  'DonationDialog.py',
+  'DownloadRow.py',
+  'DownloadsPage.py',
+  'FailedAuthPage.py',
+  'LoginPage.py',
+  'MainWindow.py',
+  'SettingsDialog.py',
+  '__init__.py',
+  '__main__.py',
+  'actions.py',
+  'api.py',
+  'app.py',
+  'auth.py',
+  'utils.py',
 )
 sources += config_source_file
 
@@ -33,25 +35,26 @@ python.dependency()
 python.install_sources(sources, subdir: meson.project_name())
 
 blueprints = custom_target(
-    'blueprints',
-    input: files(
-        'DocumentationRow.blp',
-        'DonationDialog.blp',
-        'DownloadRow.blp',
-        'DownloadsPage.blp',
-        'LoginPage.blp',
-        'MainWindow.blp',
-        'SettingsDialog.blp',
-    ),
-    output: 'data',
-    command: [
-        find_program('blueprint-compiler'),
-        'batch-compile',
-        '../data',
-        '@CURRENT_SOURCE_DIR@',
-        '@INPUT@',
-    ],
-    build_by_default: true,
+  'blueprints',
+  input: files(
+    'DocumentationRow.blp',
+    'DonationDialog.blp',
+    'DownloadRow.blp',
+    'DownloadsPage.blp',
+    'FailedAuthPage.blp',
+    'LoginPage.blp',
+    'MainWindow.blp',
+    'SettingsDialog.blp',
+  ),
+  output: 'data',
+  command: [
+    find_program('blueprint-compiler'),
+    'batch-compile',
+    '../data',
+    '@CURRENT_SOURCE_DIR@',
+    '@INPUT@',
+  ],
+  build_by_default: true,
 )
 
 dependency('libadwaita-1', version: '>= 1.6')

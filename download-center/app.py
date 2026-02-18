@@ -1,7 +1,10 @@
+import asyncio
+
 from gi.repository import Adw, Gio, Gtk
+
 from .config import APP_ID
 from .MainWindow import MainWindow
-
+from .utils import print_log
 
 WEB_URL = "https://update-center.red-soft.ru"
 

@@ -1,9 +1,12 @@
-from http.client import OK
+import datetime
 import json
 import typing
+from http.client import OK
+
 import requests
-import datetime
+
 from .config import DEVELOPMENT
+from .utils import print_error
 
 BASE_ADDR = "https://update-center.red-soft.ru"
 
@@ -16,14 +19,14 @@ def get_headers(
     with_json_content: bool = False, with_auth: bool = False
 ) -> dict[str, str]:
     global __jwt
-    headers = {}
+    headers: dict[str, str] = {}
     if with_json_content:
         headers["Content-Type"] = "application/json"
     if with_auth:
         if __jwt is not None:
             headers["Authorization"] = f"Bearer {__jwt}"
         else:
-            print("[ERROR] Failed add authorization header, JWT token is empty")
+            print_error("Failed add authorization header, JWT token is empty")
 
     return headers
 
@@ -37,8 +40,8 @@ def __auth(license_key: str) -> bool:
     )
 
     if not response.status_code == OK:
-        print(
-            f"[ERROR] Auth failed with status code {response.status_code}. Body dump: {response.content}"
+        print_error(
+            f"Auth failed with status code {response.status_code}. Body dump: {response.content}"
         )
         return False
     js = response.json()
@@ -50,7 +53,8 @@ def __auth(license_key: str) -> bool:
 
 
 def __check_auth() -> bool:
-    if __jwt == None:
+    global __jwt, __license_key, __last_auth
+    if __jwt is None:
         return False
     if __license_key == None:
         return False

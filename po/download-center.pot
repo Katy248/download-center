@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: download-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-15 13:18+0300\n"
+"POT-Creation-Date: 2026-02-18 17:22+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,15 +54,15 @@ msgstr ""
 msgid "Astra Linux"
 msgstr ""
 
-#: download-center/DownloadsPage.blp:89
+#: download-center/DownloadsPage.blp:82
 msgid "RED OS 8"
 msgstr ""
 
-#: download-center/DownloadsPage.blp:101
+#: download-center/DownloadsPage.blp:87
 msgid "RED OS 7.3"
 msgstr ""
 
-#: download-center/DownloadsPage.blp:119
+#: download-center/DownloadsPage.blp:98
 msgid "Documentation"
 msgstr ""
 
@@ -120,6 +120,34 @@ msgstr ""
 msgid "Terrible"
 msgstr ""
 
+#: download-center/FailedAuthPage.blp:5 download-center/FailedAuthPage.blp:13
+msgid "Authentication Failed"
+msgstr ""
+
+#: download-center/FailedAuthPage.blp:14
+msgid "Please check your license key and internet connection and try again."
+msgstr ""
+
+#: download-center/FailedAuthPage.blp:22
+msgid "Possible problems"
+msgstr ""
+
+#: download-center/FailedAuthPage.blp:26
+msgid "License key is invalid"
+msgstr ""
+
+#: download-center/FailedAuthPage.blp:27
+msgid "The license key you entered can be expired"
+msgstr ""
+
+#: download-center/FailedAuthPage.blp:31
+msgid "VPN"
+msgstr ""
+
+#: download-center/FailedAuthPage.blp:32
+msgid "The connection may not be established if VPN is enabled."
+msgstr ""
+
 #: download-center/LoginPage.blp:5
 msgid "Login"
 msgstr ""
@@ -134,6 +162,10 @@ msgstr ""
 
 #: download-center/LoginPage.blp:51
 msgid "Log in"
+msgstr ""
+
+#: download-center/MainWindow.blp:13
+msgid "Loading..."
 msgstr ""
 
 #: download-center/SettingsDialog.blp:14
@@ -190,50 +222,50 @@ msgstr ""
 msgid "Current build: %s"
 msgstr ""
 
-#: download-center/DownloadsPage.py:54
+#: download-center/DownloadsPage.py:62
 #, python-format
 msgid "Started downloading to %s"
 msgstr ""
 
-#: download-center/DownloadsPage.py:66
+#: download-center/DownloadsPage.py:74
 #, python-format
 msgid "Finished downloading to %s"
 msgstr ""
 
-#: download-center/MainWindow.py:72
+#: download-center/MainWindow.py:86
 msgid "What are you trying to debug?"
 msgstr ""
 
-#: download-center/MainWindow.py:74
+#: download-center/MainWindow.py:88
 msgid "The Ultimate Question of Life, the Universe, and Everything"
 msgstr ""
 
-#: download-center/MainWindow.py:76
+#: download-center/MainWindow.py:90
 msgid "Nice!"
 msgstr ""
 
-#: download-center/MainWindow.py:78
+#: download-center/MainWindow.py:92
 msgid "228"
 msgstr ""
 
-#: download-center/MainWindow.py:80
+#: download-center/MainWindow.py:94
 msgid "420"
 msgstr ""
 
-#: download-center/MainWindow.py:82
+#: download-center/MainWindow.py:96
 msgid "Bang! Bang! Bang! Pull my devil trigger"
 msgstr ""
 
-#: download-center/MainWindow.py:84
+#: download-center/MainWindow.py:98
 msgid "You nazi, aren't you? If you are, go fuck yourself"
 msgstr ""
 
-#: download-center/MainWindow.py:88
+#: download-center/MainWindow.py:102
 #, python-format
 msgid "Congratulations! This is your %s visit. Hope you like this app"
 msgstr ""
 
-#: download-center/MainWindow.py:108
+#: download-center/MainWindow.py:122
 msgid "Support development"
 msgstr ""
 

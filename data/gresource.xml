@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <gresources>
 	<gresource prefix="/ru/katy248/download-center">
 		<file preprocess="xml-stripblanks">DownloadRow.ui</file>
@@ -8,6 +8,9 @@
 		<file preprocess="xml-stripblanks">SettingsDialog.ui</file>
 		<file preprocess="xml-stripblanks">DonationDialog.ui</file>
 		<file preprocess="xml-stripblanks">DocumentationRow.ui</file>
-		<file preprocess="xml-stripblanks">ru.katy248.download-center.metainfo.xml</file>
+		<file preprocess="xml-stripblanks">FailedAuthPage.ui</file>
+		<file
+            preprocess="xml-stripblanks"
+        >ru.katy248.download-center.metainfo.xml</file>
 	</gresource>
 </gresources>

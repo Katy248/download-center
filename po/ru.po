@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: download-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-15 13:18+0300\n"
+"POT-Creation-Date: 2026-02-18 17:22+0300\n"
 "Last-Translator: Katy248 <petrovanton247@gmail.com>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -46,15 +46,15 @@ msgstr "Меню Приложения"
 msgid "Astra Linux"
 msgstr "Astra Linux"
 
-#: download-center/DownloadsPage.blp:89
+#: download-center/DownloadsPage.blp:82
 msgid "RED OS 8"
 msgstr "РЕД ОС 8"
 
-#: download-center/DownloadsPage.blp:101
+#: download-center/DownloadsPage.blp:87
 msgid "RED OS 7.3"
 msgstr "РЕД ОС 7.3"
 
-#: download-center/DownloadsPage.blp:119
+#: download-center/DownloadsPage.blp:98
 msgid "Documentation"
 msgstr "Документация"
 
@@ -115,6 +115,35 @@ msgstr "Во время загрузки файла '%s' произошла ош
 msgid "Terrible"
 msgstr "Ужасно"
 
+#: download-center/FailedAuthPage.blp:5 download-center/FailedAuthPage.blp:13
+msgid "Authentication Failed"
+msgstr "Не удалось аутентифицироваться"
+
+#: download-center/FailedAuthPage.blp:14
+msgid "Please check your license key and internet connection and try again."
+msgstr "Пожалуйста, проверьте ваш лицензионный ключ и подключение к интернету и попробуйте снова."
+
+#: download-center/FailedAuthPage.blp:22
+msgid "Possible problems"
+msgstr "Возможные проблемы"
+
+#: download-center/FailedAuthPage.blp:26
+#, fuzzy
+msgid "License key is invalid"
+msgstr "Лицензионный ключ"
+
+#: download-center/FailedAuthPage.blp:27
+msgid "The license key you entered can be expired"
+msgstr "Ваш лицензионный ключ может быть с истекшим сроком действия"
+
+#: download-center/FailedAuthPage.blp:31
+msgid "VPN"
+msgstr "VPN"
+
+#: download-center/FailedAuthPage.blp:32
+msgid "The connection may not be established if VPN is enabled."
+msgstr "Подключение может не быть установлено, если VPN включен."
+
 #: download-center/LoginPage.blp:5
 msgid "Login"
 msgstr "Вход"
@@ -130,6 +159,10 @@ msgstr "Оставаться в системе"
 #: download-center/LoginPage.blp:51
 msgid "Log in"
 msgstr "Войти"
+
+#: download-center/MainWindow.blp:13
+msgid "Loading..."
+msgstr "Загрузка..."
 
 #: download-center/SettingsDialog.blp:14
 msgid "General"
@@ -185,50 +218,50 @@ msgstr "Не получилось авторизоваться"
 msgid "Current build: %s"
 msgstr "Текущая сборка: %s"
 
-#: download-center/DownloadsPage.py:54
+#: download-center/DownloadsPage.py:62
 #, python-format
 msgid "Started downloading to %s"
 msgstr "Началась загрузка в %s"
 
-#: download-center/DownloadsPage.py:66
+#: download-center/DownloadsPage.py:74
 #, python-format
 msgid "Finished downloading to %s"
 msgstr "Завершена загрузка в %s"
 
-#: download-center/MainWindow.py:72
+#: download-center/MainWindow.py:86
 msgid "What are you trying to debug?"
 msgstr "Что ты пытаешься отладить?"
 
-#: download-center/MainWindow.py:74
+#: download-center/MainWindow.py:88
 msgid "The Ultimate Question of Life, the Universe, and Everything"
 msgstr "Ответ на главный вопрос жизни, вселенной и всего такого"
 
-#: download-center/MainWindow.py:76
+#: download-center/MainWindow.py:90
 msgid "Nice!"
 msgstr "Nice!"
 
-#: download-center/MainWindow.py:78
+#: download-center/MainWindow.py:92
 msgid "228"
 msgstr "228"
 
-#: download-center/MainWindow.py:80
+#: download-center/MainWindow.py:94
 msgid "420"
 msgstr "420"
 
-#: download-center/MainWindow.py:82
+#: download-center/MainWindow.py:96
 msgid "Bang! Bang! Bang! Pull my devil trigger"
 msgstr "Bang! Bang! Bang! Pull my devil trigger"
 
-#: download-center/MainWindow.py:84
+#: download-center/MainWindow.py:98
 msgid "You nazi, aren't you? If you are, go fuck yourself"
 msgstr "Вы наци, да? Если вы наци, то идите вы нахуй короче"
 
-#: download-center/MainWindow.py:88
+#: download-center/MainWindow.py:102
 #, python-format
 msgid "Congratulations! This is your %s visit. Hope you like this app"
 msgstr "Поздравляем! Это ваш %s визит. Надеемся вам нравится приложение"
 
-#: download-center/MainWindow.py:108
+#: download-center/MainWindow.py:122
 msgid "Support development"
 msgstr "Поддержать разработку"
 

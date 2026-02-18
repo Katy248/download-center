@@ -1,0 +1,38 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $FailedAuthPage: Adw.NavigationPage {
+  title: _("Authentication Failed");
+
+  Adw.ToolbarView {
+    [top]
+    Adw.HeaderBar {}
+
+    content: Adw.StatusPage {
+      icon-name: "dialog-error-symbolic";
+      title: _("Authentication Failed");
+      description: _("Please check your license key and internet connection and try again.");
+
+      Adw.Clamp {
+        Adw.PreferencesGroup {
+          styles [
+            "error"
+          ]
+
+          title: _("Possible problems");
+          separate-rows: true;
+
+          Adw.ActionRow {
+            title: _("License key is invalid");
+            subtitle: _("The license key you entered can be expired");
+          }
+
+          Adw.ActionRow {
+            title: _("VPN");
+            subtitle: _("The connection may not be established if VPN is enabled.");
+          }
+        }
+      }
+    };
+  }
+}
