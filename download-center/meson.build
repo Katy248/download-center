@@ -30,7 +30,6 @@ sources = files(
 sources += config_source_file
 
 python = import('python').find_installation('python3')
-python.dependency()
 
 python.install_sources(sources, subdir: meson.project_name())
 
