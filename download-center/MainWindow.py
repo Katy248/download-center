@@ -1,4 +1,3 @@
-import asyncio
 from locale import gettext as _
 
 from gi.repository import Adw, Gio, Gtk
@@ -9,7 +8,6 @@ from .auth import (
     AUTHENTICATED_CHANGED_SIGNAL,
     AUTHENTICATION_FAILED_SIGNAL,
     AuthState,
-    print_log,
 )
 from .config import DEVELOPMENT, SETTINGS, VERSION
 from .DownloadsPage import DownloadsPage
@@ -21,7 +19,7 @@ MAIN_WINDOW: Adw.ApplicationWindow | None = None
 
 @Gtk.Template.from_resource("/ru/katy248/download-center/MainWindow.ui")
 class MainWindow(Adw.ApplicationWindow):
-    __gtype_name__ = "MainWindow"
+    __gtype_name__: str = "MainWindow"
     view: Adw.NavigationView = Gtk.Template.Child()
     log_toast_overlay: Adw.ToastOverlay = Gtk.Template.Child()
 
