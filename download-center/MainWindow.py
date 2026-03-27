@@ -13,6 +13,7 @@ from .config import DEVELOPMENT, SETTINGS, VERSION
 from .DownloadsPage import DownloadsPage
 from .LoginPage import LoginPage
 from .SettingsDialog import SettingsDialog
+from .utils import print_error, print_log
 
 MAIN_WINDOW: Adw.ApplicationWindow | None = None
 
@@ -125,7 +126,7 @@ class MainWindow(Adw.ApplicationWindow):
 
         self.view.replace([FailedAuthPage(error)])
 
-    def to_logout_view(self):
+    def to_login_view(self):
         self.view.replace([LoginPage()])
 
     def to_downloads_view(self):
@@ -133,9 +134,12 @@ class MainWindow(Adw.ApplicationWindow):
 
     def change_view(self, authenticated: bool):
         if authenticated:
+            print_log("Authenticated, change view to downloads")
             self.to_downloads_view()
         else:
-            self.to_logout_view()
+            print_log("Unauthenticated, change view to login")
+            self.to_login_view()
 
     def on_authenticated(self, _: AuthState, authenticated: bool):
+        print_log("Handled authentication state changed")
         self.change_view(authenticated)

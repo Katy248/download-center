@@ -3,7 +3,7 @@ import asyncio
 from gi.repository import Adw, Gio, Gtk
 
 from .config import APP_ID
-from .MainWindow import MainWindow
+from .MainWindow import AUTH_STATE, MainWindow
 from .utils import print_log
 
 WEB_URL = "https://update-center.red-soft.ru"
@@ -28,6 +28,7 @@ class Application(Adw.Application):
     def do_activate(self):
         self.window = MainWindow(self)
         self.window.present()
+        asyncio.run(AUTH_STATE.check_auth())
 
     def on_open_in_web(self, action, param):
         launcher = Gtk.UriLauncher.new(WEB_URL)
