@@ -1,3 +1,5 @@
+from typing import final
+
 from gi.repository import GObject
 
 from .api import login
@@ -10,12 +12,12 @@ AUTHENTICATION_FAILED_SIGNAL = "authentication_failed"
 
 
 class AuthState(GObject.Object):
-    __gtype_name__ = "AuthState"
+    __gtype_name__: str = "AuthState"
     __gsignals__ = {
         AUTHENTICATED_CHANGED_SIGNAL: (GObject.SignalFlags.RUN_FIRST, None, (bool,)),
         AUTHENTICATION_FAILED_SIGNAL: (GObject.SignalFlags.RUN_FIRST, None, (str,)),
     }
-    authenticated = GObject.Property(type=bool, default=False)
+    authenticated: GObject.Property = GObject.Property(type=bool, default=False)
 
     def __init__(self):
 
@@ -29,22 +31,21 @@ class AuthState(GObject.Object):
 
     async def authenticate(self, license_key: str) -> bool:
         try:
+            print_log("Start authenticating")
             self.authenticated = login(license_key)
         except Exception as e:
             print_error(f"Failed to authenticate: {e}")
             self.emit(AUTHENTICATION_FAILED_SIGNAL, str(e))
             return False
 
-        if not self.authenticated:
-            return False
-
-        if SETTINGS.get_boolean("stay-logged-in"):
+        if self.authenticated and SETTINGS.get_boolean("stay-logged-in"):
             SETTINGS.set_string("license-key", license_key)
 
+        print_log(f"Authentication state: authenticated - {self.authenticated}")
         self.emit(AUTHENTICATED_CHANGED_SIGNAL, True)
         return self.authenticated
 
-    def is_authenticated(self):
+    def is_authenticated(self) -> bool:
         return self.authenticated
 
     def logout(self):
